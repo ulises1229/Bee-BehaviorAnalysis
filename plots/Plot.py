@@ -1,0 +1,201 @@
+__author__ = 'Ulises Olivares'
+
+import matplotlib.pyplot as plt
+import plotly.plotly as py
+import plotly
+#FIXME: READ THE USER AND THE API KEY FROM A .INI FILE
+plotly.tools.set_credentials_file(username='ulises1229', api_key='IBElW0dqjDEJXCuozFGy')
+import plotly.graph_objs as go
+#from collections
+import os
+
+class Plot:
+    figPath = '\\latex_report\\latex_template\\Pictures\\'
+
+    def __init__(self):
+        """put code here"""
+
+    def pieChart(self, input, chartName, title):
+        """
+        Generates
+        :param input:
+        :return:
+        """
+        # Define a dictionary for parsing all the parameters
+        fig = {
+            'data': [{'labels': [],
+                      'values': [],
+                      'type': 'pie'}],
+            'layout': {'title': ''}
+        }
+
+        # Fill the dictionary
+        for i in input.keys():
+            fig['data'][0]['labels'].append(i)
+        for i in input.values():
+            fig['data'][0]['values'].append(i)
+        fig['layout']['title'] = title
+
+
+        #Save the pie plot
+        fileName = os.getcwd()  + self.figPath + chartName + '.png'
+        #exit(0)
+        py.image.save_as(fig, filename=fileName)
+
+    def pieChartBeeLifeCycle(self, input, chartName, title):
+        """
+        Generates
+        :param input:
+        :return:
+        """
+        # Define a dictionary for parsing all the parameters
+        tmp = {}
+        for i in input.values():
+            if i in tmp.keys():
+                tmp[i] = tmp[i] + 1
+            else:
+                tmp[i] = i
+
+        fig = {
+            'data': [{'labels': [],
+                      'values': [],
+                      'type': 'pie'}],
+            'layout': {'title': ''}
+        }
+
+        # Fill the dictionary
+        for i in tmp.keys():
+            if i == 1:
+                suffix = " Day"
+            else:
+                suffix = " Days"
+            fig['data'][0]['labels'].append(str(i) + suffix)
+        for i in tmp.values():
+            fig['data'][0]['values'].append(i)
+        fig['layout']['title'] = title
+
+
+        #Save the pie plot
+        fileName = os.getcwd()  + self.figPath + chartName + '.png'
+        #exit(0)
+        py.image.save_as(fig, filename=fileName)
+
+    def barPlot(self, inputData, title, xAxis, yAxis, chartName, type):
+        """
+
+        :param inputData: Dictionaty Date => No Obs
+        :param title:
+        :param xAxis:
+        :param yAxis:
+        :return:
+        """
+
+        inputX = inputData.keys()
+        inputY = []
+        if (type != 'diffBees'):
+            inputY = inputData.values()
+
+        if type == 'Obs':
+            tmpX = inputX
+            tmpX.sort()
+            first = tmpX[0]
+            last = tmpX[-1]
+            xAxis = xAxis + "From {} to {}".format(first, last)
+
+        if type == 'diffBees':
+            for i in inputData:
+                inputY.append(len(inputData[i]))
+
+        # Create a listo of nums from 1 to n where n is the num of elements for plots only
+        numericX =[]
+        for i in range (len(inputX)):
+            numericX.append(i + 1)
+
+        data = [go.Bar(
+                x = numericX,
+                y = inputY
+        )]
+
+        layout = go.Layout(
+                title = title,
+                xaxis=dict(
+                    title = xAxis,
+                    titlefont=dict(
+                        size=16,
+                        color='rgb(107, 107, 107)'
+                    ),
+                    tickfont=dict(
+                        size=14,
+                        color='rgb(107, 107, 107)'
+                    )
+                ),
+                yaxis=dict(
+                    title = yAxis,
+                    titlefont=dict(
+                        size=16,
+                        color='rgb(107, 107, 107)'
+                    ),
+                    tickfont=dict(
+                        size=14,
+                        color='rgb(107, 107, 107)'
+                    )
+                )
+        )
+
+        # Save the bar plot
+        fileName = os.getcwd() + self.figPath + chartName + '.png'
+        fig = go.Figure(data = data, layout=layout)
+        py.image.save_as(fig, filename=fileName)
+
+    def plotEquivalenceClass(self, inputData, title, xAxisTitle, yAxisTitle):
+
+        plt.title(title)
+        plt.xlabel(xAxisTitle)
+        plt.ylabel(yAxisTitle)
+
+        labels = ["label%d" % i for i in xrange(len(inputData))]
+        x = range(len(inputData))
+        y = inputData
+        plt.bar(x , y , align='center' , color='blue')
+        fileName = os.getcwd() + self.figPath +'histogram.png'
+        plt.savefig(fileName, format='png', dpi=600)
+        #plt.show()
+
+    def plotEquivalenceClassStd(self, inputData, title, xAxisTitle, yAxisTitle, std):
+
+        plt.title(title)
+        plt.xlabel(xAxisTitle)
+        plt.ylabel(yAxisTitle)
+
+        labels = ["label%d" % i for i in xrange(len(inputData))]
+        x = range(len(inputData))
+        y = inputData
+        plt.bar(x , y , align='center' , color='blue', yerr=std)
+        #plt.show()
+        fileName = os.getcwd() + self.figPath + 'histogramStd.png'
+        plt.savefig(fileName, format='png', dpi=600)
+
+
+
+    def barplotDictionary(self, inputData, title, xAxisTitle, yAxisTitle ):
+
+        dictionary = plt.figure()
+        list = []
+        for i in inputData:
+            list.append(str(i))
+        list.sort()
+
+        # Set tittle of the graph
+        plt.title(title)
+        plt.xlabel("Observed Days \nFrom: " + str(list[0]) + " to: " + str(list[len(list)-1]) + "\n " + str(len(list)) + " Days" )
+        plt.ylabel("Number of Observations")
+
+        plt.bar(range(len(inputData)), inputData.values(), align='center')
+        if (len(list) < 60):
+            plt.xticks(range(len(inputData)), range(1,len(inputData)+1))
+
+
+        plt.savefig("test.png", format='png', figsize=(20.7, 1.3), dpi=1200)
+        plt.show()
+        #py.plot(dictionary, filename='mpl-dictionary')
+
