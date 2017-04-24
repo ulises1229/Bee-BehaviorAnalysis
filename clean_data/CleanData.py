@@ -32,12 +32,12 @@ class CleanData:
                     if len(completeDict[i][j]) >= 2:
                         tmpDiff = datetime.strptime(str(completeDict[i][j][k + 1]), FMT) - datetime.strptime(str(completeDict[i][j][k]), FMT)
                         # The value will be discarded and stored in a list
-                        #FIXME: CHECK IF IT IS NECCESARY TO STORE THIS DATA
+                        #FIXME: CHECK IF IT IS NECCESARY TO STORE THIS DAT
                         if (tmpDiff < threshold):
                             ommitedValues[i].append(completeDict[i][j][k])
                         # The value will be stored in a dictionary
                         else:
-                            count = count + 1
+
                             cleanCompleteDict[i] = defaultdict(list)
                             # The current element doesn't exist in the dictionary
                             if i in cleanCompleteDict.keys():
@@ -51,7 +51,7 @@ class CleanData:
                 if len(timeDifference[i]) > 1:
                     timeDifference[i].sort()
         print "count:  " + str(count)
-        print cleanCompleteDict
+        #print cleanCompleteDict
         print "Len of cleanDict is: " + str(len(cleanCompleteDict))
         #print cleanDictionary
         print "Len of completeDict is: " + str(len(completeDict))
