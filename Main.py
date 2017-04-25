@@ -43,13 +43,27 @@ def main():
 
     threshold = datetime.strptime("00:01:00", FMT)
     threshold = timedelta(hours=threshold.hour, minutes=threshold.minute, seconds=threshold.second)
-    print("Threshold: " + str(threshold))
-    clean.removeLostChips(idData, dateData, completeData, threshold)
+    print("Cleaning data...\n" + "Threshold: " + str(threshold))
 
-    # Analyze data
+    """
+    This method returns a dictionary cleanData with the information:
+    'cleanCompleteDict': Dictionary
+    'cleanIdDict': Dictionary
+    'cleanDateDict': Dictionary
+    'ommitedValues': Dictionary
+    'timeIntervals': Dictionary
+    'totalElements': int
+    'totalOmmited':  int
+    'totalClean':    int
+    """
+    cleanData = clean.removeLostChips(idData, dateData, completeData, threshold)
+
+    # Analyze data data with lost chips
     #analyze = AnalizeData()
     #analysis = analyze.analizeData(idData, dateData, completeData)
     #analyze.getTotalObservationsperDay(dateData, date)
+
+    #cleanAnalysisi = analyze.analizeData(idData, dateData, completeData)
 
     """dates = dateData.keys()
     dates.sort()
@@ -68,11 +82,18 @@ def main():
         'continuousBehavior': analysis['continuousBehavior'],
         'continuousBees': analysis['continuousBees']
     }
+    cleanDict = {
+
+        'totalElements': cleanData['totalElements'],
+        'totalOmmited': cleanData['totalOmmited'],
+        'totalClean': cleanData['totalClean']
+    }
 
 
     # Generate Latex Report
     report = GenerateReport()
-    report.generateReport(introDict)
+    report.generateReport(introDict, 'intro')
+    report.generateReport(cleanDict, 'clean')
     """
 
 
