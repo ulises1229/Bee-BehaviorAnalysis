@@ -10,10 +10,8 @@ import collections
 
 start = []
 end = []
-
+observationsPerDay = ''
 class AnalizeData:
-    observationsPerDay = ''
-
 
     def __init__(self):
         """Initializa code here"""
@@ -235,20 +233,28 @@ class AnalizeData:
 
 
 
-    def analizeData(self, idDict, dateDict, completeDict):
+    def analizeData(self, idDict, dateDict, completeDict, type):
+        """
+        This method analizes all input data and additionally, it generates graphs.
+        :param idDict:
+        :param dateDict:
+        :param completeDict:
+        :param type: type of data clean or unclean
+        :return:
+        """
         # Instatiate a plot object
         plot = Plot()
         """----------------------------------------------------------------------------------------
         1. What is the activity of the hive # of lectures per day?
            Get all the observations per day format = Observation date, number of observations
         ----------------------------------------------------------------------------------------"""
-        self.observationsPerDay= self.observationsPerDay(idDict, dateDict)
+        observationsPerDay= self.observationsPerDay(idDict, dateDict)
         title = "Number of Observations Per Day"
         xAxis = "Period of Observation (DAYS):\n"
         yAxis = "Observations"
-        chartName = "observationsPerday"
+        chartName = "observationsPerday" + type
         #plot.barplotDictionary(observationsPerDay, title, xAxis, yAxis)
-        plot.barPlot(self.observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
+        #plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
 
         """----------------------------------------------------------------------------------------
         2. For how long a bee will be detected a bee? how long a bee will live?
@@ -259,10 +265,11 @@ class AnalizeData:
         title = "Life Cycle of a bee in Days"
         xAxis = "Bees"
         yAxis = "Number of Days"
-        chartName = "beeLifeCycle"
-        plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
-        plot.pieChartBeeLifeCycle(beeLifeCycleDays,"pieBeeLifeCycle", title)
-        print beeActivityPerDay
+        chartName = "beeLifeCycle" + type
+        chartName2 = "pieBeeLifeCycle" + type
+        #plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
+        #plot.pieChartBeeLifeCycle(beeLifeCycleDays,chartName2, title)
+        #print beeActivityPerDay
         """----------------------------------------------------------------------------------------
         3. How many different bees are active per day?
         ----------------------------------------------------------------------------------------"""
@@ -283,9 +290,9 @@ class AnalizeData:
         title = "Register of Different Bees per Day"
         xAxis = "Days\n"
         yAxis = "Number of bees"
-        chartName = "differentBeesPerday"
+        chartName = "differentBeesPerday" + type
 
-        plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
+        #plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
 
         """----------------------------------------------------------------------------------------
         4. What is the total activity per day number of hours?
@@ -300,7 +307,7 @@ class AnalizeData:
         5. What are the most active hours within a day?
         divide the space in 24 equivalence classes and obtain the frequency for each class
         ----------------------------------------------------------------------------------------"""
-        totalActivityEquivClasses = self.getActivityPerHour(self.observationsPerDay, dateDict)
+        totalActivityEquivClasses = self.getActivityPerHour(observationsPerDay, dateDict)
 
         """----------------------------------------------------------------------------------------
         6. What are the mean of the most active hours taking into account all the observations?
@@ -315,14 +322,16 @@ class AnalizeData:
         title = "Average of the Activity Per Hour"
         xAxis = ""
         yAxis = ""
-        plot.plotEquivalenceClass(averageEquivClasses, title, xAxis, yAxis)
+        chartName = "histogram" + type
+        #plot.plotEquivalenceClass(averageEquivClasses, title, xAxis, yAxis, chartName)
 
 
 
         title = "Average of the Activity Per Hour Including Standard Deviation"
         xAxis = ""
         yAxis = ""
-        plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses)
+        chartName = "histogramStd" + type
+        #plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses, chartName)
 
 
 
@@ -336,11 +345,12 @@ class AnalizeData:
 
 
         dict = {
-            'ObsPerDay': self.observationsPerDay,
+            'ObsPerDay': observationsPerDay,
             'lifeCycle': beeLifeCycleDays,
             'differentBeesPerDay': differentBeesPerDay,
             'continuousBehavior' : continuousBehavior,
-            'continuousBees': continuousBees
+            'continuousBees': continuousBees,
+            'averageTotalActivity': averageTotalActivity
 
         }
         return dict

@@ -147,7 +147,7 @@ class Plot:
         fig = go.Figure(data = data, layout=layout)
         py.image.save_as(fig, filename=fileName)
 
-    def plotEquivalenceClass(self, inputData, title, xAxisTitle, yAxisTitle):
+    def plotEquivalenceClass(self, inputData, title, xAxisTitle, yAxisTitle, chartName):
 
         plt.title(title)
         plt.xlabel(xAxisTitle)
@@ -157,11 +157,11 @@ class Plot:
         x = range(len(inputData))
         y = inputData
         plt.bar(x , y , align='center' , color='blue')
-        fileName = os.getcwd() + self.figPath +'histogram.png'
+        fileName = os.getcwd() + self.figPath + chartName + ".png"
         plt.savefig(fileName, format='png', dpi=600)
         #plt.show()
 
-    def plotEquivalenceClassStd(self, inputData, title, xAxisTitle, yAxisTitle, std):
+    def plotEquivalenceClassStd(self, inputData, title, xAxisTitle, yAxisTitle, std, chartName):
 
         plt.title(title)
         plt.xlabel(xAxisTitle)
@@ -172,7 +172,7 @@ class Plot:
         y = inputData
         plt.bar(x , y , align='center' , color='blue', yerr=std)
         #plt.show()
-        fileName = os.getcwd() + self.figPath + 'histogramStd.png'
+        fileName = os.getcwd() + self.figPath + chartName + ".png"
         plt.savefig(fileName, format='png', dpi=600)
 
 

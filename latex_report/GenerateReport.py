@@ -14,14 +14,98 @@ class GenerateReport:
     def __init__(self):
         """
         """
-    def addActivity(self, doc):
-        """
-
-        :return:
-        """
+    def addActivityUncleanData(self, doc, introDict):
         # --------------------------------------------------------------------------------------------
         #                                        Activity per Day
         # --------------------------------------------------------------------------------------------
+        with doc.create(Subsection("Activity per day")):
+            doc.append("This section addresses the analysis of the activity per day")
+
+            with doc.create(Figure(position='h!')) as fig:
+                fig.add_image("observationsPerdayUnclean.png", width='400px')
+                fig.add_caption('Number of Observations per Day')
+                # doc.append("Begin a new pharagraph")
+
+            with doc.create(LongTabu('| c | c | c | c |')) as table:
+                table.add_hline()
+
+                obsPerDay = collections.OrderedDict(sorted(introDict['ObsPerDay'].items()))
+                beesPerDay = collections.OrderedDict(sorted(introDict['differentBeesPerDay'].items()))
+                # print beesPerDay
+
+
+                table.add_row("Day", "Date", "# Observations", "# Bees per day")
+                table.add_hline()
+                sum = 0
+                sum2 = 0
+                count = 1
+                for i in obsPerDay:
+                    table.add_row(count, i, obsPerDay[i], len(beesPerDay[i]))
+                    table.add_hline()
+                    sum2 = sum2 + len(beesPerDay[i])
+                    sum = sum + obsPerDay[i]
+                    count = count + 1
+                table.add_hline()
+                # Write the average
+                table.add_row("--", "Average", sum / len(obsPerDay.values()), sum2 / len(beesPerDay.values()))
+                table.add_hline()
+                table.add_hline()
+
+        # --------------------------------------------------------------------------------------------
+        #                                        Activity per Day
+        # --------------------------------------------------------------------------------------------
+        with doc.create(Subsection("Bee Life Cycle")):
+            doc.append("In this section is analyzed the Life Cycle of each bee in the hive")
+            with doc.create(LongTabu('| c | c | c |')) as table2:
+                lifeCycle = collections.OrderedDict(sorted(introDict['lifeCycle'].items()))
+                table2.add_hline()
+                table2.add_hline()
+                table2.add_row("Register", "Bee ID", "Life Cycle in Days")
+                table2.add_hline()
+                table2.add_hline()
+                sum = 0
+                count = 1
+                for i in lifeCycle:
+                    table2.add_row(count, i[-4:], lifeCycle[i])
+                    table2.add_hline()
+                    sum = sum + lifeCycle[i]
+                    count = count + 1
+                table2.add_hline()
+                # Write the average
+                table2.add_row("--", "Average", sum / len(lifeCycle.values()))
+                table2.add_hline()
+                table2.add_hline()
+
+            # Add Figure
+            with doc.create(Figure(position='h!')) as fig:
+                fig.add_image("differentBeesPerdayUnclean.png", width='400px')
+                fig.add_caption('Different Bees Per Day')
+
+            # Add Figure
+            with doc.create(Figure(position='h!')) as fig:
+                fig.add_image("beeLifeCycleUnclean.png", width='400px')
+                fig.add_caption('Bee Life cycle in days')
+
+            # Add Figure
+            with doc.create(Figure(position='h!')) as fig:
+                fig.add_image("pieBeeLifeCycleUnclean.png", width='400px')
+                fig.add_caption('Bee Life cycle in days')
+                # doc.append("Begin a new pharagraph")
+
+        # --------------------------------------------------------------------------------------------
+        #                                        Activity per Hour
+        # --------------------------------------------------------------------------------------------
+        with doc.create(Subsection("Analysis of Activity per Hour")):
+            # Add Figure
+            with doc.create(Figure(position='h!')) as fig:
+                fig.add_image("histogramUnclean.png", width='400px')
+                fig.add_caption('Histogram of frequencies per hour')
+
+            # Add Figure
+            with doc.create(Figure(position='h!')) as fig:
+                fig.add_image("histogramStdUnclean.png", width='400px')
+                fig.add_caption('Histogram of frequencies per hour. It includes standard deviation')
+        return doc.dumps_content()
 
     def addIntroduction(self, doc, sectionTitle, introDict):
         """
@@ -52,103 +136,6 @@ class GenerateReport:
             with doc.create(Figure(position='h!')) as fig:
                     fig.add_image("chartNumLectures.png", width='315px')
                     fig.add_caption('Days with and without Empty Reads')
-
-        # --------------------------------------------------------------------------------------------
-        #                                        Activity per Day
-        # --------------------------------------------------------------------------------------------
-        with doc.create(Subsection("Activity per day")):
-            doc.append("This section addresses the analysis of the activity per day")
-
-            with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("observationsPerday.png", width='400px')
-                fig.add_caption('Number of Observations per Day')
-                # doc.append("Begin a new pharagraph")
-
-            with doc.create(LongTabu('| c | c | c | c |')) as table:
-                table.add_hline()
-
-                obsPerDay = collections.OrderedDict(sorted(introDict['ObsPerDay'].items()))
-                beesPerDay = collections.OrderedDict(sorted(introDict['differentBeesPerDay'].items()))
-                #print beesPerDay
-
-
-                table.add_row("Day", "Date","# Observations", "# Bees per day")
-                table.add_hline()
-                sum = 0
-                sum2 = 0
-                count = 1
-                for i in  obsPerDay:
-                    table.add_row(count, i, obsPerDay[i], len(beesPerDay[i]))
-                    table.add_hline()
-                    sum2 = sum2 + len(beesPerDay[i])
-                    sum = sum + obsPerDay[i]
-                    count = count + 1
-                table.add_hline()
-                # Write the average
-                table.add_row("--", "Average" , sum/len(obsPerDay.values()) , sum2/len(beesPerDay.values()))
-                table.add_hline()
-                table.add_hline()
-
-        # --------------------------------------------------------------------------------------------
-        #                                        Activity per Day
-        # --------------------------------------------------------------------------------------------
-        with doc.create(Subsection("Bee Life Cycle")):
-            doc.append("In this section is analyzed the Life Cycle of each bee in the hive")
-            with doc.create(LongTabu('| c | c | c |')) as table2:
-                lifeCycle = collections.OrderedDict(sorted(introDict['lifeCycle'].items()))
-                table2.add_hline()
-                table2.add_hline()
-                table2.add_row("Register", "Bee ID","Life Cycle in Days")
-                table2.add_hline()
-                table2.add_hline()
-                sum = 0
-                count = 1
-                for i in  lifeCycle:
-                    table2.add_row(count, i[-4:], lifeCycle[i])
-                    table2.add_hline()
-                    sum = sum + lifeCycle[i]
-                    count = count + 1
-                table2.add_hline()
-                # Write the average
-                table2.add_row("--","Average" , sum/len(lifeCycle.values()))
-                table2.add_hline()
-                table2.add_hline()
-
-            # Add Figure
-            with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("differentBeesPerday.png", width='400px')
-                fig.add_caption('Different Bees Per Day')
-
-            # Add Figure
-            with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("beeLifeCycle.png", width='400px')
-                fig.add_caption('Bee Life cycle in days')
-
-
-            # Add Figure
-            with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("pieBeeLifeCycle.png", width='400px')
-                fig.add_caption('Bee Life cycle in days')
-                # doc.append("Begin a new pharagraph")
-
-        # --------------------------------------------------------------------------------------------
-        #                                        Activity per Hour
-        # --------------------------------------------------------------------------------------------
-        with doc.create(Subsection("Analysis of Activity per Hour")):
-            # Add Figure
-            with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("histogram.png", width='400px')
-                fig.add_caption('Histogram of frequencies per hour')
-
-            # Add Figure
-            with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("histogramStd.png", width='400px')
-                fig.add_caption('Histogram of frequencies per hour. It includes standard deviation')
-
-
-
-
-
         return doc.dumps_content()
 
     def removePreviousFiles(self, path):
@@ -157,6 +144,7 @@ class GenerateReport:
         :param path:
         :return:
         """
+        print "the path is" + str(path)
         files = []
         # FIXME: put a try to avoid getting warning or errer if a file is open
         # Detect all the existing files
@@ -182,11 +170,11 @@ class GenerateReport:
         error = ''
         for i in range(3):
             devnull = open(os.devnull, 'wb')
-            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
-            #                        stdout=subprocess.PIPE, stderr=devnull)
-            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
-            #output, error = proc.communicate()
-            proc.communicate()
+            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
+                                    stdout=subprocess.PIPE, stderr=devnull)
+            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
+            output, error = proc.communicate()
+            #proc.communicate()
         if os.path.isfile(path + "Latex Report.pdf") and error != 'None':
             print "PDF Report generated Correctly"
         else:
@@ -217,14 +205,15 @@ class GenerateReport:
                 if (line.find("%INSERT_CONTENT_HERE")!= -1):
                     # Add all the content form the contents list
                     for i in contents:
-                        line = line + i
+                        line = line + i + '\n'
                 outFile.write(line)
 
 
-    def generateReport(self, introDict):
+    def generateReport(self, introDict, type):
         """
-        Principal function to add content to the .tex file
-        :return: None
+        :param introDict: Dictionary that contains all the information
+        :param type: This parameter denotes
+        :return:
         """
 
         geometry_options = {
@@ -238,6 +227,8 @@ class GenerateReport:
         doc = Document(geometry_options=geometry_options)
         workingDir = os.getcwd()
         path = workingDir + '\latex_report\latex_template\\'
+        if path.count("\latex_report\latex_template") > 1:
+            path = path.replace('\latex_report\latex_template' , '', 1)
         template = path + "Template.tex"
         texFile = path + "Latex Report.tex"
         contents = []
@@ -248,10 +239,22 @@ class GenerateReport:
         # Reads the template and store it in a buffer
         buffer = self.readTemplate(template)
 
-        # Add an introductory section
-        contents.append(self.addIntroduction(doc, "Introduction", introDict))
+        if type == 'introduction':
+            print "Enters to introduction"
+            # Add an introductory section and the analysis of unclean data
+            contents.append(self.addIntroduction(doc, "Introduction", introDict))
+            contents.append("\chapterimage{head3.jpg} % Chapter heading image")
+            contents.append("\chapter{Analysis of Raw Data}")
+            contents.append(self.addActivityUncleanData(doc, introDict))
 
-        #print contents
+            contents.append("\chapterimage{head4.jpg} % Chapter heading image")
+            contents.append("\chapter{Analysis of Clean Data}")
+
+
+
+
+        else:
+            print type
 
 
 

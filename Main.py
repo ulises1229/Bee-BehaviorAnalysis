@@ -17,7 +17,6 @@ def main():
 
     # Read all the CSV files and import data
     imp = ImportData()
-    #imp.importCSV()
 
     # FIXME: how to pass by reference all the parameters implement this to reduce the memory footprint
     noFiles = imp.importCSV(data)
@@ -32,8 +31,9 @@ def main():
     files['Active Days'] = len(dateData)
     files['Non-Active Days'] = noFiles - len(dateData)
 
+    # FIXME:This plot have to be in other class
     plot = Plot()
-    plot.pieChart(files, "chartNumLectures", "Relation: Active VS Non-active Days")
+    #plot.pieChart(files, "chartNumLectures", "Relation: Active VS Non-active Days")
 
 
     # FIXME: CLEAN DATA BEFORE ANALYZE IT
@@ -58,14 +58,13 @@ def main():
     """
     cleanData = clean.removeLostChips(idData, dateData, completeData, threshold)
 
-    # Analyze data data with lost chips
-    #analyze = AnalizeData()
-    #analysis = analyze.analizeData(idData, dateData, completeData)
-    #analyze.getTotalObservationsperDay(dateData, date)
 
-    #cleanAnalysisi = analyze.analizeData(idData, dateData, completeData)
+    # Analyze unclean data
+    analyze = AnalizeData()
+    uncleanAnalysis = analyze.analizeData(idData, dateData, completeData, "Unclean")
+    cleanAnalysis = analyze.analizeData(cleanData['cleanIdDict'], cleanData['cleanDateDict'], cleanData['cleanCompleteDict'], "Clean")
 
-    """dates = dateData.keys()
+    dates = dateData.keys()
     dates.sort()
 
     introDict = {
@@ -76,26 +75,31 @@ def main():
         'totalChips': len(idData.keys()),
         'non-empty': str(len(dateData)),
         'empty-files': str(noFiles - len(dateData)),
-        'ObsPerDay': analysis['ObsPerDay'],
-        'lifeCycle':analysis['lifeCycle'],
-        'differentBeesPerDay': analysis['differentBeesPerDay'],
-        'continuousBehavior': analysis['continuousBehavior'],
-        'continuousBees': analysis['continuousBees']
+        'ObsPerDay': uncleanAnalysis['ObsPerDay'],
+        'lifeCycle':uncleanAnalysis['lifeCycle'],
+        'differentBeesPerDay': uncleanAnalysis['differentBeesPerDay'],
+        'continuousBehavior': uncleanAnalysis['continuousBehavior'],
+        'continuousBees': uncleanAnalysis['continuousBees'],
+        'averageTotalActivity': uncleanAnalysis['averageTotalActivity']
     }
-    cleanDict = {
+
+    """cleanDict = {
 
         'totalElements': cleanData['totalElements'],
         'totalOmmited': cleanData['totalOmmited'],
+        'totalClean': cleanData['totalClean'],
+        'ommitedValues': cleanData['ommitedValues'],
+        'timeIntervals': cleanData['timeIntervals'],
+        'totalElements': cleanData['totalElements'],
+        'totalOmmited': cleanData['totalOmmited'],
         'totalClean': cleanData['totalClean']
-    }
-
+    }"""
 
     # Generate Latex Report
     report = GenerateReport()
-    report.generateReport(introDict, 'intro')
-    report.generateReport(cleanDict, 'clean')
-    """
-
+    #FIXME: CALL ONLY ONCE GEN REPORT AND USE AS PARAMETER INTRO DICT AND CLEAN DATA
+    report.generateReport(introDict, 'introduction')
+    #report.generateReport(cleanData, 'cleanData')
 
     # FIXME: Store all the registers in the DB
     # Connect and store values to the DB
