@@ -149,17 +149,31 @@ class Plot:
 
     def plotEquivalenceClass(self, inputData, title, xAxisTitle, yAxisTitle, chartName):
 
-        plt.title(title)
-        plt.xlabel(xAxisTitle)
-        plt.ylabel(yAxisTitle)
+
 
         labels = ["label%d" % i for i in xrange(len(inputData))]
         x = range(len(inputData))
         y = inputData
-        plt.bar(x , y , align='center' , color='blue')
+
+        tmpX =[]
+        for i in x:
+            if i < 10:
+                tmpX.append("0" + str(i))
+            else:
+                tmpX.append(str(i))
+        print tmpX
+        #FIXME: DISPLAY XTICKS IN HOUR FORMAT
+        plt.xticks(x, fontsize=7)
+        plt.yticks(y, fontsize=7)
+        plt.bar(x , y , align='center' , color='blue', alpha=0.8)
+
+        plt.xlabel(xAxisTitle, fontsize=11)
+        plt.ylabel(yAxisTitle, fontsize=11)
+        plt.title(title)
+
         fileName = os.getcwd() + self.figPath + chartName + ".png"
         plt.savefig(fileName, format='png', dpi=600)
-        #plt.show()
+        plt.close()
 
     def plotEquivalenceClassStd(self, inputData, title, xAxisTitle, yAxisTitle, std, chartName):
 
@@ -167,13 +181,16 @@ class Plot:
         plt.xlabel(xAxisTitle)
         plt.ylabel(yAxisTitle)
 
+
         labels = ["label%d" % i for i in xrange(len(inputData))]
         x = range(len(inputData))
         y = inputData
-        plt.bar(x , y , align='center' , color='blue', yerr=std)
+        plt.xticks(x, fontsize=7)
+        plt.bar(x , y , align='center' , color='blue', yerr=std, alpha=0.8)
         #plt.show()
         fileName = os.getcwd() + self.figPath + chartName + ".png"
         plt.savefig(fileName, format='png', dpi=600)
+        plt.close()
 
 
 

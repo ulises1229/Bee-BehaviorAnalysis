@@ -67,7 +67,7 @@ def main():
     dates = dateData.keys()
     dates.sort()
 
-    introDict = {
+    uncleanDict = {
         'numDays':len(dateData),
         'firstDay': dates[0],
         'lastDay': dates[-1],
@@ -83,8 +83,9 @@ def main():
         'averageTotalActivity': uncleanAnalysis['averageTotalActivity']
     }
 
-    """cleanDict = {
+    cleanDict = {
 
+        'threshold': threshold,
         'totalElements': cleanData['totalElements'],
         'totalOmmited': cleanData['totalOmmited'],
         'totalClean': cleanData['totalClean'],
@@ -92,14 +93,20 @@ def main():
         'timeIntervals': cleanData['timeIntervals'],
         'totalElements': cleanData['totalElements'],
         'totalOmmited': cleanData['totalOmmited'],
-        'totalClean': cleanData['totalClean']
-    }"""
+        'totalClean': cleanData['totalClean'],
+        'ObsPerDay': cleanAnalysis['ObsPerDay'],
+        'lifeCycle': cleanAnalysis['lifeCycle'],
+        'differentBeesPerDay': cleanAnalysis['differentBeesPerDay'],
+        'continuousBehavior': cleanAnalysis['continuousBehavior'],
+        'continuousBees': cleanAnalysis['continuousBees'],
+        'averageTotalActivity': cleanAnalysis['averageTotalActivity']
+    }
 
     # Generate Latex Report
     report = GenerateReport()
     #FIXME: CALL ONLY ONCE GEN REPORT AND USE AS PARAMETER INTRO DICT AND CLEAN DATA
-    report.generateReport(introDict, 'introduction')
-    #report.generateReport(cleanData, 'cleanData')
+
+    report.generateReport(uncleanDict, cleanDict)
 
     # FIXME: Store all the registers in the DB
     # Connect and store values to the DB

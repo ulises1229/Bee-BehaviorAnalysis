@@ -253,7 +253,7 @@ class AnalizeData:
         xAxis = "Period of Observation (DAYS):\n"
         yAxis = "Observations"
         chartName = "observationsPerday" + type
-        #plot.barplotDictionary(observationsPerDay, title, xAxis, yAxis)
+
         #plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
 
         """----------------------------------------------------------------------------------------
@@ -320,18 +320,18 @@ class AnalizeData:
         # Graph the activity by equivalence classes
 
         title = "Average of the Activity Per Hour"
-        xAxis = ""
-        yAxis = ""
+        xAxis = "Hours"
+        yAxis = "Occurrences"
         chartName = "histogram" + type
-        #plot.plotEquivalenceClass(averageEquivClasses, title, xAxis, yAxis, chartName)
+        plot.plotEquivalenceClass(averageEquivClasses, title, xAxis, yAxis, chartName)
 
 
 
         title = "Average of the Activity Per Hour Including Standard Deviation"
-        xAxis = ""
-        yAxis = ""
+        xAxis = "Hours"
+        yAxis = "Occurrences"
         chartName = "histogramStd" + type
-        #plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses, chartName)
+        plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses, chartName)
 
 
 

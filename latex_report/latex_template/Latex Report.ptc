@@ -9,7 +9,11 @@
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Analysis of Clean Data}{19}{chapter.3}
+\contentsline {chapter}{\numberline {3}Analysis of Clean Data}{21}{chapter.3}
 \ttl@stoptoc {default@2}
 \ttl@starttoc {default@3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Analysis of Foraging Behavior}{33}{chapter.4}
+\ttl@stoptoc {default@3}
+\ttl@starttoc {default@4}
 \contentsfinish 

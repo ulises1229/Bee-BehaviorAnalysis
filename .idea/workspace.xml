@@ -10,15 +10,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/beeLifeCycle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/differentBeesPerday.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/histogram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/histogramStd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/observationsPerday.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/pieBeeLifeCycle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.24-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.25-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.26-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.27-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.28-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.29-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.30-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.08.31-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.01-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.02-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.03-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.04-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.05-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.06-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.07-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.08-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.09-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.10-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.11-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.12-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.13-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.14-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.15-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.16-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.17-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.18-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.19-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.20-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.21-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.22-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.23-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.24-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.25-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.26-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.27-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.28-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.29-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.09.30-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.01-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.02-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.03-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.04-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.05-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.06-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.07-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.08-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.09-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.10-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.11-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.12-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.13-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.14-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.15-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.16-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.17-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.18-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.19-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.20-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.21-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.22-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.23-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.24-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.25-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.26-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.27-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.28-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.29-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.30-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.10.31-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.13-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.14-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.15-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.16-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.17-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.18-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.19-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.20-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.21-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.22-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.23-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.24-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.26-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.27-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2016.11.28-Edison-FZED437D00BN9501.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Template.toc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.pdf" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/import_data.iml" afterPath="$PROJECT_DIR$/.idea/import_data.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/chartNumLectures.png" afterPath="$PROJECT_DIR$/latex_report/latex_template/Pictures/chartNumLectures.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
@@ -46,18 +124,40 @@
     <window id="2">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1212">
-                    <caret line="250" column="63" lean-forward="false" selection-start-line="250" selection-start-column="63" selection-end-line="250" selection-end-column="63" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
+          <splitter split-orientation="horizontal" split-proportion="0.5">
+            <split-first>
+              <leaf>
+                <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="613">
+                        <caret line="158" column="89" lean-forward="false" selection-start-line="158" selection-start-column="89" selection-end-line="158" selection-end-column="89" />
+                        <folding>
+                          <element signature="e#0#18#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <leaf>
+                <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="703">
+                        <caret line="204" column="43" lean-forward="false" selection-start-line="204" selection-start-column="43" selection-end-line="204" selection-end-column="43" />
+                        <folding>
+                          <element signature="e#0#18#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-second>
+          </splitter>
         </state>
       </content>
     </window>
@@ -68,8 +168,8 @@
             <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="352">
-                    <caret line="141" column="32" lean-forward="true" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
+                  <state relative-caret-position="492">
+                    <caret line="331" column="19" lean-forward="false" selection-start-line="331" selection-start-column="19" selection-end-line="331" selection-end-column="19" />
                     <folding>
                       <element signature="e#32#59#0" expanded="true" />
                     </folding>
@@ -88,12 +188,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="85" column="7" lean-forward="true" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="160">
+              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <element signature="e#78#126#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,8 +203,8 @@
       <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1461">
-              <caret line="352" column="56" lean-forward="false" selection-start-line="352" selection-start-column="56" selection-end-line="352" selection-end-column="56" />
+            <state relative-caret-position="906">
+              <caret line="325" column="0" lean-forward="false" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
               <folding>
                 <element signature="e#32#59#0" expanded="true" />
               </folding>
@@ -150,11 +252,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Plot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plots/Plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="781">
+              <caret line="164" column="45" lean-forward="false" selection-start-line="164" selection-start-column="45" selection-end-line="164" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pyplot.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/matplotlib/pyplot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="1465" column="0" lean-forward="false" selection-start-line="1465" selection-start-column="0" selection-end-line="1465" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,9 +283,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getObservations</find>
-      <find>053</find>
-      <find>056</find>
       <find>071</find>
       <find>095</find>
       <find>size</find>
@@ -201,6 +310,9 @@
       <find>intro</find>
       <find>observationsPerDay</find>
       <find>the main</find>
+      <find>activity per day</find>
+      <find>fig.add_image</find>
+      <find>PLOT.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,10 +333,10 @@
         <option value="C:/Python27/Lib/site-packages/pylatex/base_classes/float.py" />
         <option value="$PROJECT_DIR$/import_data/ImportData.py" />
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
-        <option value="$PROJECT_DIR$/plots/Plot.py" />
-        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/latex_report/GenerateReport.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
+        <option value="$PROJECT_DIR$/plots/Plot.py" />
       </list>
     </option>
   </component>
@@ -512,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493105641161</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add two new sections Introduction and analysis of raw data">
+      <created>1493336108103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493336108103</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -533,18 +652,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295519" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23510292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.21554169" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18071654" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20585048" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38003403" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3521249" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295519" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3802817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -553,20 +672,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is a test commit" />
     <MESSAGE value="Clean Complete, date and Id Dictionaries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean Complete, date and Id Dictionaries" />
+    <MESSAGE value="Add two new sections Introduction and analysis of raw data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add two new sections Introduction and analysis of raw data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/latex_report/GenerateReport.py</url>
-          <line>244</line>
+          <line>342</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/latex_report/GenerateReport.py</url>
-          <line>206</line>
+          <line>305</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
+          <line>325</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -579,19 +704,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -613,7 +730,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#78#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -628,7 +747,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#78#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,7 +757,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#78#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -644,7 +767,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#78#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,7 +777,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#78#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -893,14 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plots/Plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/plotly/api/v2/utils.py" />
     <entry file="file://C:/Python27/Lib/site-packages/pylatex/section.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -912,26 +1031,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1212">
-          <caret line="250" column="63" lean-forward="false" selection-start-line="250" selection-start-column="63" selection-end-line="250" selection-end-column="63" />
+        <state relative-caret-position="613">
+          <caret line="158" column="89" lean-forward="false" selection-start-line="158" selection-start-column="89" selection-end-line="158" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="1465" column="0" lean-forward="false" selection-start-line="1465" selection-start-column="0" selection-end-line="1465" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="e#78#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1461">
-          <caret line="352" column="56" lean-forward="false" selection-start-line="352" selection-start-column="56" selection-end-line="352" selection-end-column="56" />
+        <state relative-caret-position="906">
+          <caret line="325" column="0" lean-forward="false" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$PROJECT_DIR$/plots/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="85" column="7" lean-forward="true" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
+        <state relative-caret-position="781">
+          <caret line="164" column="45" lean-forward="false" selection-start-line="164" selection-start-column="45" selection-end-line="164" selection-end-column="45" />
           <folding />
         </state>
       </provider>
