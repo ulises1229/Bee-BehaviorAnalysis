@@ -339,7 +339,7 @@ class GenerateReport:
         buffer = self.readTemplate(template)
 
         print "Enters to introduction"
-        # Add an introductory section and the analysis of unclean data
+        # Add Capter 1: Introductory section
         contents.append(self.addIntroduction(doc, "Introduction", uncleanDict))
 
         doc1 = Document(geometry_options=geometry_options)

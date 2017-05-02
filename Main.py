@@ -19,7 +19,10 @@ def main():
     imp = ImportData()
 
     # FIXME: how to pass by reference all the parameters implement this to reduce the memory footprint
-    noFiles = imp.importCSV(data)
+    noFiles = imp.importInputData(data)
+    if noFiles < 1:
+        print "There are not input Files, Please be sure tu put your input files in the data Directory..."
+        exit(0)
     idData = imp.getIdDictionary()
     dateData = imp.getDateDictionaary()
     completeData = imp.getCompleteDictionary()

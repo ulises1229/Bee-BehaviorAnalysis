@@ -48,7 +48,6 @@ class CleanData:
                         # The value will be stored in a dictionary
                         else:
                             totalClean = totalClean + 1
-                            cleanCompleteDict[i] = defaultdict(list)
                             # The current element exists in the dictionary
                             if i in cleanCompleteDict.keys():
                                 cleanCompleteDict[i][j].append(completeDict[i][j][k])
@@ -59,10 +58,18 @@ class CleanData:
                                 cleanCompleteDict[i][j].append(completeDict[i][j][k])
 
                         timeDifference[i].append(tmpDiff)
+
+                    elif len(completeDict[i][j]) == 1:
+                        # store the unique value to the dict
+                        cleanCompleteDict[i] = defaultdict(list)
+                        if i in cleanCompleteDict.keys():
+                            cleanCompleteDict[i][j].append(completeDict[i][j][k])
+                        else:
+                            cleanCompleteDict[i] = defaultdict(list)
+                            cleanCompleteDict[i][j].append(completeDict[i][j][k])
+
                 if len(timeDifference[i]) > 1:
                     timeDifference[i].sort()
-
-
         results = {
             'cleanCompleteDict': cleanCompleteDict,
             'cleanIdDict': cleanIdDict,

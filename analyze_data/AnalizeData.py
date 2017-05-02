@@ -284,8 +284,6 @@ class AnalizeData:
         # A Continuous behavior is detected if the bee has activity at least once in a day
         continuousBehavior, continuousBees = self.detectContinuousBehavior(sortedDays, beeLifeCycleDays, completeDict)
 
-        # FIXME: MAKE A PLOT OF THIS BEHAVIOR
-
         # First graph different Bees Per Day
         title = "Register of Different Bees per Day"
         xAxis = "Days\n"

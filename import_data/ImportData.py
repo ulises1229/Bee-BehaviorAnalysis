@@ -31,8 +31,21 @@ class ImportData:
         files = []
         for (dirpath, dirnames, filenames) in walk(path):
             files.extend(filenames)
+            print dirnames
+            print filenames
+            print dirpath
             break
         return files
+
+    """ This Function retrieves all the files for a specified path"""
+
+    def exploreDirs(self, path):
+        # Iterate on the path and get the filenames
+        dirs = []
+        for (dirpath, dirnames, filenames) in walk(path):
+            dirs.extend(filenames)
+            break
+        return dirs
 
     # This function adjusts the time to an specific Time Zone
     def adjustTime(self, originalTime, row, tvar):
@@ -48,9 +61,16 @@ class ImportData:
 
     """ This function imports all the values in a CSV file"""
 
-    def importCSV(self, path):
-        #FIXME: CORRECT THE TIMEZONE
-        files = self.exploreFiles(path)
+    def importInputData(self, path):
+        #FIXME:  IMPORT THE data of the chips
+        #files = self.exploreFiles(path)
+        inputFiles = []
+        installationFiles = self.exploreFiles(path + "\\raw_data\\")
+        dataDirs = self.exploreDirs(path)
+        for i in dataDirs:
+            inputFiles.append(self.exploreFiles(path + i))
+
+        #FIXME: INSTANTIATE ALL THE INPUT FILES
         for i in files:
             currentFile = str(path + i)
             #print currentFile
