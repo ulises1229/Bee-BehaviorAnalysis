@@ -14,9 +14,9 @@ import itertools
     Define global variables
 """
 TZDifference = -5;  # -5 hours of difference
-date = []
-time = []
-sensorID = []
+date = [[]]
+time = [[]]
+sensorID = [[]]
 
 
 class ImportData:
@@ -31,9 +31,6 @@ class ImportData:
         files = []
         for (dirpath, dirnames, filenames) in walk(path):
             files.extend(filenames)
-            print dirnames
-            print filenames
-            print dirpath
             break
         return files
 
@@ -43,7 +40,7 @@ class ImportData:
         # Iterate on the path and get the filenames
         dirs = []
         for (dirpath, dirnames, filenames) in walk(path):
-            dirs.extend(filenames)
+            dirs.extend(dirnames)
             break
         return dirs
 
@@ -62,41 +59,50 @@ class ImportData:
     """ This function imports all the values in a CSV file"""
 
     def importInputData(self, path):
-        #FIXME:  IMPORT THE data of the chips
-        #files = self.exploreFiles(path)
-        inputFiles = []
-        installationFiles = self.exploreFiles(path + "\\raw_data\\")
-        dataDirs = self.exploreDirs(path)
+
+        # Get all the files tha contains all the information related to IDs and installation date
+        installationFiles = self.exploreFiles(path + "\\installation_data\\")
+        print installationFiles
+
+        # Get all the files related to raw data
+        rawPath = path + "\\raw_data\\"
+        # This is a list wich contains in each possition a datasate for an specific Hive
+        rawFiles = []
+        # Explore the contents of "path + raw_data" to find all the folders
+        dataDirs = self.exploreDirs(rawPath)
         for i in dataDirs:
-            inputFiles.append(self.exploreFiles(path + i))
+            rawFiles.append(self.exploreFiles(rawPath + i))
 
-        #FIXME: INSTANTIATE ALL THE INPUT FILES
-        for i in files:
-            currentFile = str(path + i)
-            #print currentFile
-            f = open(currentFile) #FIXME: PUT IN A TRY TO VALIDATE IF THERE ARE EMPTY OR DAMAGED FILES
-            for row in csv.reader(f):
-                # Skip first line
-                if row[0][0] == '#':
-                    continue
-                # Remove all the FFFFFF reads those are for test proposses
-                #FIXME: store all the FFFFFF reads for statististical proposes
-                elif row[1][0] != 'F':
-                    # Parse dete and time values
-                    tvar = row[0].find('T')
+        for i in rawFiles:
+            for j in i:
+                try:
+                    currentFile = str(rawPath + i)
+                    #print currentFile
+                    f = open(currentFile) #FIXME: PUT IN A TRY TO VALIDATE IF THERE ARE EMPTY OR DAMAGED FILES
+                    for row in csv.reader(f):
+                        # Skip first line
+                        if row[0][0] == '#':
+                            continue
+                        # Remove all the FFFFFF reads those are for test proposes
+                        #FIXME: store all the FFFFFF reads for statistical proposes
+                        elif row[1][0] != 'F':
+                            # Parse dete and time values
+                            tvar = row[0].find('T')
 
-                    # Parse Time in a 'HH:MM:SS' format
-                    tmp1 = int(row[0][tvar + 1:tvar + 3])
-                    tmp2 = self.adjustTime(tmp1, row[0], tvar)
-                    tmpTime = arrow.get(tmp2, 'HHmmss').time()
-                    time.append(tmpTime)
+                            # Parse Time in a 'HH:MM:SS' format
+                            tmp1 = int(row[0][tvar + 1:tvar + 3])
+                            tmp2 = self.adjustTime(tmp1, row[0], tvar)
+                            tmpTime = arrow.get(tmp2, 'HHmmss').time()
+                            time.append(tmpTime)
 
-                    # Parse Date
-                    tmpDate = arrow.get(row[0][:tvar], 'YYYYMD').date()
-                    date.append (tmpDate)
+                            # Parse Date
+                            tmpDate = arrow.get(row[0][:tvar], 'YYYYMD').date()
+                            date.append (tmpDate)
 
-                    # Parse ID and store it in a list
-                    sensorID.append(row[1][:24])
+                            # Parse ID and store it in a list
+                            sensorID.append(row[1][:24])
+                except csv.Error, e:
+                    sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
 
         return len(files)
 
