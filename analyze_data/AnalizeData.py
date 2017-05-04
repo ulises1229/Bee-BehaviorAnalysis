@@ -257,7 +257,7 @@ class AnalizeData:
         #plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
 
         """----------------------------------------------------------------------------------------
-        2. For how long a bee will be detected a bee? how long a bee will live?
+        2. For how long a bee will be detected? how long a bee will live?
         Observations: taking into account the installation date
         ----------------------------------------------------------------------------------------"""
         beeLifeCycleDays, beeActivityPerDay= self.beeLifeCycleDays(idDict, dateDict, completeDict)
@@ -281,7 +281,7 @@ class AnalizeData:
         # Dictionary ID = 1, 2, ... n  Keys= sortedDays
         sortedDays  = self.getSortedDays(dateDict.keys())
 
-        # A Continuous behavior is detected if the bee has activity at least once in a day
+        # A Continuous behavior is detected if the bee has activity at least once a day
         continuousBehavior, continuousBees = self.detectContinuousBehavior(sortedDays, beeLifeCycleDays, completeDict)
 
         # First graph different Bees Per Day

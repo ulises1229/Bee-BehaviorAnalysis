@@ -8,15 +8,23 @@ import arrow
 from os import walk
 from collections import defaultdict
 import itertools
+import time
+from datetime import datetime
+import datetime
+
 
 
 """
     Define global variables
 """
 TZDifference = -5;  # -5 hours of difference
-date = [[]]
-time = [[]]
-sensorID = [[]]
+
+# This lists store all the global data (complete set of all datasets)
+globaDate = {}
+globalTime = {}
+globalID = {}
+
+installationDates = {}
 
 
 class ImportData:
@@ -44,11 +52,17 @@ class ImportData:
             break
         return dirs
 
-    # This function adjusts the time to an specific Time Zone
     def adjustTime(self, originalTime, row, tvar):
+        """
+        This function adjusts the time to an specific Time Zone
+        :param originalTime:
+        :param row:
+        :param tvar:
+        :return:
+        """
         correctedTime = originalTime + TZDifference
         if (correctedTime < 10):
-            if (correctedTime < 0):  # handle negative cases FIXME: this the past day correct it
+            if (correctedTime < 0):  # handle negative cases FIXME: this is the past day correct it
                 tmp2 = str(24 + correctedTime) + row[tvar + 3:-1]
             else:
                 tmp2 = str(0) + str(originalTime + TZDifference) + row[tvar + 3:-1]
@@ -56,79 +70,167 @@ class ImportData:
             tmp2 = str(originalTime + TZDifference) + row[tvar + 3:-1]
         return tmp2
 
-    """ This function imports all the values in a CSV file"""
-
-    def importInputData(self, path):
-
-        # Get all the files tha contains all the information related to IDs and installation date
-        installationFiles = self.exploreFiles(path + "\\installation_data\\")
-        print installationFiles
-
-        # Get all the files related to raw data
-        rawPath = path + "\\raw_data\\"
-        # This is a list wich contains in each possition a datasate for an specific Hive
-        rawFiles = []
-        # Explore the contents of "path + raw_data" to find all the folders
-        dataDirs = self.exploreDirs(rawPath)
-        for i in dataDirs:
-            rawFiles.append(self.exploreFiles(rawPath + i))
-
+    def importRawData(self, rawFiles, rawPath):
+        """
+        This function imports all the
+        :param rawFiles:
+        :param rawPath:
+        :return:
+        """
         for i in rawFiles:
-            for j in i:
+            # Declare the lists for storing
+            date = []
+            time = []
+            sensorID = []
+            for j in rawFiles[i]:
                 try:
-                    currentFile = str(rawPath + i)
-                    #print currentFile
-                    f = open(currentFile) #FIXME: PUT IN A TRY TO VALIDATE IF THERE ARE EMPTY OR DAMAGED FILES
+                    currentFile = str(rawPath + i + '\\' + j)
+                    # print currentFile
+                    f = open(currentFile)
                     for row in csv.reader(f):
-                        # Skip first line
+                        # Skip first line of the csv
                         if row[0][0] == '#':
                             continue
                         # Remove all the FFFFFF reads those are for test proposes
-                        #FIXME: store all the FFFFFF reads for statistical proposes
+                        # FIXME: store all the FFFFFF reads for statistical proposes
                         elif row[1][0] != 'F':
                             # Parse dete and time values
                             tvar = row[0].find('T')
 
+
+
                             # Parse Time in a 'HH:MM:SS' format
-                            tmp1 = int(row[0][tvar + 1:tvar + 3])
+                            tmp1 = int(row[0][tvar + 1:tvar + 3]) # Extract hour and adjust time zone
                             tmp2 = self.adjustTime(tmp1, row[0], tvar)
+                            # Build a datetime from a string
+                            completeDateTime= datetime.datetime(int (row[0][0:4]), int (row[0][4:6]) , int (row[0][6:tvar]), int (tmp2[:2]) , int (tmp2[2:4]) , int (tmp2[4:6]))
+
+                            # Append date and time to the lists
+                            date.append(completeDateTime.date())
+                            time.append(completeDateTime.time())
+
+                            """
+                            # Parse time
                             tmpTime = arrow.get(tmp2, 'HHmmss').time()
                             time.append(tmpTime)
 
+
                             # Parse Date
                             tmpDate = arrow.get(row[0][:tvar], 'YYYYMD').date()
-                            date.append (tmpDate)
+                            date.append(tmpDate)
+                            """
 
                             # Parse ID and store it in a list
                             sensorID.append(row[1][:24])
+                        #else:
+                        #    print "Unknown value or error in input file" + str(row)
                 except csv.Error, e:
                     sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
+            globaDate[i] = date
+            globalID[i] = sensorID
+            globalTime[i] = time
 
-        return len(files)
+    def importInstallationFiles(self, installationFiles, installationPath):
+        """
+
+        :param installationFiles:
+        :param installationPath:
+        :return:
+        """
+        # sort the name of the installation files to be sure that they will be in order
+        #installationFiles = installationFiles.sort()
+        for i in installationFiles:
+            try:
+                currentFile = str(installationPath + i)
+                f = open(currentFile)
+                for row in csv.reader(f):
+                    # Detects the first digit if it begins with two it is a valid entry
+                    if row[0]:
+                        if row[0][0] == '2':
+                            if row[1] not in installationDates:
+                                installationDates[row[1]] = row[0]
+                            else:
+                                print "Errror: Plaese, check te input installation files" \
+                                      " You have inserted repeated IDs"
+            except csv.Error, e:
+                sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
+
+    def importInputData(self, path):
+        """
+        This method invocates other methods to import input data (raw and installation data)
+        :param path:
+        :return:
+        """
+
+
+        start = time.time()
+        # Get all the files tha contains all the information related to IDs and installation date
+        installationPath = path + "\\installation_data\\"
+        installationFiles = self.exploreFiles(installationPath)
+        self.importInstallationFiles(installationFiles, installationPath)
+        end= time.time()
+        delta = end -start
+        print "Import installation: " + str(delta)
+
+
+        start = time.time()
+        # Get all the files related to raw data
+        rawPath = path + "\\raw_data\\"
+        # This is a list wich contains in each possition a datasate for an specific Hive
+        rawFiles = {}
+        # Explore the contents of "path + raw_data" to find all the folders
+        rawDataDirs = self.exploreDirs(rawPath)
+        for i in rawDataDirs:
+            rawFiles[i] = (self.exploreFiles(rawPath + i))
+        self.importRawData(rawFiles, rawPath)
+        end = time.time()
+        delta = end - start
+        print "Import raw data: " + str(delta)
+
+        return len(globalTime)
+
+
+
+        #return len(files)
 
     def getCompleteDictionary(self):
         # Create a nested dictionary with all the elements ID => Date => Time
-        completeDictionary = {}
-        for i, j ,k in itertools.izip(sensorID, date, time):
-            if i in completeDictionary.keys():
-                completeDictionary[i][j].append(k)
-            else:
-                completeDictionary[i] = defaultdict(list)
-                completeDictionary[i][j].append(k)
-        #print completeDictionary
+        for i  in globalID:
+            completeDictionary = {}
+            for j, k ,l in itertools.izip(globalID[i], globaDate[i], globalTime[i]):
+                if i in completeDictionary.keys():
+                    completeDictionary[j][k].append(k)
+                else:
+                    completeDictionary[j] = defaultdict(list)
+                    completeDictionary[j][k].append(l)
+            #print completeDictionary
         return completeDictionary
 
 
     def getIdDictionary(self):
-        # IdDict = ID => date
-        IdDict = defaultdict(list)
-        for i, j in itertools.izip(sensorID, date):
-            IdDict[i].append(j)
-        return IdDict
+        """
+        This method gets a dictionary which contains all the ID and dates
+        :return:
+        """
+        # completeIdDict = ID => date
+        completeIdDict = {}
+        for i in globalID:
+            idDict = defaultdict(list)
+            for j, k in itertools.izip(globalID[i], globaDate[i]):
+                idDict[j].append(k) #FIXME: CHECK IF THIS IS CORRECT AND APPLY THIS APPORACH TO DATEDICT
+            completeIdDict[i] =  idDict
+        return completeIdDict
 
     def getDateDictionaary(self):
-        # dateDict = Date => time
-        dateDict = defaultdict(list)
-        for i, j in itertools.izip(date, time):
-            dateDict[i].append(j);
-        return dateDict
+        """
+        This method returns a complete dictionary of
+        :return:
+        """
+        # complete dateDict = Date => time
+        completeDateDict = {}
+        for i in globaDate:
+            dateDict = defaultdict(list)
+            for j, k in itertools.izip(globaDate[i], globalTime[i]):
+                dateDict[j].append(k);
+            completeDateDict[i] = dateDict
+        return completeDateDict

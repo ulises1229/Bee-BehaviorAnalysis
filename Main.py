@@ -9,6 +9,7 @@ from plots.Plot import Plot
 from clean_data.CleanData import CleanData
 
 from datetime import datetime, timedelta
+import time
 
 # Data folder
 data = "data/"
@@ -19,7 +20,12 @@ def main():
     imp = ImportData()
 
     # FIXME: how to pass by reference all the parameters implement this to reduce the memory footprint
+    start = time.time()
     noFiles = imp.importInputData(data)
+    end = time.time()
+    delta = end - start
+    print "Duration: " + str(delta)
+
     if noFiles < 1:
         print "There are not input Files, Please be sure tu put your input files in the data Directory..."
         exit(0)

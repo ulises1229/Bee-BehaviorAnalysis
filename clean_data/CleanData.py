@@ -36,7 +36,7 @@ class CleanData:
                     if len(completeDict[i][j]) >= 2:
                         tmpDiff = datetime.strptime(str(completeDict[i][j][k + 1]), FMT) - datetime.strptime(str(completeDict[i][j][k]), FMT)
                         # The value will be discarded and stored in a list
-                        #FIXME: CHECK IF IT IS NECCESARY TO STORE THIS DATE
+                        #FIXME: CHECK IF IT IS NECCESARY TO STORE THIS DATA
                         if (tmpDiff < threshold):
                             totalOmmited = totalOmmited + 1
                             #veriify if the ith element exist
