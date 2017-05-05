@@ -192,7 +192,7 @@ class ImportData:
             completeDictionary = {}
             for j, k ,l in itertools.izip(globalID[i], globaDate[i], globalTime[i]):
                 if j in completeDictionary.keys():
-                    completeDictionary[j][k].append(k)
+                    completeDictionary[j][k].append(l)
                 else:
                     completeDictionary[j] = defaultdict(list)
                     completeDictionary[j][k].append(l)
