@@ -359,12 +359,6 @@ class GenerateReport:
         contents.append("\chapterimage{head5.jpg} % Chapter heading image")
         contents.append("\chapter{Analysis of Foraging Behavior}")
 
-
-
-
-
-
-
         # Add content to the file
         self.addContent(texFile, contents, doc, buffer)
         self.addContent(texFile, contents, doc1, buffer)

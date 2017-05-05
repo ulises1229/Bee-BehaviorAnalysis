@@ -10,114 +10,143 @@ from clean_data.CleanData import CleanData
 
 from datetime import datetime, timedelta
 import time
+import operator
 
 # Data folder
 data = "data/"
 
-def main():
+def sortDates(dates):
+    """
+    This method sorts an input array
+    :param dates:
+    :return:
+    """
+    return sorted(dates)
+    
 
-    # Read all the CSV files and import data
-    imp = ImportData()
+def main():
+    # ------------------------
+    # Object declaration
+    # ------------------------
+    imp = ImportData()      # Import data
+    plot = Plot()           # Plot data
+    clean = CleanData()     # Clean data
+    analyze = AnalizeData() # Analyze unclean data
+
+    #------------------------
+    #Variable declaration
+    #------------------------
+    FMT = '%H:%M:%S'
+    thresholdLostChips = datetime.strptime("00:01:00", FMT)
+    thresholdLostChips = timedelta(hours=thresholdLostChips.hour, minutes=thresholdLostChips.minute,
+                                   seconds=thresholdLostChips.second)
+    thresholdForaging = datetime.strptime("00:20:00", FMT)
+    thresholdForaging = timedelta(hours=thresholdForaging.hour, minutes=thresholdForaging.minute,
+                                   seconds=thresholdForaging.second)
+    cleanDataDict = {}
+    uncleanAnalysis = {}
+    cleanAnalysis = {}
+    cleanDict = {}
+    uncleanDict = {}
 
     # FIXME: how to pass by reference all the parameters implement this to reduce the memory footprint
     start = time.time()
     noFiles = imp.importInputData(data)
+    #noFiles = sorted(noFiles.items(), key=operator.itemgetter(0))
     end = time.time()
     delta = end - start
-    print "Duration: " + str(delta)
+    print "Time Lapse of importation: " + str(delta)
 
     if noFiles < 1:
         print "There are not input Files, Please be sure tu put your input files in the data Directory..."
         exit(0)
+
+    #Get data
     idData = imp.getIdDictionary()
     dateData = imp.getDateDictionaary()
     completeData = imp.getCompleteDictionary()
-    print "Number of files: " + str(noFiles)
-    print "Active Days: " + str(len(dateData))
-    print "Non-Active Days: " + str(noFiles - len(dateData))
 
-    files = {}
-    files['Active Days'] = len(dateData)
-    files['Non-Active Days'] = noFiles - len(dateData)
+    activity = {}
+    # Iteration for analizing all the input data
+    for i in completeData:
+        print "---------------------------------"
+        print "Site Name: " + i
+        print "---------------------------------"
 
-    # FIXME:This plot have to be in other class
-    plot = Plot()
-    #plot.pieChart(files, "chartNumLectures", "Relation: Active VS Non-active Days")
+        print "Number of files: " + str(noFiles[i])
+        print "Active Days: " + str(len(dateData[i]))
+        print "Non-Active Days: " + str(noFiles[i] - len(dateData[i]))
+        print str(noFiles[i] - len(dateData[i]))
+        # Store values of activity for each site
+        activity[i] = {}
+        activity[i]['Active Days'] = len(dateData[i])
+        activity[i]['Non-Active Days'] = noFiles[i] - len(dateData[i])
+
+        # FIXME:This plot has to be in other class
+        chartName=  i + "chartNumLectures"
+        #plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
+
+        print "---------------------------------"
+        print("Cleaning data...\n" + "Threshold: " + str(thresholdLostChips))
+
+        # sorting all dates to select 1st and last date and make a difference
+        sortedDates = sortDates(dateData[i].keys())
+
+        cleanDataDict[i] = clean.removeLostChips( completeData[i], thresholdLostChips)
+
+        # Perform an analysis of clean data
+        cleanAnalysis[i] = analyze.analizeData(cleanDataDict[i]['cleanIdDict'], cleanDataDict[i]['cleanDateDict'],
+                                               cleanDataDict[i]['cleanCompleteDict'], "Clean", i)
+        cleanDict[i] = {}
+        cleanDict[i] = {
+            'thresholdLostChips': thresholdLostChips,
+            'totalElements': cleanDataDict[i]['totalElements'],
+            'totalOmmited': cleanDataDict[i]['totalOmmited'],
+            'totalClean': cleanDataDict[i]['totalClean'],
+            'ommitedValues': cleanDataDict[i]['ommitedValues'],
+            'timeIntervals': cleanDataDict[i]['timeIntervals'],
+            'totalElements': cleanDataDict[i]['totalElements'],
+            'totalOmmited': cleanDataDict[i]['totalOmmited'],
+            'totalClean': cleanDataDict[i]['totalClean'],
+            'ObsPerDay': cleanAnalysis[i]['ObsPerDay'],
+            'lifeCycle': cleanAnalysis[i]['lifeCycle'],
+            'differentBeesPerDay': cleanAnalysis[i]['differentBeesPerDay'],
+            'continuousBehavior': cleanAnalysis[i]['continuousBehavior'],
+            'continuousBees': cleanAnalysis[i]['continuousBees'],
+            'averageTotalActivity': cleanAnalysis[i]['averageTotalActivity']
+        }
+
+        print("Cleaning data process finished..\n" )
 
 
-    # FIXME: CLEAN DATA BEFORE ANALYZE IT
-    # Clean data
-    clean = CleanData()
-    FMT = '%H:%M:%S'
 
-    threshold = datetime.strptime("00:01:00", FMT)
-    threshold = timedelta(hours=threshold.hour, minutes=threshold.minute, seconds=threshold.second)
-    print("Cleaning data...\n" + "Threshold: " + str(threshold))
+        # Performs an analysis of unclean data
+        uncleanAnalysis[i] = analyze.analizeData(idData[i], dateData[i], completeData[i], "Unclean", i)
+        #FIXME: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
+        uncleanDict[i] = {}
+        uncleanDict[i] = {
+            'numDays': len(dateData[i]),
+            'firstDay': sortedDates[0],
+            'lastDay': sortedDates[-1],
+            'totalRegisters': analyze.getTotalObservations(dateData[i]),
+            'totalChips': len(idData[i].keys()),
+            'non-empty': str(len(dateData[i])),
+            'empty-files': str(noFiles[i] - len(dateData[i])),
+            'ObsPerDay': uncleanAnalysis[i]['ObsPerDay'],
+            'lifeCycle': uncleanAnalysis[i]['lifeCycle'],
+            'differentBeesPerDay': uncleanAnalysis[i]['differentBeesPerDay'],
+            'continuousBehavior': uncleanAnalysis[i]['continuousBehavior'],
+            'continuousBees': uncleanAnalysis[i]['continuousBees'],
+            'averageTotalActivity': uncleanAnalysis[i]['averageTotalActivity']
+        }
 
-    """
-    This method returns a dictionary cleanData with the information:
-    'cleanCompleteDict': Dictionary
-    'cleanIdDict': Dictionary
-    'cleanDateDict': Dictionary
-    'ommitedValues': Dictionary
-    'timeIntervals': Dictionary
-    'totalElements': int
-    'totalOmmited':  int
-    'totalClean':    int
-    """
-    cleanData = clean.removeLostChips(idData, dateData, completeData, threshold)
 
-
-    # Analyze unclean data
-    analyze = AnalizeData()
-    uncleanAnalysis = analyze.analizeData(idData, dateData, completeData, "Unclean")
-    cleanAnalysis = analyze.analizeData(cleanData['cleanIdDict'], cleanData['cleanDateDict'], cleanData['cleanCompleteDict'], "Clean")
-
-    dates = dateData.keys()
-    dates.sort()
-
-    uncleanDict = {
-        'numDays':len(dateData),
-        'firstDay': dates[0],
-        'lastDay': dates[-1],
-        'totalRegisters': analyze.getTotalObservations(dateData),
-        'totalChips': len(idData.keys()),
-        'non-empty': str(len(dateData)),
-        'empty-files': str(noFiles - len(dateData)),
-        'ObsPerDay': uncleanAnalysis['ObsPerDay'],
-        'lifeCycle':uncleanAnalysis['lifeCycle'],
-        'differentBeesPerDay': uncleanAnalysis['differentBeesPerDay'],
-        'continuousBehavior': uncleanAnalysis['continuousBehavior'],
-        'continuousBees': uncleanAnalysis['continuousBees'],
-        'averageTotalActivity': uncleanAnalysis['averageTotalActivity']
-    }
-
-    cleanDict = {
-
-        'threshold': threshold,
-        'totalElements': cleanData['totalElements'],
-        'totalOmmited': cleanData['totalOmmited'],
-        'totalClean': cleanData['totalClean'],
-        'ommitedValues': cleanData['ommitedValues'],
-        'timeIntervals': cleanData['timeIntervals'],
-        'totalElements': cleanData['totalElements'],
-        'totalOmmited': cleanData['totalOmmited'],
-        'totalClean': cleanData['totalClean'],
-        'ObsPerDay': cleanAnalysis['ObsPerDay'],
-        'lifeCycle': cleanAnalysis['lifeCycle'],
-        'differentBeesPerDay': cleanAnalysis['differentBeesPerDay'],
-        'continuousBehavior': cleanAnalysis['continuousBehavior'],
-        'continuousBees': cleanAnalysis['continuousBees'],
-        'averageTotalActivity': cleanAnalysis['averageTotalActivity']
-    }
 
     # Generate Latex Report
     report = GenerateReport()
-    #FIXME: CALL ONLY ONCE GEN REPORT AND USE AS PARAMETER INTRO DICT AND CLEAN DATA
-
     report.generateReport(uncleanDict, cleanDict)
 
-    # FIXME: Store all the registers in the DB
+    #FIXME: Store all the registers in the DB
     # Connect and store values to the DB
     #con = mysqlConnect()
     #con.insertData()

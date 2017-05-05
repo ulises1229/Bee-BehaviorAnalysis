@@ -13,7 +13,7 @@ class CleanData:
         This method removes all the test lectures FFFFFF
     """
     #FIXME: IS NOT NECCESARY TO TRANSFEER IDDICT AND DATEDICT
-    def removeLostChips(self, idDict, dateDict, completeDict, threshold):
+    def removeLostChips(self, completeDict, threshold):
 
         cleanCompleteDict = {}
         ommitedValues = {}
@@ -30,11 +30,15 @@ class CleanData:
         for i in completeDict:
             for j in  completeDict[i]:
                 cleanIdDict[i].append(j)
-                for k in range (len(completeDict[i][j])-1):
+                #for k in range (len(completeDict[i][j])-1):
+                for k in completeDict[i][j]:
                     # validate if there are at least two elements the same day
                     totalElements = totalElements + 1
                     if len(completeDict[i][j]) >= 2:
-                        tmpDiff = datetime.strptime(str(completeDict[i][j][k + 1]), FMT) - datetime.strptime(str(completeDict[i][j][k]), FMT)
+                        print completeDict[i][j][k + 1]
+                        print completeDict[i][j][k]
+                        tmpDiff = datetime.strptime(str(completeDict[i][j][k + 1]), FMT) - \
+                                  datetime.strptime(str(completeDict[i][j][k]), FMT)
                         # The value will be discarded and stored in a list
                         #FIXME: CHECK IF IT IS NECCESARY TO STORE THIS DATA
                         if (tmpDiff < threshold):

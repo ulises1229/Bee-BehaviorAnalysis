@@ -3,7 +3,6 @@ __author__ = 'Ulises Olivares'
 from plots.Plot import Plot
 import numpy as np
 import datetime
-import itertools
 from datetime import datetime as dt
 from collections import defaultdict
 import collections
@@ -80,21 +79,18 @@ class AnalizeData:
         list.append(seconds)
         return list
 
-    """
-    """
     def combineDateTime(self, date, time):
         return datetime.datetime.combine(date, time)
 
-    """
-         This method analyzes all the activity and divides the space in 24 buckets = hours per day and make a
+    def getActivityPerHour(self, observationsPerDay, dateDic ):
+        """
+        This method analyzes all the activity and divides the space in 24 buckets = hours per day and make a
          frequency analysis for performing a frequency analysis
          Input:
             ObservationsPerDay = Dictionary date, number of observations per day
          Output:
             DateDic = Dictionary date, time in datetime format
-
-    """
-    def getActivityPerHour(self, observationsPerDay, dateDic ):
+        """
         totalActivity = {}
         for i in observationsPerDay:
             # Fill a list with 0s 24 elements
@@ -105,14 +101,14 @@ class AnalizeData:
             totalActivity[i] = activity
         return totalActivity
 
-    """
-     This method calculates the average of all the activity per hour
-     Input:
-        totalActivity: Dictionary = Date, list[24] with frequencies
-     Output:
-        average: List [24] each position represents the average of the len(totalActivity) days
-    """
     def getAverageActivityPerHour(self, totalActivity):
+        """
+        This method calculates the average of all the activity per hour
+        Input:
+            totalActivity: Dictionary = Date, list[24] with frequencies
+        Output:
+            average: List [24] each position represents the average of the len(totalActivity) days
+        """
         average = [0.0] * 24
         for i in totalActivity:
             for j in range(len(totalActivity[i])):
@@ -233,7 +229,7 @@ class AnalizeData:
 
 
 
-    def analizeData(self, idDict, dateDict, completeDict, type):
+    def analizeData(self, idDict, dateDict, completeDict, type, site):
         """
         This method analizes all input data and additionally, it generates graphs.
         :param idDict:
@@ -252,7 +248,7 @@ class AnalizeData:
         title = "Number of Observations Per Day"
         xAxis = "Period of Observation (DAYS):\n"
         yAxis = "Observations"
-        chartName = "observationsPerday" + type
+        chartName = site + "observationsPerday" + type
 
         #plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
 
@@ -265,21 +261,21 @@ class AnalizeData:
         title = "Life Cycle of a bee in Days"
         xAxis = "Bees"
         yAxis = "Number of Days"
-        chartName = "beeLifeCycle" + type
-        chartName2 = "pieBeeLifeCycle" + type
+        chartName = site + "beeLifeCycle" + type
+        chartName2 = site + "pieBeeLifeCycle" + type
         #plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
         #plot.pieChartBeeLifeCycle(beeLifeCycleDays,chartName2, title)
-        #print beeActivityPerDay
         """----------------------------------------------------------------------------------------
         3. How many different bees are active per day?
         ----------------------------------------------------------------------------------------"""
         #self.differentObservationsPerDay(completeDict, beeLifeCycleDays)
-
         # Dictionary => Date => ID
         differentBeesPerDay = self.differentBeesPerDay(idDict)
 
+        #FIXME: MAKE A COLOR MAP WITH MAPPLOTLIB OF THIS
         # Dictionary ID = 1, 2, ... n  Keys= sortedDays
         sortedDays  = self.getSortedDays(dateDict.keys())
+
 
         # A Continuous behavior is detected if the bee has activity at least once a day
         continuousBehavior, continuousBees = self.detectContinuousBehavior(sortedDays, beeLifeCycleDays, completeDict)
@@ -288,7 +284,7 @@ class AnalizeData:
         title = "Register of Different Bees per Day"
         xAxis = "Days\n"
         yAxis = "Number of bees"
-        chartName = "differentBeesPerday" + type
+        chartName = site + "differentBeesPerday" + type
 
         #plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
 
@@ -320,7 +316,7 @@ class AnalizeData:
         title = "Average of the Activity Per Hour"
         xAxis = "Hours"
         yAxis = "Occurrences"
-        chartName = "histogram" + type
+        chartName = site + "histogram" + type
         plot.plotEquivalenceClass(averageEquivClasses, title, xAxis, yAxis, chartName)
 
 
@@ -328,7 +324,7 @@ class AnalizeData:
         title = "Average of the Activity Per Hour Including Standard Deviation"
         xAxis = "Hours"
         yAxis = "Occurrences"
-        chartName = "histogramStd" + type
+        chartName = site + "histogramStd" + type
         plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses, chartName)
 
 
@@ -340,6 +336,9 @@ class AnalizeData:
         #8. Make a scatter plot of all observations
 
         #9. detect Nocturnal behavior
+
+        #10. Detect if there were interaction between sites
+
 
 
         dict = {

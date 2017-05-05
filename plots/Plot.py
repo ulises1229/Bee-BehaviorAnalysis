@@ -6,11 +6,10 @@ import plotly
 #FIXME: READ THE USER AND THE API KEY FROM A .INI FILE
 plotly.tools.set_credentials_file(username='ulises1229', api_key='IBElW0dqjDEJXCuozFGy')
 import plotly.graph_objs as go
-#from collections
 import os
 
 class Plot:
-    figPath = '\\latex_report\\latex_template\\Pictures\\'
+    figPath = '\\latex_report\\latex_template\\Pictures\\plots\\'
 
     def __init__(self):
         """put code here"""
@@ -148,9 +147,15 @@ class Plot:
         py.image.save_as(fig, filename=fileName)
 
     def plotEquivalenceClass(self, inputData, title, xAxisTitle, yAxisTitle, chartName):
-
-
-
+        """
+        This method generates a histogram
+        :param inputData:
+        :param title:
+        :param xAxisTitle:
+        :param yAxisTitle:
+        :param chartName:
+        :return:
+        """
         labels = ["label%d" % i for i in xrange(len(inputData))]
         x = range(len(inputData))
         y = inputData

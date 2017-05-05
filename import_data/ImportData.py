@@ -161,50 +161,43 @@ class ImportData:
         :param path:
         :return:
         """
+        lenDict = {}
 
-
-        start = time.time()
         # Get all the files tha contains all the information related to IDs and installation date
         installationPath = path + "\\installation_data\\"
         installationFiles = self.exploreFiles(installationPath)
         self.importInstallationFiles(installationFiles, installationPath)
-        end= time.time()
-        delta = end -start
-        print "Import installation: " + str(delta)
 
-
-        start = time.time()
         # Get all the files related to raw data
         rawPath = path + "\\raw_data\\"
         # This is a list wich contains in each possition a datasate for an specific Hive
         rawFiles = {}
+
         # Explore the contents of "path + raw_data" to find all the folders
         rawDataDirs = self.exploreDirs(rawPath)
+        rawDataDirs.sort(reverse=True)
         for i in rawDataDirs:
             rawFiles[i] = (self.exploreFiles(rawPath + i))
+            lenDict[i] = len(rawFiles[i])
         self.importRawData(rawFiles, rawPath)
-        end = time.time()
-        delta = end - start
-        print "Import raw data: " + str(delta)
-
-        return len(globalTime)
-
-
-
-        #return len(files)
+        return lenDict
 
     def getCompleteDictionary(self):
-        # Create a nested dictionary with all the elements ID => Date => Time
+        """
+        This method creates a nested dictionary with all the elements ID => Date => Time
+        :return:
+        """
+        fullDict = {}
         for i  in globalID:
             completeDictionary = {}
             for j, k ,l in itertools.izip(globalID[i], globaDate[i], globalTime[i]):
-                if i in completeDictionary.keys():
+                if j in completeDictionary.keys():
                     completeDictionary[j][k].append(k)
                 else:
                     completeDictionary[j] = defaultdict(list)
                     completeDictionary[j][k].append(l)
-            #print completeDictionary
-        return completeDictionary
+            fullDict[i] = completeDictionary
+        return fullDict
 
 
     def getIdDictionary(self):
