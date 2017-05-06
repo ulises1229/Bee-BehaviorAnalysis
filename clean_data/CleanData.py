@@ -31,12 +31,10 @@ class CleanData:
             for j in  completeDict[i]:
                 cleanIdDict[i].append(j)
                 #for k in range (len(completeDict[i][j])-1):
-                for k in completeDict[i][j]:
+                for k in range (len(completeDict[i][j])):
                     # validate if there are at least two elements the same day
                     totalElements = totalElements + 1
                     if len(completeDict[i][j]) >= 2:
-                        print completeDict[i][j][k + 1]
-                        print completeDict[i][j][k]
                         tmpDiff = datetime.strptime(str(completeDict[i][j][k + 1]), FMT) - \
                                   datetime.strptime(str(completeDict[i][j][k]), FMT)
                         # The value will be discarded and stored in a list
