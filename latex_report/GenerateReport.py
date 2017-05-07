@@ -308,7 +308,7 @@ class GenerateReport:
                 outFile.write(line)
 
 
-    def generateReport(self, uncleanDict, cleanDict):
+    def generateReport(self, uncleanDict, cleanDict, site):
         """
         :param uncleanDict: Dictionary that contains all the information
         :param type: This parameter denotes

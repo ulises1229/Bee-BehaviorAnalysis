@@ -141,10 +141,10 @@ def main():
         }
 
 
-    #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
-    # Generate Latex Report
-    report = GenerateReport()
-    report.generateReport(uncleanDict, cleanDict)
+        #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
+        # Generate Latex Report
+        report = GenerateReport()
+        report.generateReport(uncleanDict, cleanDict, i)
 
     #FIXME: Store all the registers in the DB
     # Connect and store values to the DB
