@@ -274,6 +274,8 @@ class AnalizeData:
 
         #FIXME: MAKE A COLOR MAP WITH MAPPLOTLIB OF THIS
         # Dictionary ID = 1, 2, ... n  Keys= sortedDays
+
+
         sortedDays  = self.getSortedDays(dateDict.keys())
 
 
@@ -338,6 +340,8 @@ class AnalizeData:
         #9. detect Nocturnal behavior
 
         #10. Detect if there were interaction between sites
+
+        #11. Make line plots and maps
 
 
 

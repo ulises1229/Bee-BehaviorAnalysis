@@ -29,9 +29,9 @@ class CleanData:
 
         for i in completeDict:
             for j in  completeDict[i]:
-                cleanIdDict[i].append(j)
+
                 #for k in range (len(completeDict[i][j])-1):
-                for k in range (len(completeDict[i][j])):
+                for k in range (len(completeDict[i][j])-1):
                     # validate if there are at least two elements the same day
                     totalElements = totalElements + 1
                     if len(completeDict[i][j]) >= 2:
@@ -51,9 +51,11 @@ class CleanData:
                         else:
                             totalClean = totalClean + 1
                             # The current element exists in the dictionary
+                            #FIXME: CHECK IF THIS PART IS CORRECT
+                            cleanIdDict[i].append(j)
+                            cleanDateDict[j].append(completeDict[i][j][k])
                             if i in cleanCompleteDict.keys():
                                 cleanCompleteDict[i][j].append(completeDict[i][j][k])
-                                cleanDateDict[j].append(completeDict[i][j][k])
                             # The element doesn't exists
                             else:
                                 cleanCompleteDict[i] = defaultdict(list)

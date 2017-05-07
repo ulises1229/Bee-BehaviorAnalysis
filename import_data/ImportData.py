@@ -188,16 +188,24 @@ class ImportData:
         :return:
         """
         fullDict = {}
+        completeDateDict = {}
+        completeIdDict = {}
         for i  in globalID:
             completeDictionary = {}
+            idDict = defaultdict(list)
+            dateDict = defaultdict(list)
             for j, k ,l in itertools.izip(globalID[i], globaDate[i], globalTime[i]):
+                idDict[j].append(k)
+                dateDict[k].append(l)
                 if j in completeDictionary.keys():
                     completeDictionary[j][k].append(l)
                 else:
                     completeDictionary[j] = defaultdict(list)
                     completeDictionary[j][k].append(l)
             fullDict[i] = completeDictionary
-        return fullDict
+            completeIdDict[i] = idDict
+            completeDateDict[i] = dateDict
+        return completeIdDict, completeDateDict, fullDict
 
 
     def getIdDictionary(self):
@@ -208,10 +216,20 @@ class ImportData:
         # completeIdDict = ID => date
         completeIdDict = {}
         for i in globalID:
+            id = 0
+            date = 0
             idDict = defaultdict(list)
+
             for j, k in itertools.izip(globalID[i], globaDate[i]):
+                if j not in idDict.keys():
+                    id = id + 1
                 idDict[j].append(k) #FIXME: CHECK IF THIS IS CORRECT AND APPLY THIS APPORACH TO DATEDICT
+                date = date +1
             completeIdDict[i] =  idDict
+        print "Id Dict: Total Elements: ID: " + str(id) + " Date: " + str(date)
+
+        for i in completeIdDict:
+            print " Ids: " + str(len(completeIdDict[i].keys())) + " Dates: " + str(len(completeIdDict[i].values()))
         return completeIdDict
 
     def getDateDictionaary(self):

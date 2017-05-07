@@ -62,9 +62,9 @@ def main():
         exit(0)
 
     #Get data
-    idData = imp.getIdDictionary()
-    dateData = imp.getDateDictionaary()
-    completeData = imp.getCompleteDictionary()
+    #idData, dateData, completeData = imp.getIdDictionary()
+    #dateData = imp.getDateDictionaary()
+    idData, dateData, completeData = imp.getCompleteDictionary()
 
     activity = {}
     # Iteration for analizing all the input data
@@ -141,7 +141,7 @@ def main():
         }
 
 
-
+    #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
     # Generate Latex Report
     report = GenerateReport()
     report.generateReport(uncleanDict, cleanDict)
