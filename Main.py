@@ -117,7 +117,7 @@ def main():
         }
 
         print("Cleaning data process finished..\n" )
-        print cleanDict['numDays']
+
 
 
 
@@ -141,11 +141,12 @@ def main():
             'averageTotalActivity': uncleanAnalysis[i]['averageTotalActivity']
         }
 
+        print uncleanDict[i]['numDays']
 
         #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
         # Generate Latex Report
         report = GenerateReport()
-        report.generateReport(uncleanDict, cleanDict, i)
+        report.generateReport(uncleanDict[i], cleanDict[i], i)
 
     #FIXME: Store all the registers in the DB
     # Connect and store values to the DB

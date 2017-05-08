@@ -1,0 +1,774 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  My documentation report
+%  Objetive: Explain what I did and how, so someone can continue with the investigation
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,letterpaper]{geometry} % Page margins
+
+\usepackage{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{52,177,201} % Define the orange color used for highlighting throughout the book
+
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+%Tables
+\usepackage{tabularx}
+\usepackage{longtable,tabu}
+
+% Bibliography
+\usepackage[style=alphabetic,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % BibTeX bibliography file
+\defbibheading{bibempty}{}
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1.25]{cover}}} % Image background
+\centering
+\vspace*{4cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{\color{white}Data Mining for Bee Micro-sensors}\\
+{\Huge\color{white} Laboratorio Nacional de Análisis y Síntesis Ecológica}\par % Book title
+\vspace*{0.2cm}
+%Add all the collaborators
+%{\LARGE\color{white} Laboratorio Nacional de Análisis y Síntesis Ecológica}\par % Author name
+{\LARGE\color{white} Framework Developed by:\\ Ulises Olivares, Gloria Ruiz, Maria J. Aguilar, Oliverio Delgado, Francisco J. Balvino, Mauricio Quesada }\par % Author name
+\endgroup
+
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+%\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
+
+\noindent \textsc{High Performance Computing applied to biological sciences, Universidad Nacional Autónoma de México - Escuela Nacional de de Estudios Superiores Unidad Morelia - Laboratorio Nacional de Análisis y Síntesis Ecológica }\\
+
+\noindent  This work was supported by grants from Consejo Nacional de Ciencia y Tecnología (CONACyT: Laboratorio Nacional de Análisis y Síntesis Ecológica U-3-2015-2-250996, CONACYT and CONACyT: Propuesta para eldesarrollo de una infraestructura tecnológica para lacreación de repositorios masivos de datos biológicos con fines de conservación y análisis de información I0028-2015-02-271432, CONACYT).\\ % License information
+
+\noindent \textit{First release, April 2017} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.jpg} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+\chapterimage{head2.jpg} % Chapter heading image
+
+\chapter{Introduction}
+
+%INSERT_CONTENT_HERE
+\normalsize%
+\section*{Introduction}%
+The main propose of this document  is to show a concise report about the activity of bees and behavior in a specific period of time. This report also shows a complete analysis of the most active hours.\newline%
+\newline%
+Tis report corresponds to a period of time of 70 day(s). From 2016{-}07{-}01 to 2016{-}11{-}19. During this period of time, a total amount of 1113295 lectures were registered from 72 different bees. There exist a total of 20 non{-}active days. We define an 'active day' if there is more than one observation. (see Figure1.1).\newline%
+\newline%
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=315px]{chartNumLectures.png}%
+\caption{Days with and without Empty Reads}%
+\end{figure}
+
+
+\chapterimage{head3.jpg} % Chapter heading image
+\chapter{Analysis of Raw Data}
+\normalsize%
+\subsection*{Activity Per Day of Raw Data}%
+This section addresses the analysis of raw data. Which implies that this date is presented without filters or a data preprocessing step to clean the data. This section presents severalgraphs which reflects the behavior of a beehive during a specific period of time.%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{observationsPerdayUnclean.png}%
+\caption{Number of Observations per Day}%
+\end{figure}
+
+%
+\begin{longtabu}{| c | c | c | c |}%
+\hline%
+Day&Date&\# Observations&\# Bees per day\\%
+\hline%
+1&2016{-}07{-}01&5&2\\%
+\hline%
+2&2016{-}07{-}03&3&1\\%
+\hline%
+3&2016{-}07{-}04&5&1\\%
+\hline%
+4&2016{-}07{-}08&20&4\\%
+\hline%
+5&2016{-}07{-}09&91&5\\%
+\hline%
+6&2016{-}07{-}10&8&1\\%
+\hline%
+7&2016{-}07{-}11&11&2\\%
+\hline%
+8&2016{-}07{-}12&3&2\\%
+\hline%
+9&2016{-}07{-}13&1&1\\%
+\hline%
+10&2016{-}07{-}14&689&2\\%
+\hline%
+11&2016{-}07{-}15&377&4\\%
+\hline%
+12&2016{-}07{-}16&980&3\\%
+\hline%
+13&2016{-}07{-}17&135&3\\%
+\hline%
+14&2016{-}07{-}18&4&1\\%
+\hline%
+15&2016{-}07{-}19&6&1\\%
+\hline%
+16&2016{-}07{-}20&7&2\\%
+\hline%
+17&2016{-}07{-}22&1&1\\%
+\hline%
+18&2016{-}07{-}23&16023&27\\%
+\hline%
+19&2016{-}07{-}24&73807&28\\%
+\hline%
+20&2016{-}07{-}25&83741&12\\%
+\hline%
+21&2016{-}07{-}26&73707&13\\%
+\hline%
+22&2016{-}07{-}27&67496&7\\%
+\hline%
+23&2016{-}07{-}28&15132&3\\%
+\hline%
+24&2016{-}07{-}29&9108&1\\%
+\hline%
+25&2016{-}07{-}30&69867&2\\%
+\hline%
+26&2016{-}07{-}31&75743&4\\%
+\hline%
+27&2016{-}08{-}01&125216&4\\%
+\hline%
+28&2016{-}08{-}02&152995&6\\%
+\hline%
+29&2016{-}08{-}03&54565&6\\%
+\hline%
+30&2016{-}08{-}04&65197&4\\%
+\hline%
+31&2016{-}08{-}05&66056&3\\%
+\hline%
+32&2016{-}10{-}10&7&4\\%
+\hline%
+33&2016{-}10{-}11&7&5\\%
+\hline%
+34&2016{-}10{-}12&7&4\\%
+\hline%
+35&2016{-}10{-}13&5&2\\%
+\hline%
+36&2016{-}10{-}14&3&3\\%
+\hline%
+37&2016{-}10{-}15&1&1\\%
+\hline%
+38&2016{-}10{-}16&15&2\\%
+\hline%
+39&2016{-}10{-}17&7&1\\%
+\hline%
+40&2016{-}10{-}18&18&2\\%
+\hline%
+41&2016{-}10{-}19&3&2\\%
+\hline%
+42&2016{-}10{-}20&14&2\\%
+\hline%
+43&2016{-}10{-}21&5&1\\%
+\hline%
+44&2016{-}10{-}22&2&1\\%
+\hline%
+45&2016{-}10{-}23&8&1\\%
+\hline%
+46&2016{-}10{-}24&4&3\\%
+\hline%
+47&2016{-}10{-}25&17&2\\%
+\hline%
+48&2016{-}10{-}26&3&1\\%
+\hline%
+49&2016{-}10{-}27&8&2\\%
+\hline%
+50&2016{-}10{-}28&4&1\\%
+\hline%
+51&2016{-}10{-}29&310&2\\%
+\hline%
+52&2016{-}10{-}30&1&1\\%
+\hline%
+53&2016{-}10{-}31&27&2\\%
+\hline%
+54&2016{-}11{-}01&9&2\\%
+\hline%
+55&2016{-}11{-}02&1&1\\%
+\hline%
+56&2016{-}11{-}03&5&2\\%
+\hline%
+57&2016{-}11{-}04&8&2\\%
+\hline%
+58&2016{-}11{-}05&3&1\\%
+\hline%
+59&2016{-}11{-}06&1&1\\%
+\hline%
+60&2016{-}11{-}07&1&1\\%
+\hline%
+61&2016{-}11{-}08&23&1\\%
+\hline%
+62&2016{-}11{-}09&10&1\\%
+\hline%
+63&2016{-}11{-}10&8&1\\%
+\hline%
+64&2016{-}11{-}11&1&1\\%
+\hline%
+65&2016{-}11{-}13&1&1\\%
+\hline%
+66&2016{-}11{-}15&1&1\\%
+\hline%
+67&2016{-}11{-}16&15804&1\\%
+\hline%
+68&2016{-}11{-}17&59508&1\\%
+\hline%
+69&2016{-}11{-}18&54868&1\\%
+\hline%
+70&2016{-}11{-}19&31568&1\\%
+\hline%
+\hline%
+{-}{-}&Average&15904&3\\%
+\hline%
+\hline%
+\end{longtabu}
+
+%
+\subsection*{Bee Life Cycle}%
+In this section is analyzed the Life Cycle of each bee in the hive%
+\begin{longtabu}{| c | c | c |}%
+\hline%
+\hline%
+Register&Bee ID&Life Cycle in Days\\%
+\hline%
+\hline%
+1&61DC&1\\%
+\hline%
+2&0000&1\\%
+\hline%
+3&14DC&1\\%
+\hline%
+4&0087&1\\%
+\hline%
+5&0062&1\\%
+\hline%
+6&0071&1\\%
+\hline%
+7&0002&1\\%
+\hline%
+8&0010&1\\%
+\hline%
+9&0014&2\\%
+\hline%
+10&0031&2\\%
+\hline%
+11&0032&1\\%
+\hline%
+12&0036&2\\%
+\hline%
+13&0045&3\\%
+\hline%
+14&0046&2\\%
+\hline%
+15&0053&1\\%
+\hline%
+16&0054&2\\%
+\hline%
+17&0065&4\\%
+\hline%
+18&0066&1\\%
+\hline%
+19&0067&1\\%
+\hline%
+20&0072&10\\%
+\hline%
+21&0074&1\\%
+\hline%
+22&0077&5\\%
+\hline%
+23&0080&4\\%
+\hline%
+24&0083&2\\%
+\hline%
+25&0111&7\\%
+\hline%
+26&0114&1\\%
+\hline%
+27&0116&4\\%
+\hline%
+28&0119&6\\%
+\hline%
+29&0125&2\\%
+\hline%
+30&0126&1\\%
+\hline%
+31&0128&1\\%
+\hline%
+32&0129&1\\%
+\hline%
+33&0136&4\\%
+\hline%
+34&0145&1\\%
+\hline%
+35&0151&12\\%
+\hline%
+36&0160&7\\%
+\hline%
+37&0167&2\\%
+\hline%
+38&0168&1\\%
+\hline%
+39&0170&2\\%
+\hline%
+40&0176&14\\%
+\hline%
+41&0177&1\\%
+\hline%
+42&0178&1\\%
+\hline%
+43&0187&2\\%
+\hline%
+44&0189&13\\%
+\hline%
+45&0192&1\\%
+\hline%
+46&0197&2\\%
+\hline%
+47&0201&2\\%
+\hline%
+48&0203&4\\%
+\hline%
+49&0204&5\\%
+\hline%
+50&0208&2\\%
+\hline%
+51&0213&4\\%
+\hline%
+52&0217&3\\%
+\hline%
+53&0219&1\\%
+\hline%
+54&0222&1\\%
+\hline%
+55&0223&1\\%
+\hline%
+56&0228&3\\%
+\hline%
+57&0231&4\\%
+\hline%
+58&0234&2\\%
+\hline%
+59&0243&4\\%
+\hline%
+60&0244&1\\%
+\hline%
+61&0246&1\\%
+\hline%
+62&0453&5\\%
+\hline%
+63&0482&2\\%
+\hline%
+64&0493&1\\%
+\hline%
+65&0526&1\\%
+\hline%
+66&0530&1\\%
+\hline%
+67&0533&5\\%
+\hline%
+68&0537&16\\%
+\hline%
+69&0541&26\\%
+\hline%
+70&0570&1\\%
+\hline%
+71&0571&1\\%
+\hline%
+72&0581&14\\%
+\hline%
+\hline%
+{-}{-}&Average&3\\%
+\hline%
+\hline%
+\end{longtabu}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{differentBeesPerdayUnclean.png}%
+\caption{Different Bees Per Day}%
+\end{figure}
+
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{beeLifeCycleUnclean.png}%
+\caption{Bee Life cycle in days}%
+\end{figure}
+
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{pieBeeLifeCycleUnclean.png}%
+\caption{Bee Life cycle in days}%
+\end{figure}
+
+%
+\subsection*{Analysis of Activity per Hour}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{histogramUnclean.png}%
+\caption{Histogram of frequencies per hour}%
+\end{figure}
+
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{histogramStdUnclean.png}%
+\caption{Histogram of frequencies per hour. It includes standard deviation}%
+\end{figure}
+
+
+\chapterimage{head4.jpg} % Chapter heading image
+\chapter{Analysis of Clean Data}
+\normalsize%
+\subsection*{Activity Per Day of Clean Data}%
+In this section is presented an analysis of input data. During this analysis some filters were applied. One of these filters is the definition of a threshold which removes all the observations that fall in a period of time less than 60 seconds. This preprocessing step tends to  remove all the lost chips which generated unnecessary and repeated registers %
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{observationsPerdayClean.png}%
+\caption{Number of Observations per Day}%
+\end{figure}
+
+%
+\begin{longtabu}{| c | c | c | c |}%
+\hline%
+Day&Date&\# Observations&\# Bees per day\\%
+\hline%
+1&2016{-}07{-}08&5&3\\%
+\hline%
+2&2016{-}07{-}09&15&3\\%
+\hline%
+3&2016{-}07{-}10&1&1\\%
+\hline%
+4&2016{-}07{-}11&7&2\\%
+\hline%
+5&2016{-}07{-}12&1&1\\%
+\hline%
+6&2016{-}07{-}14&38&2\\%
+\hline%
+7&2016{-}07{-}15&64&4\\%
+\hline%
+8&2016{-}07{-}16&97&2\\%
+\hline%
+9&2016{-}07{-}17&26&3\\%
+\hline%
+10&2016{-}07{-}18&3&1\\%
+\hline%
+11&2016{-}07{-}19&2&1\\%
+\hline%
+12&2016{-}07{-}20&2&2\\%
+\hline%
+13&2016{-}07{-}23&131&19\\%
+\hline%
+14&2016{-}07{-}24&311&19\\%
+\hline%
+15&2016{-}07{-}25&482&9\\%
+\hline%
+16&2016{-}07{-}26&414&7\\%
+\hline%
+17&2016{-}07{-}27&450&5\\%
+\hline%
+18&2016{-}07{-}28&19&2\\%
+\hline%
+19&2016{-}07{-}29&79&1\\%
+\hline%
+20&2016{-}07{-}30&80&2\\%
+\hline%
+21&2016{-}07{-}31&11&3\\%
+\hline%
+22&2016{-}08{-}01&104&2\\%
+\hline%
+23&2016{-}08{-}02&60&3\\%
+\hline%
+24&2016{-}08{-}03&209&2\\%
+\hline%
+25&2016{-}08{-}04&246&3\\%
+\hline%
+26&2016{-}08{-}05&185&2\\%
+\hline%
+27&2016{-}10{-}10&2&2\\%
+\hline%
+28&2016{-}10{-}11&1&1\\%
+\hline%
+29&2016{-}10{-}12&2&2\\%
+\hline%
+30&2016{-}10{-}13&3&2\\%
+\hline%
+31&2016{-}10{-}16&2&2\\%
+\hline%
+32&2016{-}10{-}18&4&1\\%
+\hline%
+33&2016{-}10{-}19&1&1\\%
+\hline%
+34&2016{-}10{-}20&6&2\\%
+\hline%
+35&2016{-}10{-}21&1&1\\%
+\hline%
+36&2016{-}10{-}22&1&1\\%
+\hline%
+37&2016{-}10{-}23&1&1\\%
+\hline%
+38&2016{-}10{-}24&1&1\\%
+\hline%
+39&2016{-}10{-}25&5&2\\%
+\hline%
+40&2016{-}10{-}26&2&1\\%
+\hline%
+41&2016{-}10{-}27&5&1\\%
+\hline%
+42&2016{-}10{-}28&2&1\\%
+\hline%
+43&2016{-}10{-}29&7&1\\%
+\hline%
+44&2016{-}10{-}31&2&2\\%
+\hline%
+45&2016{-}11{-}01&1&1\\%
+\hline%
+46&2016{-}11{-}03&3&2\\%
+\hline%
+47&2016{-}11{-}04&4&2\\%
+\hline%
+48&2016{-}11{-}05&1&1\\%
+\hline%
+49&2016{-}11{-}08&5&1\\%
+\hline%
+50&2016{-}11{-}09&2&1\\%
+\hline%
+51&2016{-}11{-}10&3&1\\%
+\hline%
+52&2016{-}11{-}16&16&1\\%
+\hline%
+\hline%
+{-}{-}&Average&60&2\\%
+\hline%
+\hline%
+\end{longtabu}
+
+%
+\subsection*{Bee Life Cycle}%
+\begin{longtabu}{| c | c | c |}%
+\hline%
+\hline%
+Register&Bee ID&Life Cycle in Days\\%
+\hline%
+\hline%
+1&0062&1\\%
+\hline%
+2&0071&1\\%
+\hline%
+3&0014&1\\%
+\hline%
+4&0031&2\\%
+\hline%
+5&0045&2\\%
+\hline%
+6&0046&1\\%
+\hline%
+7&0053&1\\%
+\hline%
+8&0054&2\\%
+\hline%
+9&0065&1\\%
+\hline%
+10&0066&1\\%
+\hline%
+11&0072&10\\%
+\hline%
+12&0077&4\\%
+\hline%
+13&0080&2\\%
+\hline%
+14&0111&1\\%
+\hline%
+15&0114&1\\%
+\hline%
+16&0116&3\\%
+\hline%
+17&0119&6\\%
+\hline%
+18&0125&2\\%
+\hline%
+19&0126&1\\%
+\hline%
+20&0128&1\\%
+\hline%
+21&0129&1\\%
+\hline%
+22&0136&4\\%
+\hline%
+23&0145&1\\%
+\hline%
+24&0151&8\\%
+\hline%
+25&0160&6\\%
+\hline%
+26&0167&1\\%
+\hline%
+27&0170&2\\%
+\hline%
+28&0176&14\\%
+\hline%
+29&0178&1\\%
+\hline%
+30&0187&1\\%
+\hline%
+31&0189&13\\%
+\hline%
+32&0201&2\\%
+\hline%
+33&0203&4\\%
+\hline%
+34&0204&5\\%
+\hline%
+35&0208&2\\%
+\hline%
+36&0213&4\\%
+\hline%
+37&0217&2\\%
+\hline%
+38&0222&1\\%
+\hline%
+39&0223&1\\%
+\hline%
+40&0228&1\\%
+\hline%
+41&0231&3\\%
+\hline%
+42&0234&2\\%
+\hline%
+43&0243&1\\%
+\hline%
+44&0244&1\\%
+\hline%
+45&0246&1\\%
+\hline%
+46&0453&1\\%
+\hline%
+47&0533&4\\%
+\hline%
+48&0537&14\\%
+\hline%
+49&0541&26\\%
+\hline%
+50&0581&13\\%
+\hline%
+\hline%
+{-}{-}&Average&3\\%
+\hline%
+\hline%
+\end{longtabu}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{differentBeesPerdayClean.png}%
+\caption{Different Bees Per Day}%
+\end{figure}
+
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{beeLifeCycleClean.png}%
+\caption{Bee Life cycle in days}%
+\end{figure}
+
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{pieBeeLifeCycleClean.png}%
+\caption{Bee Life cycle in days}%
+\end{figure}
+
+%
+\subsection*{Analysis of Activity per Hour}%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{histogramClean.png}%
+\caption{Histogram of frequencies per hour}%
+\end{figure}
+
+%
+
+
+\begin{figure}[h!]%
+\centering%
+\includegraphics[width=400px]{histogramStdClean.png}%
+\caption{Histogram of frequencies per hour. It includes standard deviation}%
+\end{figure}
+
+
+\chapterimage{head5.jpg} % Chapter heading image
+\chapter{Analysis of Foraging Behavior}
+
+\end{document}

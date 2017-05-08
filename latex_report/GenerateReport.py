@@ -118,7 +118,7 @@ class GenerateReport:
                        " were applied. One of these filters is the definition of a threshold which removes all"
                        " the observations that fall in a period of time less than {} seconds. This preprocessing step tends to"
                        "  remove all the lost chips which generated unnecessary and repeated registers"
-                       " ".format(cleanDict['threshold'].seconds))
+                       " ".format(cleanDict['thresholdLostChips'].seconds))
 
             with doc.create(Figure(position='h!')) as fig:
                 fig.add_image("observationsPerdayClean.png", width='400px')
@@ -245,7 +245,7 @@ class GenerateReport:
         :param path:
         :return:
         """
-        print "the path is" + str(path)
+        #print "the path is" + str(path)
         files = []
         # FIXME: put a try to avoid getting warning or errer if a file is open
         # Detect all the existing files
