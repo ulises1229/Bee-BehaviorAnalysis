@@ -166,7 +166,7 @@ class Plot:
                 tmpX.append("0" + str(i))
             else:
                 tmpX.append(str(i))
-        print tmpX
+        #print tmpX
         #FIXME: DISPLAY XTICKS IN HOUR FORMAT
         plt.xticks(x, fontsize=7)
         plt.yticks(y, fontsize=7)

@@ -297,7 +297,7 @@ class AnalizeData:
         timeInterval = self.activityPerDay(dateDict)
         #get the average of activity per day = single timedelta value
         averageTotalActivity = self.averageTotalActivity(timeInterval)
-        print "Average total activity: " + str(averageTotalActivity)
+        print "Site: " + site  + " Average total activity: " + str(averageTotalActivity)
 
         """----------------------------------------------------------------------------------------
         5. What are the most active hours within a day?

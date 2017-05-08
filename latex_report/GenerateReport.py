@@ -213,6 +213,8 @@ class GenerateReport:
         :return:
         """
 
+        print "Number of days: " + str(introDict['numDays'])
+
         # --------------------------------------------------------------------------------------------
         #                                        INTRODUCTION
         # --------------------------------------------------------------------------------------------
@@ -310,6 +312,7 @@ class GenerateReport:
 
     def generateReport(self, uncleanDict, cleanDict, site):
         """
+        This methods generates a PDF report for each site
         :param uncleanDict: Dictionary that contains all the information
         :param type: This parameter denotes
         :return:
@@ -338,7 +341,8 @@ class GenerateReport:
         # Reads the template and store it in a buffer
         buffer = self.readTemplate(template)
 
-        print "Enters to introduction"
+        #FIXME: ADD A CHAPTER FOR EACH SITE
+
         # Add Capter 1: Introductory section
         contents.append(self.addIntroduction(doc, "Introduction", uncleanDict))
 

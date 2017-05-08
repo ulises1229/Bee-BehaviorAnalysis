@@ -117,6 +117,7 @@ def main():
         }
 
         print("Cleaning data process finished..\n" )
+        print cleanDict['numDays']
 
 
 
@@ -125,7 +126,7 @@ def main():
         #FIXME: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
         uncleanDict[i] = {}
         uncleanDict[i] = {
-            'numDays': len(dateData[i]),
+            'numDays': len(dateData[i].keys()),
             'firstDay': sortedDates[0],
             'lastDay': sortedDates[-1],
             'totalRegisters': analyze.getTotalObservations(dateData[i]),
