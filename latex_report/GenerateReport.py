@@ -370,5 +370,5 @@ class GenerateReport:
 
         # Generate the PDF file using pdf_latex
         #FIXME: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
-        print "Path:" + str(path)
+        #print "Path:" + str(path)
         self.generatePDF(path)

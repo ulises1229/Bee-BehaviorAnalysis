@@ -177,6 +177,9 @@ class Plot:
         plt.title(title)
 
         fileName = os.getcwd() + self.figPath + chartName + ".png"
+        if fileName.count("\latex_report\latex_template") > 1:
+            fileName = fileName.replace('\\latex_report\\latex_template' , '', 1)
+
         plt.savefig(fileName, format='png', dpi=600)
         plt.close()
 
@@ -194,6 +197,8 @@ class Plot:
         plt.bar(x , y , align='center' , color='blue', yerr=std, alpha=0.8)
         #plt.show()
         fileName = os.getcwd() + self.figPath + chartName + ".png"
+        if fileName.count("\latex_report\latex_template") > 1:
+            fileName = fileName.replace('\latex_report\latex_template' , '', 1)
         plt.savefig(fileName, format='png', dpi=600)
         plt.close()
 

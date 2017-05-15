@@ -28,10 +28,12 @@ def main():
     # ------------------------
     # Object declaration
     # ------------------------
-    imp = ImportData()      # Import data
-    plot = Plot()           # Plot data
-    clean = CleanData()     # Clean data
-    analyze = AnalizeData() # Analyze unclean data
+    imp = ImportData()          # Import data
+    plot = Plot()               # Plot data
+    clean = CleanData()         # Clean data
+    analyze = AnalizeData()     # Analyze unclean data
+    report = GenerateReport()   # Generate report of analyzed data
+
 
     #------------------------
     #Variable declaration
@@ -143,7 +145,7 @@ def main():
 
         #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
         # Generate Latex Report
-        report = GenerateReport()
+        #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
         report.generateReport(uncleanDict[i], cleanDict[i], i)
 
     #FIXME: Store all the registers in the DB
