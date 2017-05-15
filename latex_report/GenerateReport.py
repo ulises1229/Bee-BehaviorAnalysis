@@ -292,7 +292,7 @@ class GenerateReport:
             buffer = inFile.readlines()
         return buffer
 
-    def addContent(self, texFile, contents, doc, buffer):
+    def addContent(self, texFile, contents, buffer):
         """
         This Function takes an input list and add its contents to a tex file
         :param texFile: Path of the tex file
@@ -336,7 +336,7 @@ class GenerateReport:
         contents = []
 
         # Removes previous generated files
-        self.removePreviousFiles(path)
+        #self.removePreviousFiles(path)
 
         # Reads the template and store it in a buffer
         buffer = self.readTemplate(template)
@@ -367,11 +367,11 @@ class GenerateReport:
         contents.append("\chapter{Analysis of Foraging Behavior}")
 
         # Add content to the file
-        self.addContent(texFile, contents, doc, buffer)
-        self.addContent(texFile, contents, doc1, buffer)
-        self.addContent(texFile, contents, doc2, buffer)
+        self.addContent(texFile, contents, buffer)
+        #self.addContent(texFile, contents, buffer)
+        #self.addContent(texFile, contents, buffer)
 
         # Generate the PDF file using pdf_latex
         #FIXME: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
         #print "Path:" + str(path)
-        self.generatePDF(path)
+        #self.generatePDF(path)

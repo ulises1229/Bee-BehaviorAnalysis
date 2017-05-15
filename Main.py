@@ -10,7 +10,7 @@ from clean_data.CleanData import CleanData
 
 from datetime import datetime, timedelta
 import time
-import operator
+import os
 
 # Data folder
 data = "data/"
@@ -147,6 +147,12 @@ def main():
         # Generate Latex Report
         #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
         report.generateReport(uncleanDict[i], cleanDict[i], i)
+
+    workingDir = os.getcwd()
+    path = workingDir + '\latex_report\latex_template\\'
+    if path.count("\latex_report\latex_template") > 1:
+        path = path.replace('\latex_report\latex_template', '', 1)
+    report.generatePDF(path)
 
     #FIXME: Store all the registers in the DB
     # Connect and store values to the DB
