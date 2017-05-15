@@ -141,8 +141,6 @@ def main():
             'averageTotalActivity': uncleanAnalysis[i]['averageTotalActivity']
         }
 
-        print uncleanDict[i]['numDays']
-
         #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
         # Generate Latex Report
         report = GenerateReport()

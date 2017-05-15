@@ -2134,4 +2134,13 @@
       <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
         <bcf:field>gender</bcf:field>
       </bcf:constraint>
-    </bcf:cons
+    </bcf:constraints>
+  </bcf:datamodel>
+  <!-- CITATION DATA -->
+  <!-- SECTION 0 -->
+  <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex">bibliography.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="0">
+  </bcf:section>
+</bcf:controlfile>

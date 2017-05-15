@@ -213,7 +213,7 @@ class GenerateReport:
         :return:
         """
 
-        print "Number of days: " + str(introDict['numDays'])
+        #print "Number of days: " + str(introDict['numDays'])
 
         # --------------------------------------------------------------------------------------------
         #                                        INTRODUCTION
@@ -271,11 +271,11 @@ class GenerateReport:
         error = ''
         for i in range(3):
             devnull = open(os.devnull, 'wb')
-            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
-                                    stdout=subprocess.PIPE, stderr=devnull)
-            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
-            output, error = proc.communicate()
-            #proc.communicate()
+            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
+            #                        stdout=subprocess.PIPE, stderr=devnull)
+            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
+            #output, error = proc.communicate()
+            proc.communicate()
         if os.path.isfile(path + "Latex Report.pdf") and error != 'None':
             print "PDF Report generated Correctly"
         else:
@@ -369,4 +369,6 @@ class GenerateReport:
         self.addContent(texFile, contents, doc2, buffer)
 
         # Generate the PDF file using pdf_latex
+        #FIXME: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
+        print "Path:" + str(path)
         self.generatePDF(path)
