@@ -344,6 +344,9 @@ class GenerateReport:
         #FIXME: ADD A CHAPTER FOR EACH SITE
 
         # Add Capter 1: Introductory section
+        contents.append("\part{" + str(site)+ "}")
+        contents.append("\chapterimage{head2.jpg} % Chapter heading image")
+        contents.append("\chapter{Introduction}")
         contents.append(self.addIntroduction(doc, "Introduction", uncleanDict))
 
         doc1 = Document(geometry_options=geometry_options)

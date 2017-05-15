@@ -11,17 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="Add two new sections Introduction and analysis of raw data">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.out" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.pdf" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.toc" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.toc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/GenerateReport.py" afterPath="$PROJECT_DIR$/latex_report/GenerateReport.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.aux" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.bcf" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.bcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.log" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.run.xml" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.run.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Plot.py" afterPath="$PROJECT_DIR$/plots/Plot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/Template.tex" afterPath="$PROJECT_DIR$/latex_report/latex_template/Template.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex_report/latex_template/structure.tex" afterPath="$PROJECT_DIR$/latex_report/latex_template/structure.tex" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,8 +55,8 @@
       <file leaf-file-name="ImportData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4488">
-              <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+            <state relative-caret-position="22">
+              <caret line="192" column="27" lean-forward="true" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
               <folding>
                 <element signature="e#78#88#0" expanded="true" />
               </folding>
@@ -81,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
@@ -111,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+            <state relative-caret-position="436">
+              <caret line="376" column="8" lean-forward="true" selection-start-line="376" selection-start-column="8" selection-end-line="376" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -204,15 +197,16 @@
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
         <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
         <option value="$PROJECT_DIR$/plots/Plot.py" />
-        <option value="$PROJECT_DIR$/latex_report/GenerateReport.py" />
         <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/latex_report/GenerateReport.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="978" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -519,7 +513,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="978" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20510396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -531,7 +525,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18032786" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20585048" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39862543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39411098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,16 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4488">
-          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-          <folding>
-            <element signature="e#78#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/Hill.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -934,18 +918,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="147" column="81" lean-forward="false" selection-start-line="147" selection-start-column="81" selection-end-line="147" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="192" column="27" lean-forward="true" selection-start-line="192" selection-start-column="27" selection-end-line="192" selection-end-column="27" />
+          <folding>
+            <element signature="e#78#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="376" column="8" lean-forward="true" selection-start-line="376" selection-start-column="8" selection-end-line="376" selection-end-column="8" />
           <folding />
         </state>
       </provider>
