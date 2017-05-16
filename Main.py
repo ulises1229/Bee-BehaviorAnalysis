@@ -50,6 +50,7 @@ def main():
     cleanAnalysis = {}
     cleanDict = {}
     uncleanDict = {}
+    reportContent = {}     # Contains the latex document in a str format
 
     # FIXME: how to pass by reference all the parameters implement this to reduce the memory footprint
     start = time.time()
@@ -146,13 +147,11 @@ def main():
         #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
         # Generate Latex Report
         #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
-        report.generateReport(uncleanDict[i], cleanDict[i], i)
+        reportContent[i] = report.generateLatexContent(uncleanDict[i], cleanDict[i], i)
 
-    workingDir = os.getcwd()
-    path = workingDir + '\latex_report\latex_template\\'
-    if path.count("\latex_report\latex_template") > 1:
-        path = path.replace('\latex_report\latex_template', '', 1)
-    report.generatePDF(path)
+    # Generate the .tex file
+    report.generateReport(reportContent)
+
 
     #FIXME: Store all the registers in the DB
     # Connect and store values to the DB

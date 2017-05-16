@@ -2,7 +2,7 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}Morelia Hive 2}{5}{part.1}
+\contentsline {part}{I\hspace {1em}Morelia Hive 1}{5}{part.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
 \ttl@starttoc {default@1}
@@ -11,11 +11,29 @@
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Analysis of Clean Data}{19}{chapter.3}
+\contentsline {chapter}{\numberline {3}Analysis of Clean Data}{23}{chapter.3}
 \ttl@stoptoc {default@2}
 \ttl@starttoc {default@3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Analysis of Foraging Behavior}{29}{chapter.4}
+\contentsline {chapter}{\numberline {4}Analysis of Foraging Behavior}{35}{chapter.4}
 \ttl@stoptoc {default@3}
 \ttl@starttoc {default@4}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{II\hspace {1em}Morelia Hive 2}{37}{part.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Introduction}{39}{chapter.5}
+\ttl@stoptoc {default@4}
+\ttl@starttoc {default@5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Analysis of Raw Data}{41}{chapter.6}
+\ttl@stoptoc {default@5}
+\ttl@starttoc {default@6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Analysis of Clean Data}{51}{chapter.7}
+\ttl@stoptoc {default@6}
+\ttl@starttoc {default@7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Analysis of Foraging Behavior}{61}{chapter.8}
+\ttl@stoptoc {default@7}
+\ttl@starttoc {default@8}
 \contentsfinish 

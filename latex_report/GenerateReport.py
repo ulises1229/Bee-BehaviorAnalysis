@@ -11,6 +11,7 @@ class GenerateReport:
 
     doc = Document()
 
+
     def __init__(self):
         """
         """
@@ -271,11 +272,11 @@ class GenerateReport:
         error = ''
         for i in range(3):
             devnull = open(os.devnull, 'wb')
-            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
-            #                        stdout=subprocess.PIPE, stderr=devnull)
-            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
-            #output, error = proc.communicate()
-            proc.communicate()
+            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
+                                    stdout=subprocess.PIPE, stderr=devnull)
+            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
+            output, error = proc.communicate()
+            #proc.communicate()
         if os.path.isfile(path + "Latex Report.pdf") and error != 'None':
             print "PDF Report generated Correctly"
         else:
@@ -306,17 +307,56 @@ class GenerateReport:
                 if (line.find("%INSERT_CONTENT_HERE")!= -1):
                     # Add all the content form the contents list
                     for i in contents:
-                        line = line + i + '\n'
+                        line = line + i
                 outFile.write(line)
 
+    def generateReport(self, contents):
+        """
 
-    def generateReport(self, uncleanDict, cleanDict, site):
+        :param contents:
+        :return:
+        """
+        print contents
+
+        workingDir = os.getcwd()
+        path = workingDir + '\latex_report\latex_template\\'
+        if path.count("\latex_report\latex_template") > 1:
+            path = path.replace('\latex_report\latex_template', '', 1)
+        template = path + "Template.tex"
+        texFile = path + "Latex Report.tex"
+
+        # Append the all the content
+        totalContent = ""
+        for i in contents:
+            for j in contents[i]:
+                totalContent = totalContent + str(j)
+
+        # Reads the template and store it in a buffer
+        buffer = self.readTemplate(template)
+
+        # Add content to the file
+        self.addContent(texFile,totalContent, buffer)
+
+        # FIXME: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
+        # Generate the PDF file using pdf_latex
+        self.generatePDF(path)
+
+
+
+
+    def generateLatexContent(self, uncleanDict, cleanDict, site):
         """
         This methods generates a PDF report for each site
-        :param uncleanDict: Dictionary that contains all the information
+        :param uncleanDict: Dictifindonary that contains all the information
         :param type: This parameter denotes
         :return:
         """
+        contents = []
+
+        workingDir = os.getcwd()
+        path = workingDir + '\latex_report\latex_template\\'
+        if path.count("\latex_report\latex_template") > 1:
+            path = path.replace('\latex_report\latex_template', '', 1)
 
         geometry_options = {
             "landscape": False,
@@ -327,51 +367,36 @@ class GenerateReport:
         }
         # Variable definition
         doc = Document(geometry_options=geometry_options)
-        workingDir = os.getcwd()
-        path = workingDir + '\latex_report\latex_template\\'
-        if path.count("\latex_report\latex_template") > 1:
-            path = path.replace('\latex_report\latex_template' , '', 1)
-        template = path + "Template.tex"
-        texFile = path + "Latex Report.tex"
-        contents = []
 
         # Removes previous generated files
-        #self.removePreviousFiles(path)
+        self.removePreviousFiles(path)
 
-        # Reads the template and store it in a buffer
-        buffer = self.readTemplate(template)
+
 
         #FIXME: ADD A CHAPTER FOR EACH SITE
 
         # Add Capter 1: Introductory section
-        contents.append("\part{" + str(site)+ "}")
-        contents.append("\chapterimage{head2.jpg} % Chapter heading image")
-        contents.append("\chapter{Introduction}")
+        contents.append("\part{" + str(site)+ "}\n")
+        contents.append("\chapterimage{head2.jpg} % Chapter heading image \n")
+        contents.append("\chapter{Introduction} \n")
         contents.append(self.addIntroduction(doc, "Introduction", uncleanDict))
 
         doc1 = Document(geometry_options=geometry_options)
         #Add Chapter 2 analysis of RAW data
-        contents.append("\chapterimage{head3.jpg} % Chapter heading image")
-        contents.append("\chapter{Analysis of Raw Data}")
+        contents.append("\chapterimage{head3.jpg} % Chapter heading image \n")
+        contents.append("\chapter{Analysis of Raw Data} \n")
         contents.append(self.addActivityUncleanData(doc1, uncleanDict))
 
         doc2 = Document(geometry_options=geometry_options)
         #Add chapter 3 analysis of clean data
-        contents.append("\chapterimage{head4.jpg} % Chapter heading image")
-        contents.append("\chapter{Analysis of Clean Data}")
+        contents.append("\chapterimage{head4.jpg} % Chapter heading image \n")
+        contents.append("\chapter{Analysis of Clean Data}\n")
         contents.append(self.addActivityCleanData(doc2, cleanDict))
 
         doc3 = Document(geometry_options=geometry_options)
         #Add chapter 4 foraging behavior
-        contents.append("\chapterimage{head5.jpg} % Chapter heading image")
-        contents.append("\chapter{Analysis of Foraging Behavior}")
+        contents.append("\chapterimage{head5.jpg} % Chapter heading image\n")
+        contents.append("\chapter{Analysis of Foraging Behavior}\n")
 
-        # Add content to the file
-        self.addContent(texFile, contents, buffer)
-        #self.addContent(texFile, contents, buffer)
-        #self.addContent(texFile, contents, buffer)
+        return contents
 
-        # Generate the PDF file using pdf_latex
-        #FIXME: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
-        #print "Path:" + str(path)
-        #self.generatePDF(path)

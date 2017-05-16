@@ -27,3 +27,5 @@ pip install pyplot
 #install perl
 http://www.activestate.com/activeperl/downloads
 
+https://www.latex-project.org/get/
+
