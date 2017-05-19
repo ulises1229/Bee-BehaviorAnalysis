@@ -371,8 +371,6 @@ class GenerateReport:
         # Removes previous generated files
         self.removePreviousFiles(path)
 
-
-
         #FIXME: ADD A CHAPTER FOR EACH SITE
 
         # Add Capter 1: Introductory section

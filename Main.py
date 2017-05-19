@@ -70,7 +70,9 @@ def main():
     idData, dateData, completeData = imp.getCompleteDictionary()
 
     activity = {}
-    # Iteration for analizing all the input data
+
+    # Iteration for analizing all the input data of independent sites
+    """
     for i in completeData:
         print "---------------------------------"
         print "Site Name: " + i
@@ -125,7 +127,7 @@ def main():
 
 
         # Performs an analysis of unclean data
-        uncleanAnalysis[i] = analyze.analizeData(idData[i], dateData[i], completeData[i], "Unclean", i)
+        uncleanAnalysis[i] = analyze.analizeSingleSite(idData[i], dateData[i], completeData[i], "Unclean", i)
         #FIXME: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
         uncleanDict[i] = {}
         uncleanDict[i] = {
@@ -148,6 +150,11 @@ def main():
         # Generate Latex Report
         #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
         reportContent[i] = report.generateLatexContent(uncleanDict[i], cleanDict[i], i)
+    """
+
+    # Analysis of all sites
+    analyze.analizeAllSites(completeData);
+
 
     # Generate the .tex file
     report.generateReport(reportContent)

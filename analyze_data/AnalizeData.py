@@ -229,7 +229,7 @@ class AnalizeData:
 
 
 
-    def analizeData(self, idDict, dateDict, completeDict, type, site):
+    def analizeSingleSite(self, idDict, dateDict, completeDict, type, site):
         """
         This method analizes all input data and additionally, it generates graphs.
         :param idDict:
@@ -355,6 +355,35 @@ class AnalizeData:
 
         }
         return dict
+
+
+    def getNumberIds(self, completeData):
+        """
+
+        :return:
+        """
+        id = {}
+        for i in completeData:
+            id[i] = len(completeData[i].keys())
+        return id
+
+    def analizeAllSites(self, completeData):
+        #TODO: VERIFY HOW MANY SITES ARE SUPPORTED WITHOUT DEFORMING GRAPHS
+        """
+        This method analyzes a complete
+        :param completeData:
+        :return:
+        """
+        """----------------------------------------------------------------------------------------
+        1. Get the number of total ID and observations for each site
+        ----------------------------------------------------------------------------------------"""
+        #Number of ids
+        ids = self.getNumberIds(completeData)
+
+
+
+
+
 
 
 
