@@ -8,7 +8,6 @@ import arrow
 from os import walk
 from collections import defaultdict
 import itertools
-import time
 from datetime import datetime
 import datetime
 
@@ -152,8 +151,10 @@ class ImportData:
                             else:
                                 print "Errror: Plaese, check te input installation files" \
                                       " You have inserted repeated IDs"
+                return installationDates
             except csv.Error, e:
                 sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
+
 
     def importInputData(self, path):
         """
@@ -163,10 +164,11 @@ class ImportData:
         """
         lenDict = {}
 
-        # Get all the files tha contains all the information related to IDs and installation date
+        # Get all the files tha contains the information related to IDs and installation date
         installationPath = path + "\\installation_data\\"
         installationFiles = self.exploreFiles(installationPath)
-        self.importInstallationFiles(installationFiles, installationPath)
+        print "The installation dates files are: " +  str(installationFiles)
+        print self.importInstallationFiles(installationFiles, installationPath)
 
         # Get all the files related to raw data
         rawPath = path + "\\raw_data\\"
@@ -205,7 +207,7 @@ class ImportData:
             fullDict[i] = completeDictionary
             completeIdDict[i] = idDict
             completeDateDict[i] = dateDict
-        return completeIdDict, completeDateDict, fullDict
+        return completeIdDict, completeDateDict, fullDict, installationDates
 
 
     def getIdDictionary(self):

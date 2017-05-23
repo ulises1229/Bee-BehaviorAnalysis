@@ -362,10 +362,29 @@ class AnalizeData:
 
         :return:
         """
-        id = {}
+        ids = {}
         for i in completeData:
-            id[i] = len(completeData[i].keys())
-        return id
+            ids[i] = len(completeData[i].keys())
+        return ids
+
+    def getNumRegisters(self, completeData):
+
+        registers = {}
+
+        for i in completeData:
+            totalCount = 0
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    print len(completeData[i][j][k])
+                    print completeData[i][j][k]
+                    totalCount = totalCount + len(completeData[i][j][k])
+
+            registers[i] = totalCount
+        return registers
+
+
+    #def detectLostChips(self, completeData, installationDates):
+    #    for i in completeData:
 
     def analizeAllSites(self, completeData):
         #TODO: VERIFY HOW MANY SITES ARE SUPPORTED WITHOUT DEFORMING GRAPHS
@@ -374,11 +393,31 @@ class AnalizeData:
         :param completeData:
         :return:
         """
+
+        #Object Declaration
+        plot = Plot()   #Make plots
+
         """----------------------------------------------------------------------------------------
-        1. Get the number of total ID and observations for each site
+            1. Get the number of total ID and observations for each site
         ----------------------------------------------------------------------------------------"""
         #Number of ids
         ids = self.getNumberIds(completeData)
+        registers = self.getNumRegisters(completeData)
+        # TODO: generate a plot of this graph of these two values
+
+
+        """----------------------------------------------------------------------------------------
+            2. Check how many chips were lost using the original installation information
+        ----------------------------------------------------------------------------------------"""
+
+
+
+
+
+
+
+
+
 
 
 

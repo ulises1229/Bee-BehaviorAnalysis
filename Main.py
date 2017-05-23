@@ -67,7 +67,8 @@ def main():
     #Get data
     #idData, dateData, completeData = imp.getIdDictionary()
     #dateData = imp.getDateDictionaary()
-    idData, dateData, completeData = imp.getCompleteDictionary()
+    idData, dateData, completeData, installationDates= imp.getCompleteDictionary()
+    print "The installation dates are:" + str(installationDates)
 
     activity = {}
 
@@ -157,7 +158,7 @@ def main():
 
 
     # Generate the .tex file
-    report.generateReport(reportContent)
+    #report.generateReport(reportContent)
 
 
     #FIXME: Store all the registers in the DB
