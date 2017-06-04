@@ -30,3 +30,8 @@ http://www.activestate.com/activeperl/downloads
 #It is madatory to install latex and enable the automation of package installation
 https://www.latex-project.org/get/
 
+#--------------------------
+# How to USE the framework
+#--------------------------
+It is necessary to put the same name in the folder that contains all the observatios (Site) and the name of the installation files
+

@@ -316,8 +316,6 @@ class GenerateReport:
         :param contents:
         :return:
         """
-        print contents
-
         workingDir = os.getcwd()
         path = workingDir + '\latex_report\latex_template\\'
         if path.count("\latex_report\latex_template") > 1:

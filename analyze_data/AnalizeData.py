@@ -6,6 +6,8 @@ import datetime
 from datetime import datetime as dt
 from collections import defaultdict
 import collections
+from clean_data.CleanData import CleanData
+from datetime import datetime, timedelta
 
 start = []
 end = []
@@ -375,18 +377,43 @@ class AnalizeData:
             totalCount = 0
             for j in completeData[i]:
                 for k in completeData[i][j]:
-                    print len(completeData[i][j][k])
-                    print completeData[i][j][k]
                     totalCount = totalCount + len(completeData[i][j][k])
 
             registers[i] = totalCount
         return registers
 
 
-    #def detectLostChips(self, completeData, installationDates):
-    #    for i in completeData:
+    def detectForeignKeys(self, completeData, installationDates):
+        outData = {}
+        for i in (completeData):
+            totalLocal= 0
+            totalForeign = 0
+            local = defaultdict(list)
+            foreign = defaultdict(list)
+            for j in completeData[i]:
+                outData[i] = {}
+                flagLocal = False
+                for k in installationDates:
+                    keys = installationDates[k].keys()
+                    keysSize = len(keys)
+                    if j in keys:
+                        if i == k: # The key is found in the same site
+                            flagLocal = True
+                            totalLocal = totalLocal + 1
+                            local[i].append(j)
+                        else:      # The key was found in a different site
+                            totalForeign = totalForeign + 1
+                            foreign[i].append(j)
+            outData[i]["foreign"] = totalForeign
+            outData[i]["local"] = totalLocal
+            outData[i]["foreignList"] = foreign
+            outData[i]["localList"] = local
+            outData[i]["installationSize"] = keysSize
+        return outData
 
-    def analizeAllSites(self, completeData):
+
+
+    def analizeAllSites(self, completeData, installationDates):
         #TODO: VERIFY HOW MANY SITES ARE SUPPORTED WITHOUT DEFORMING GRAPHS
         """
         This method analyzes a complete
@@ -405,24 +432,31 @@ class AnalizeData:
         registers = self.getNumRegisters(completeData)
         # TODO: generate a plot of this graph of these two values
 
+        """----------------------------------------------------------------------------------------
+            2. Check how many chips were lost using the original installation information and if there was an interchange between hives
+        ----------------------------------------------------------------------------------------"""
+        foreign = self.detectForeignKeys(completeData, installationDates)
+        # TODO: Generate a plot of this
 
         """----------------------------------------------------------------------------------------
-            2. Check how many chips were lost using the original installation information
+            3. Get the duration between one register and other in different intervals 5, 10, 15, and 20 minutes
+        ----------------------------------------------------------------------------------------"""
+        clean = CleanData()  # Clean data
+        FMT = '%H:%M:%S'
+
+        threshold = [ datetime.strptime("00:05:00", FMT), datetime.strptime("00:10:00", FMT),
+                       datetime.strptime("00:15:00", FMT), datetime.strptime("00:20:00", FMT)]
+        cleanData = {}
+        for i in threshold:
+            cleanData[i] = {}
+            for j in completeData:
+                cleanData[i][j] = clean.removeLostChips( completeData[j], i)
+
+
+        """----------------------------------------------------------------------------------------
+            4. Detect Nocturnal behavior
         ----------------------------------------------------------------------------------------"""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        """----------------------------------------------------------------------------------------
+            5. Classsify in an histogram per week in four equivalence classes
+        ----------------------------------------------------------------------------------------"""

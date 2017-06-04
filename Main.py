@@ -68,7 +68,6 @@ def main():
     #idData, dateData, completeData = imp.getIdDictionary()
     #dateData = imp.getDateDictionaary()
     idData, dateData, completeData, installationDates= imp.getCompleteDictionary()
-    print "The installation dates are:" + str(installationDates)
 
     activity = {}
 
@@ -154,7 +153,7 @@ def main():
     """
 
     # Analysis of all sites
-    analyze.analizeAllSites(completeData);
+    analyze.analizeAllSites(completeData, installationDates);
 
 
     # Generate the .tex file

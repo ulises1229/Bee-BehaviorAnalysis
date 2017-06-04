@@ -140,6 +140,8 @@ class ImportData:
         #installationFiles = installationFiles.sort()
         for i in installationFiles:
             try:
+                tmpI = i[:-4]
+                installationDates[tmpI] = {}
                 currentFile = str(installationPath + i)
                 f = open(currentFile)
                 for row in csv.reader(f):
@@ -147,14 +149,23 @@ class ImportData:
                     if row[0]:
                         if row[0][0] == '2':
                             if row[1] not in installationDates:
-                                installationDates[row[1]] = row[0]
+                                time = row[0]
+                                year = row[0][0:4]
+                                month = row[0][4:6]
+                                day =  row[0][6:8]
+
+                                #print "Complete date: " + str(row[0]) + " year: " + str(year) + " month: " + str(month) + " day " + str(day)
+                                tmp = datetime.datetime(int(year), int(month), int(day),0,0,0)
+                                installationDates[tmpI][row[1]] = tmp.date()
+                                #installationDates[]= datetime.datetime(int (row[0][0:4]), int (row[0][4:6]) , int (row[0][6:tvar]), int (tmp2[:2]) , int (tmp2[2:4]) , int (tmp2[4:6]))
+
                             else:
                                 print "Errror: Plaese, check te input installation files" \
                                       " You have inserted repeated IDs"
-                return installationDates
+
             except csv.Error, e:
                 sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
-
+        return installationDates
 
     def importInputData(self, path):
         """
@@ -167,8 +178,7 @@ class ImportData:
         # Get all the files tha contains the information related to IDs and installation date
         installationPath = path + "\\installation_data\\"
         installationFiles = self.exploreFiles(installationPath)
-        print "The installation dates files are: " +  str(installationFiles)
-        print self.importInstallationFiles(installationFiles, installationPath)
+        self.importInstallationFiles(installationFiles, installationPath)
 
         # Get all the files related to raw data
         rawPath = path + "\\raw_data\\"

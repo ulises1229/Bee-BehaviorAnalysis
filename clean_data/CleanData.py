@@ -29,8 +29,6 @@ class CleanData:
 
         for i in completeDict:
             for j in  completeDict[i]:
-
-                #for k in range (len(completeDict[i][j])-1):
                 for k in range (len(completeDict[i][j])-1):
                     # validate if there are at least two elements the same day
                     totalElements = totalElements + 1
