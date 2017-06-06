@@ -7,7 +7,7 @@ from datetime import datetime as dt
 from collections import defaultdict
 import collections
 from clean_data.CleanData import CleanData
-from datetime import datetime, timedelta
+from datetime import  timedelta
 
 start = []
 end = []
@@ -51,8 +51,8 @@ class AnalizeData:
             for k in range (len(dateDictionary[i])):
                 list.append(dateDictionary[i][k])
             list.sort()
-            start.append(list[0])
-            end.append(list[len(list)-1])
+            #start.append(list[0])
+            #end.append(list[len(list)-1])
             difference.append(datetime.datetime.combine(i ,list[-1]) - datetime.datetime.combine(i ,list[0]))
 
             #print str(list[0].hour) + " " + str(list[0].minute) + " " + str(list[0].second)
@@ -252,7 +252,7 @@ class AnalizeData:
         yAxis = "Observations"
         chartName = site + "observationsPerday" + type
 
-        #plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
+        plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
 
         """----------------------------------------------------------------------------------------
         2. For how long a bee will be detected? how long a bee will live?
@@ -265,8 +265,8 @@ class AnalizeData:
         yAxis = "Number of Days"
         chartName = site + "beeLifeCycle" + type
         chartName2 = site + "pieBeeLifeCycle" + type
-        #plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
-        #plot.pieChartBeeLifeCycle(beeLifeCycleDays,chartName2, title)
+        plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
+        plot.pieChartBeeLifeCycle(beeLifeCycleDays,chartName2, title)
         """----------------------------------------------------------------------------------------
         3. How many different bees are active per day?
         ----------------------------------------------------------------------------------------"""
@@ -290,7 +290,9 @@ class AnalizeData:
         yAxis = "Number of bees"
         chartName = site + "differentBeesPerday" + type
 
-        #plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
+        plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
+        #plot.linePlotBeesPerDay(differentBeesPerDay, title, xAxis, yAxis, chartName)
+
 
         """----------------------------------------------------------------------------------------
         4. What is the total activity per day number of hours?
@@ -312,24 +314,29 @@ class AnalizeData:
         ----------------------------------------------------------------------------------------"""
 
         averageEquivClasses = np.mean(totalActivityEquivClasses.values(), dtype=np.float32, axis=0)
+        averageEquivClasses.tolist()
+        list(averageEquivClasses)
         stdEquivClasses = np.std(totalActivityEquivClasses.values(), dtype=np.float32, axis=0)
-        #print "Average: " + str(averageEquivClasses)
+        #rint "Average: " + str(averageEquivClasses)
         #print "Std: " + str(stdEquivClasses)
         # Graph the activity by equivalence classes
+        tmpAverage = []
+        for i in averageEquivClasses:
+            tmpAverage.append(i)
 
         title = "Average of the Activity Per Hour"
         xAxis = "Hours"
         yAxis = "Occurrences"
         chartName = site + "histogram" + type
-        plot.plotEquivalenceClass(averageEquivClasses, title, xAxis, yAxis, chartName)
+        plot.plotEquivalenceClass(tmpAverage, title, xAxis, yAxis, chartName)
 
 
 
-        title = "Average of the Activity Per Hour Including Standard Deviation"
+        """title = "Average of the Activity Per Hour Including Standard Deviation"
         xAxis = "Hours"
         yAxis = "Occurrences"
         chartName = site + "histogramStd" + type
-        plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses, chartName)
+        plot.plotEquivalenceClassStd(averageEquivClasses, title, xAxis, yAxis, stdEquivClasses, chartName)"""
 
 
 
@@ -430,13 +437,15 @@ class AnalizeData:
         #Number of ids
         ids = self.getNumberIds(completeData)
         registers = self.getNumRegisters(completeData)
-        # TODO: generate a plot of this graph of these two values
+        # Plot the two variables
+        plot.barPlotCategories(ids, registers)
+
 
         """----------------------------------------------------------------------------------------
             2. Check how many chips were lost using the original installation information and if there was an interchange between hives
         ----------------------------------------------------------------------------------------"""
         foreign = self.detectForeignKeys(completeData, installationDates)
-        # TODO: Generate a plot of this
+
 
         """----------------------------------------------------------------------------------------
             3. Get the duration between one register and other in different intervals 5, 10, 15, and 20 minutes
@@ -444,19 +453,36 @@ class AnalizeData:
         clean = CleanData()  # Clean data
         FMT = '%H:%M:%S'
 
-        threshold = [ datetime.strptime("00:05:00", FMT), datetime.strptime("00:10:00", FMT),
-                       datetime.strptime("00:15:00", FMT), datetime.strptime("00:20:00", FMT)]
-        cleanData = {}
+        threshold = [ dt.strptime("00:05:00", FMT), dt.strptime("00:10:00", FMT),
+                      dt.strptime("00:15:00", FMT), dt.strptime("00:20:00", FMT)]
+        thresholdTimeDelta = []
+
+        # Cast datetime to time delta
         for i in threshold:
+            thresholdTimeDelta.append(timedelta(hours=i.hour, minutes=i.minute, seconds=i.second))
+
+        cleanData = {}
+
+        for i in thresholdTimeDelta:
             cleanData[i] = {}
+            count = 0
             for j in completeData:
-                cleanData[i][j] = clean.removeLostChips( completeData[j], i)
+                cleanData[i][count] = clean.removeNonValidReads( completeData[j], i)
+                count = count + 1
+            #TODO: MAKE A PLOT OF CleanData['timeDiff'] this is the duration between observations
 
 
         """----------------------------------------------------------------------------------------
-            4. Detect Nocturnal behavior
+            4. Line plot of the number of observations per day
+        ----------------------------------------------------------------------------------------"""
+            #for i in completeData:
+             #   self.differentBeesPerDay()
+
+        """----------------------------------------------------------------------------------------
+            5. Detect Nocturnal behavior
         ----------------------------------------------------------------------------------------"""
 
+
         """----------------------------------------------------------------------------------------
-            5. Classsify in an histogram per week in four equivalence classes
+            6. Classsify in an histogram per week in four equivalence classes
         ----------------------------------------------------------------------------------------"""

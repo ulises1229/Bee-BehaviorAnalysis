@@ -72,7 +72,7 @@ def main():
     activity = {}
 
     # Iteration for analizing all the input data of independent sites
-    """
+
     for i in completeData:
         print "---------------------------------"
         print "Site Name: " + i
@@ -100,7 +100,7 @@ def main():
         cleanDataDict[i] = clean.removeLostChips( completeData[i], thresholdLostChips)
 
         # Perform an analysis of clean data
-        cleanAnalysis[i] = analyze.analizeData(cleanDataDict[i]['cleanIdDict'], cleanDataDict[i]['cleanDateDict'],
+        cleanAnalysis[i] = analyze.analizeSingleSite(cleanDataDict[i]['cleanIdDict'], cleanDataDict[i]['cleanDateDict'],
                                                cleanDataDict[i]['cleanCompleteDict'], "Clean", i)
         cleanDict[i] = {}
         cleanDict[i] = {
@@ -150,7 +150,7 @@ def main():
         # Generate Latex Report
         #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
         reportContent[i] = report.generateLatexContent(uncleanDict[i], cleanDict[i], i)
-    """
+
 
     # Analysis of all sites
     analyze.analizeAllSites(completeData, installationDates);

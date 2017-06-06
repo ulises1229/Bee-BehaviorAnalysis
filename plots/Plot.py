@@ -3,6 +3,7 @@ __author__ = 'Ulises Olivares'
 import matplotlib.pyplot as plt
 import plotly.plotly as py
 import plotly
+import numpy as np
 #FIXME: READ THE USER AND THE API KEY FROM A .INI FILE
 plotly.tools.set_credentials_file(username='ulises1229', api_key='IBElW0dqjDEJXCuozFGy')
 import plotly.graph_objs as go
@@ -146,6 +147,13 @@ class Plot:
         fig = go.Figure(data = data, layout=layout)
         py.image.save_as(fig, filename=fileName)
 
+    def linePlotBeesPerDay(self, inputData, title, xAxis, yAxis, chartName):
+        x = inputData.keys()
+        y = inputData.values()
+        fig, ax = plt.subplots()
+        line1, = ax.plot(x, np.sin(x), '--', linewidth=2,label='Dashes set retroactively')
+
+
     def plotEquivalenceClass(self, inputData, title, xAxisTitle, yAxisTitle, chartName):
         """
         This method generates a histogram
@@ -156,6 +164,7 @@ class Plot:
         :param chartName:
         :return:
         """
+        print inputData
         labels = ["label%d" % i for i in xrange(len(inputData))]
         x = range(len(inputData))
         y = inputData
@@ -169,7 +178,7 @@ class Plot:
         #print tmpX
         #FIXME: DISPLAY XTICKS IN HOUR FORMAT
         plt.xticks(x, fontsize=7)
-        plt.yticks(y, fontsize=7)
+        #plt.yticks(y, fontsize=2)
         plt.bar(x , y , align='center' , color='blue', alpha=0.8)
 
         plt.xlabel(xAxisTitle, fontsize=11)
@@ -204,6 +213,58 @@ class Plot:
 
 
 
+
+    def barPlotCategories(self, ids, registers):
+        N = 2
+        ind = np.arange(N)
+        width = 0.35
+
+        site1 = []
+        site2 = []
+
+        site1.append(ids['Morelia Hive 1'])
+        site1.append(ids['Morelia Hive 2'])
+
+        site2.append(registers['Morelia Hive 1'])
+        site2.append(registers['Morelia Hive 2'])
+
+        print "Morelia - Site 1: " + str(site1)
+        print "Morelia - Site 2: " + str(site2)
+
+        fig, ax = plt.subplots()
+        rects1 = ax.bar(ind, site1, width, color='b')
+        rects2 = ax.bar(ind + width, site2, width, color='r')
+
+        ax.set_ylabel('Observations \n log scale')
+        ax.set_title('Number of Ids and Registers per Site')
+        ax.set_xticks(ind + width / 2)
+        ax.set_xticklabels(('Site 1', 'Site 2'))
+        ax.set_yscale('log')
+
+        ax.legend((rects1, rects2), ('Ids', 'Registers'))
+
+        for rect in rects1:
+            height = rect.get_height()
+            ax.text(rect.get_x() + rect.get_width() / 2., 1.05 * height,
+                    '%d' % int(height),
+                    ha='center', va='bottom')
+
+        for rect in rects2:
+            height = rect.get_height()
+            ax.text(rect.get_x() + rect.get_width() / 2., 1.05 * height,
+                    '%d' % int(height),
+                    ha='center', va='bottom')
+
+        #plt.show()
+
+        fileName = os.getcwd() + self.figPath + "Registers_IDs" + ".png"
+        if fileName.count("\latex_report\latex_template") > 1:
+            fileName = fileName.replace('\latex_report\latex_template', '', 1)
+        plt.savefig(fileName, format='png', dpi=600)
+        plt.close()
+
+
+
     def barplotDictionary(self, inputData, title, xAxisTitle, yAxisTitle ):
 
         dictionary = plt.figure()
@@ -216,6 +277,7 @@ class Plot:
         plt.title(title)
         plt.xlabel("Observed Days \nFrom: " + str(list[0]) + " to: " + str(list[len(list)-1]) + "\n " + str(len(list)) + " Days" )
         plt.ylabel("Number of Observations")
+
 
         plt.bar(range(len(inputData)), inputData.values(), align='center')
         if (len(list) < 60):
