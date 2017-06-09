@@ -252,7 +252,7 @@ class AnalizeData:
         yAxis = "Observations"
         chartName = site + "observationsPerday" + type
 
-        plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
+        #plot.barPlot(observationsPerDay, title, xAxis, yAxis, chartName, 'Obs')
 
         """----------------------------------------------------------------------------------------
         2. For how long a bee will be detected? how long a bee will live?
@@ -265,8 +265,8 @@ class AnalizeData:
         yAxis = "Number of Days"
         chartName = site + "beeLifeCycle" + type
         chartName2 = site + "pieBeeLifeCycle" + type
-        plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
-        plot.pieChartBeeLifeCycle(beeLifeCycleDays,chartName2, title)
+        #plot.barPlot(beeLifeCycleDays, title, xAxis, yAxis, chartName, 'Life')
+        #plot.pieChartBeeLifeCycle(beeLifeCycleDays,chartName2, title)
         """----------------------------------------------------------------------------------------
         3. How many different bees are active per day?
         ----------------------------------------------------------------------------------------"""
@@ -289,8 +289,8 @@ class AnalizeData:
         xAxis = "Days\n"
         yAxis = "Number of bees"
         chartName = site + "differentBeesPerday" + type
-
-        plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
+        #TODO: PARSE THOSE PLOTS TO MATPLOTLIB, PLOYLY HAS SOME RESTRICTIONS
+        #plot.barPlot(differentBeesPerDay, title, xAxis, yAxis, chartName, 'diffBees')
         #plot.linePlotBeesPerDay(differentBeesPerDay, title, xAxis, yAxis, chartName)
 
 
