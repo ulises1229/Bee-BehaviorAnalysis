@@ -11,26 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="Add two new sections Introduction and analysis of raw data">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1beeLifeCycleClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1beeLifeCycleUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1differentBeesPerdayClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1differentBeesPerdayUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1histogramClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1histogramUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1observationsPerdayClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1observationsPerdayUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 1pieBeeLifeCycleUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2beeLifeCycleClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2beeLifeCycleUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2differentBeesPerdayClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2differentBeesPerdayUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2histogramClean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2histogramUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2observationsPerdayUnclean.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/latex_report/latex_template/Pictures/plots/Morelia Hive 2pieBeeLifeCycleUnclean.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Plot.py" afterPath="$PROJECT_DIR$/plots/Plot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,8 +32,8 @@
             <file leaf-file-name="Plot.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/plots/Plot.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="400">
-                    <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                  <state relative-caret-position="580">
+                    <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
                     <folding>
                       <element signature="e#32#63#0" expanded="true" />
                     </folding>
@@ -123,8 +105,8 @@
           <file leaf-file-name="ImportData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1304">
-                  <caret line="244" column="29" lean-forward="false" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
+                <state relative-caret-position="564">
+                  <caret line="207" column="24" lean-forward="false" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -145,8 +127,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="472">
-                  <caret line="462" column="0" lean-forward="true" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="0" />
+                <state relative-caret-position="385">
+                  <caret line="368" column="8" lean-forward="false" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -162,7 +144,7 @@
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="528">
-                  <caret line="458" column="51" lean-forward="true" selection-start-line="458" selection-start-column="51" selection-end-line="458" selection-end-column="51" />
+                  <caret line="464" column="51" lean-forward="false" selection-start-line="464" selection-start-column="51" selection-end-line="464" selection-end-column="51" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -183,7 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>detectContinuousBehavior</find>
       <find>cleanDateDict</find>
       <find>average of</find>
       <find>average tota</find>
@@ -213,6 +194,7 @@
       <find>thresholdLostChips</find>
       <find>site 1</find>
       <find>average</find>
+      <find>dict</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -235,8 +217,8 @@
         <option value="$PROJECT_DIR$/import_data/ImportData.py" />
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
         <option value="$PROJECT_DIR$/Main.py" />
-        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
         <option value="$PROJECT_DIR$/plots/Plot.py" />
+        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
       </list>
     </option>
   </component>
@@ -627,8 +609,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>456</line>
+          <line>462</line>
           <option name="timeStamp" value="251" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
+          <line>382</line>
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
+          <line>378</line>
+          <option name="timeStamp" value="255" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -641,7 +633,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="253" />
+      <option name="time" value="256" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -927,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1304">
-          <caret line="244" column="29" lean-forward="false" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -979,18 +963,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plots/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="580">
+          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
           <folding>
             <element signature="e#32#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="207" column="24" lean-forward="false" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="458" column="51" lean-forward="true" selection-start-line="458" selection-start-column="51" selection-end-line="458" selection-end-column="51" />
+        <state relative-caret-position="385">
+          <caret line="368" column="8" lean-forward="false" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>

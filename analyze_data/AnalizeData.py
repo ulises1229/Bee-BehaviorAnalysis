@@ -372,8 +372,14 @@ class AnalizeData:
         :return:
         """
         ids = {}
+        week = defaultdict(list)
         for i in completeData:
-            ids[i] = len(completeData[i].keys())
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    week[k.isocalendar()[1]].append(completeData[i][j])
+
+        """for i in completeData:
+            ids[i] = len(completeData[i].keys())"""
         return ids
 
     def getNumRegisters(self, completeData):
@@ -432,7 +438,7 @@ class AnalizeData:
         plot = Plot()   #Make plots
 
         """----------------------------------------------------------------------------------------
-            1. Get the number of total ID and observations for each site
+            1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
         #Number of ids
         ids = self.getNumberIds(completeData)
