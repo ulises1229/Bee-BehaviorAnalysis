@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="Add two new sections Introduction and analysis of raw data">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,26 +24,6 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="Plot.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/plots/Plot.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="580">
-                    <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
-                    <folding>
-                      <element signature="e#32#63#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
     <window id="1">
       <content type="file-editors">
         <state>
@@ -69,7 +48,7 @@
     <favorites_list name="import_data" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.78998697">
+    <splitter split-orientation="vertical" split-proportion="0.6677503">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="CleanData.py" pinned="false" current-in-tab="false">
@@ -106,7 +85,7 @@
             <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="564">
-                  <caret line="207" column="24" lean-forward="false" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="40" />
+                  <caret line="228" column="27" lean-forward="true" selection-start-line="228" selection-start-column="27" selection-end-line="228" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -127,8 +106,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="368" column="8" lean-forward="false" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
+                <state relative-caret-position="585">
+                  <caret line="378" column="29" lean-forward="true" selection-start-line="378" selection-start-column="29" selection-end-line="378" selection-end-column="29" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -143,8 +122,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="464" column="51" lean-forward="false" selection-start-line="464" selection-start-column="51" selection-end-line="464" selection-end-column="51" />
+                <state relative-caret-position="308">
+                  <caret line="456" column="71" lean-forward="false" selection-start-line="456" selection-start-column="71" selection-end-line="456" selection-end-column="71" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -609,18 +588,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>462</line>
+          <line>468</line>
           <option name="timeStamp" value="251" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>382</line>
+          <line>388</line>
           <option name="timeStamp" value="254" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>378</line>
-          <option name="timeStamp" value="255" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -633,7 +607,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="256" />
+      <option name="time" value="258" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -919,10 +893,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://C:/Python27/Lib/site-packages/plotly/api/v2/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="973" column="0" lean-forward="false" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
+        <state relative-caret-position="336">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -935,18 +909,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state relative-caret-position="22">
+          <caret line="973" column="0" lean-forward="false" selection-start-line="973" selection-start-column="0" selection-end-line="973" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/plotly/api/v2/utils.py">
+    <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="1044">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -963,8 +937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plots/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+        <state relative-caret-position="200">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
           <folding>
             <element signature="e#32#63#0" expanded="true" />
           </folding>
@@ -974,15 +948,15 @@
     <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
-          <caret line="207" column="24" lean-forward="false" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="40" />
+          <caret line="228" column="27" lean-forward="true" selection-start-line="228" selection-start-column="27" selection-end-line="228" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="368" column="8" lean-forward="false" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
+        <state relative-caret-position="585">
+          <caret line="378" column="29" lean-forward="true" selection-start-line="378" selection-start-column="29" selection-end-line="378" selection-end-column="29" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
