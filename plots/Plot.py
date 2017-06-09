@@ -8,12 +8,27 @@ import numpy as np
 plotly.tools.set_credentials_file(username='ulises1229', api_key='IBElW0dqjDEJXCuozFGy')
 import plotly.graph_objs as go
 import os
+from matplotlib.gridspec import GridSpec
 
 class Plot:
     figPath = '\\latex_report\\latex_template\\Pictures\\plots\\'
 
     def __init__(self):
         """put code here"""
+
+    def multiplePiePlot(self, input, chartName, title):
+        labels = []
+
+        for i in input:
+            labels.append(i)
+
+
+        # Make square figures and axes
+        the_grid = GridSpec(2, 1)
+        plt.subplot(the_grid[0, 0], aspect=1)
+
+        plt.pie(fracs, labels=labels, autopct='%1.1f%%', shadow=True)
+
 
     def pieChart(self, input, chartName, title):
         """

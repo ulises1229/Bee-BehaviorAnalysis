@@ -390,7 +390,7 @@ class AnalizeData:
         return registers
 
 
-    def detectForeignKeys(self, completeData, installationDates):
+    def detectInterchangeInHives(self, completeData, installationDates):
         outData = {}
         for i in (completeData):
             totalLocal= 0
@@ -415,7 +415,7 @@ class AnalizeData:
             outData[i]["local"] = totalLocal
             outData[i]["foreignList"] = foreign
             outData[i]["localList"] = local
-            outData[i]["installationSize"] = keysSize
+            outData[i]["instSize"] = keysSize
         return outData
 
 
@@ -444,7 +444,22 @@ class AnalizeData:
         """----------------------------------------------------------------------------------------
             2. Check how many chips were lost using the original installation information and if there was an interchange between hives
         ----------------------------------------------------------------------------------------"""
-        foreign = self.detectForeignKeys(completeData, installationDates)
+        detectedChipsDict = {}
+        foreign = self.detectInterchangeInHives(completeData, installationDates)
+        for i in foreign:
+            detectedChipsDict[i]= {
+                'Installed_Chips' : foreign[i]["instSize"],
+                'Registered_Bees': foreign[i]["local"] + foreign[i]["foreign"]
+            }
+
+        title = "Number of chips installed VS Number of detected bees"
+        chartName = "detectedChips"
+        plot.multiplePiePlot(detectedChipsDict,chartName, title)
+
+        title = "Interchange of bees between Hives"
+
+
+
 
 
         """----------------------------------------------------------------------------------------
