@@ -176,12 +176,12 @@ class ImportData:
         lenDict = {}
 
         # Get all the files tha contains the information related to IDs and installation date
-        installationPath = path + "\\installation_data\\"
+        installationPath = path + "\\input\\installation_data\\"
         installationFiles = self.exploreFiles(installationPath)
         self.importInstallationFiles(installationFiles, installationPath)
 
         # Get all the files related to raw data
-        rawPath = path + "\\raw_data\\"
+        rawPath = path + "\\input\\raw_data\\"
         # This is a list wich contains in each possition a datasate for an specific Hive
         rawFiles = {}
 

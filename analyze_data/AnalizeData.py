@@ -7,6 +7,7 @@ from datetime import datetime as dt
 from collections import defaultdict
 import collections
 from clean_data.CleanData import CleanData
+from export_data.exportData import ExportData
 from datetime import  timedelta
 
 start = []
@@ -371,22 +372,24 @@ class AnalizeData:
 
         :return:
         """
-        ids = {}
-        weekActivity = {}
+        bees = {}
+        #weekActivity = {}
         weekCount = {}
         for i in completeData:
-            weekActivity[i] = defaultdict(list)
+            #weekActivity[i] = defaultdict(list)
             weekCount[i] = {}
             for j in completeData[i]:
                 for k in completeData[i][j]:
-                    weekActivity[i][k.isocalendar()[1]].append(completeData[i][j])
-                    if k.isocalendar()[1] in weekCount.keys():
-                        weekCount[i][k.isocalendar()[1]] =  weekCount[k.isocalendar()[1]] + 1
+                    week = k.isocalendar()[1]
+                    #weekActivity[i][week].append(completeData[i][j])
+
+                    if week in weekCount[i].keys():
+                        weekCount[i][week] =  weekCount[i][k.isocalendar()[1]] + 1
                     else:
-                        weekCount[i][k.isocalendar()[1]] = 1
+                        weekCount[i][week] = 1
         for i in completeData:
-            ids[i] = len(completeData[i].keys())
-        return ids, weekActivity, weekCount
+            bees[i] = len(completeData[i].keys())
+        return bees, weekCount
 
     def getNumRegisters(self, completeData):
 
@@ -441,16 +444,20 @@ class AnalizeData:
         """
 
         #Object Declaration
-        plot = Plot()   #Make plots
+        plot = Plot()           #Make plots
+        export = ExportData()   #Export data in csv format
 
         """----------------------------------------------------------------------------------------
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
         #Number of ids
-        ids, weekActivity = self.getNumberIds(completeData)
+        bees, weekActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
         registers = self.getNumRegisters(completeData)
+
         # Plot the two variables
-        plot.barPlotCategories(ids, registers)
+        plot.barPlotCategories(bees, registers)
+
+
 
 
         """----------------------------------------------------------------------------------------
@@ -466,7 +473,7 @@ class AnalizeData:
 
         title = "Number of chips installed VS Number of detected bees"
         chartName = "detectedChips"
-        plot.multiplePiePlot(detectedChipsDict,chartName, title)
+        #plot.multiplePiePlot(detectedChipsDict,chartName, title)
 
         title = "Interchange of bees between Hives"
 
