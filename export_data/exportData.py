@@ -6,4 +6,4 @@ class ExportData:
         """
             initialize constructor
         """
-    def exportBeeActivityperWeek(self, bees, weekActivity, ):
+    #def exportWeeklyBeeActivity(self, bees, weekActivity, ):

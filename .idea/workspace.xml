@@ -11,119 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="Add two new sections Introduction and analysis of raw data">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/export_data/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/installation_data/Morelia Hive 1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/installation_data/Morelia Hive 2.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.01-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.02-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.03-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.04-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.05-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.06-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.07-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.08-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.09-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.10-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.11-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.12-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.13-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.14-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.15-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.16-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.17-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.18-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.19-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.20-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.21-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.22-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.23-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.24-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.25-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.26-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.27-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.28-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.29-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.30-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 1/2016.07.31-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.01-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.02-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.03-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.04-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.05-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.06-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.07-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.08-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.09-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.10-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.11-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.12-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.13-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.14-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.15-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.16-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.17-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.18-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.19-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.20-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.21-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.22-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.23-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.24-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.25-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.26-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.27-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.28-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.29-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.30-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/raw_data/Morelia Hive 2/2016.07.31-Edison-fzed437d00bnc501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/figures/chartNumLectures.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.01-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.02-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.03-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.04-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.05-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.06-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.07-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.08-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.09-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.10-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.11-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.12-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.13-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.14-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.15-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.16-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.17-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.18-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.19-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.20-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.21-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.22-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.23-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.24-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.25-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.26-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.27-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.28-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.29-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.30-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.07.31-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.01-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.02-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.03-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.04-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.05-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.06-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.07-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.08-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.09-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.10-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.11-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/2016.08.12-Edison-fzed437d00cex501.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/import_data/ImportData.py" afterPath="$PROJECT_DIR$/import_data/ImportData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -144,7 +33,7 @@
               <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="160">
-                    <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+                    <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
                     <folding />
                   </state>
                 </provider>
@@ -191,11 +80,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ImportData.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ImportData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="183" column="33" lean-forward="false" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
+                <state relative-caret-position="683">
+                  <caret line="183" column="46" lean-forward="true" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
@@ -213,11 +102,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="129">
-                  <caret line="455" column="0" lean-forward="false" selection-start-line="455" selection-start-column="0" selection-end-line="455" selection-end-column="0" />
+                <state relative-caret-position="183">
+                  <caret line="461" column="100" lean-forward="false" selection-start-line="461" selection-start-column="100" selection-end-line="461" selection-end-column="100" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -264,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>average of</find>
       <find>average tota</find>
       <find>numDays</find>
       <find>workingDir = os.getcwd()         path = workingDir + '\latex_report\latex_template\\'         if path.count(&quot;\latex_report\latex_template&quot;) &gt; 1:             path = path.replace('\latex_report\latex_template' , '', 1)</find>
@@ -294,6 +182,7 @@
       <find>average</find>
       <find>dict</find>
       <find>installation_data</find>
+      <find>raw_da</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -316,9 +205,9 @@
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/plots/Plot.py" />
-        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-        <option value="$PROJECT_DIR$/export_data/exportData.py" />
         <option value="$PROJECT_DIR$/import_data/ImportData.py" />
+        <option value="$PROJECT_DIR$/export_data/exportData.py" />
+        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
       </list>
     </option>
   </component>
@@ -695,7 +584,7 @@
     <frame x="1913" y="-463" width="1092" height="1885" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09982984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23482245" sideWeight="0.5037675" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15125571" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -768,13 +657,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>475</line>
+          <line>481</line>
           <option name="timeStamp" value="251" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>391</line>
-          <option name="timeStamp" value="254" />
+          <line>409</line>
+          <option name="timeStamp" value="260" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -787,7 +676,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="260" />
+      <option name="time" value="261" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1116,29 +1005,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="183" column="46" lean-forward="true" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="455" column="0" lean-forward="false" selection-start-line="455" selection-start-column="0" selection-end-line="455" selection-end-column="0" />
+        <state relative-caret-position="183">
+          <caret line="461" column="100" lean-forward="false" selection-start-line="461" selection-start-column="100" selection-end-line="461" selection-end-column="100" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="183" column="33" lean-forward="false" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>

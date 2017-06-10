@@ -370,6 +370,7 @@ class AnalizeData:
     def getNumberIds(self, completeData):
         """
 
+        :param completeData:
         :return:
         """
         bees = {}
@@ -382,9 +383,8 @@ class AnalizeData:
                 for k in completeData[i][j]:
                     week = k.isocalendar()[1]
                     #weekActivity[i][week].append(completeData[i][j])
-
                     if week in weekCount[i].keys():
-                        weekCount[i][week] =  weekCount[i][k.isocalendar()[1]] + 1
+                        weekCount[i][week] =  weekCount[i][week] + 1
                     else:
                         weekCount[i][week] = 1
         for i in completeData:
@@ -394,15 +394,20 @@ class AnalizeData:
     def getNumRegisters(self, completeData):
 
         registers = {}
-
+        weeklyActivity = {}
         for i in completeData:
+            weeklyActivity[i] = {}
             totalCount = 0
             for j in completeData[i]:
                 for k in completeData[i][j]:
                     totalCount = totalCount + len(completeData[i][j][k])
-
+                    week = k.isocalendar()[1]
+                    if week in weeklyActivity[i].keys():
+                        weeklyActivity[i][week] = weeklyActivity[i][week] + len(completeData[i][j][k])
+                    else:
+                        weeklyActivity[i][week] = len(completeData[i][j][k])
             registers[i] = totalCount
-        return registers
+        return registers, weeklyActivity
 
 
     def detectInterchangeInHives(self, completeData, installationDates):
@@ -451,11 +456,12 @@ class AnalizeData:
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
         #Number of ids
-        bees, weekActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
-        registers = self.getNumRegisters(completeData)
+        bees, weeklyActivityBees = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
+        registers, weeklyActivityRegisters = self.getNumRegisters(completeData)
 
+        export.exportWeeklyBeeActivity(bees, weeklyActivityBees, registers, weeklyActivityRegisters)
         # Plot the two variables
-        plot.barPlotCategories(bees, registers)
+        #plot.barPlotCategories(bees, registers)
 
 
 
