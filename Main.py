@@ -146,7 +146,7 @@ def main():
             'averageTotalActivity': uncleanAnalysis[i]['averageTotalActivity']
         }
 
-        #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE CORRECTLY THE REPORT
+        #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE THE REPORT CORRECTLY
         # Generate Latex Report
         #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
         reportContent[i] = report.generateLatexContent(uncleanDict[i], cleanDict[i], i)
