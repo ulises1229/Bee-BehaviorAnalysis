@@ -16,7 +16,7 @@ class Plot:
     def __init__(self):
         """put code here"""
 
-    def multiplePiePlot(self, input, chartName, title):
+    '''def multiplePiePlot(self, input, chartName, title):
         labels = []
 
         for i in input:
@@ -27,7 +27,7 @@ class Plot:
         the_grid = GridSpec(2, 1)
         plt.subplot(the_grid[0, 0], aspect=1)
 
-        plt.pie(fracs, labels=labels, autopct='%1.1f%%', shadow=True)
+        plt.pie(fracs, labels=labels, autopct='%1.1f%%', shadow=True)'''
 
 
     def pieChart(self, input, chartName, title):

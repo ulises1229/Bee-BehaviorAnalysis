@@ -12,7 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Plot.py" afterPath="$PROJECT_DIR$/plots/Plot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,36 +29,36 @@
     <window id="3">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="180">
-                    <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="CleanData.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="791">
-                    <caret line="152" column="43" lean-forward="false" selection-start-line="152" selection-start-column="43" selection-end-line="152" selection-end-column="43" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
+          <splitter split-orientation="horizontal" split-proportion="0.5">
+            <split-first>
+              <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+                <file leaf-file-name="CleanData.py" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="891">
+                        <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <leaf>
+                <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="220">
+                        <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-second>
+          </splitter>
         </state>
       </content>
     </window>
@@ -73,8 +74,18 @@
           <file leaf-file-name="CleanData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2600">
-                  <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+                <state relative-caret-position="121">
+                  <caret line="113" column="15" lean-forward="true" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="15" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Plot.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/plots/Plot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="520">
+                  <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
                   <folding />
                 </state>
               </provider>
@@ -90,10 +101,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="667">
+                <state relative-caret-position="681">
                   <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
                   <folding>
                     <element signature="e#78#126#0" expanded="true" />
@@ -105,8 +116,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="927">
-                  <caret line="524" column="0" lean-forward="true" selection-start-line="524" selection-start-column="0" selection-end-line="524" selection-end-column="0" />
+                <state relative-caret-position="218">
+                  <caret line="463" column="9" lean-forward="true" selection-start-line="463" selection-start-column="9" selection-end-line="463" selection-end-column="9" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -131,8 +142,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="20">
-                  <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+                <state relative-caret-position="-340">
+                  <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
                   <folding>
                     <element signature="e#32#59#0" expanded="true" />
                   </folding>
@@ -203,11 +214,11 @@
         <option value="C:/Python27/Lib/site-packages/pylatex/base_classes/float.py" />
         <option value="$PROJECT_DIR$/latex_report/GenerateReport.py" />
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
-        <option value="$PROJECT_DIR$/plots/Plot.py" />
         <option value="$PROJECT_DIR$/import_data/ImportData.py" />
-        <option value="$PROJECT_DIR$/export_data/exportData.py" />
         <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
         <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/export_data/exportData.py" />
+        <option value="$PROJECT_DIR$/plots/Plot.py" />
       </list>
     </option>
   </component>
@@ -265,6 +276,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Bee-BehaviorAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bee-BehaviorAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bee-BehaviorAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plots" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -568,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493950542044</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Check clean data function, it is taking only the date and not the time&#10;new changes&#10;">
+      <created>1497290080807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1497290080807</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -584,7 +616,7 @@
     <frame x="1913" y="-463" width="1092" height="1885" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09982984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23482245" sideWeight="0.5037675" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -630,7 +662,8 @@
     <MESSAGE value="Clean Complete, date and Id Dictionaries" />
     <MESSAGE value="Add two new sections Introduction and analysis of raw data" />
     <MESSAGE value="Check clean data function, it is taking only the date and not the time&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check clean data function, it is taking only the date and not the time&#10;" />
+    <MESSAGE value="Check clean data function, it is taking only the date and not the time&#10;new changes&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check clean data function, it is taking only the date and not the time&#10;new changes&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -952,16 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plots/Plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding>
-            <element signature="e#32#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2738">
@@ -992,39 +1015,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="927">
-          <caret line="524" column="0" lean-forward="true" selection-start-line="524" selection-start-column="0" selection-end-line="524" selection-end-column="0" />
+        <state relative-caret-position="218">
+          <caret line="463" column="9" lean-forward="true" selection-start-line="463" selection-start-column="9" selection-end-line="463" selection-end-column="9" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
+        <state relative-caret-position="681">
           <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
           <folding>
             <element signature="e#78#126#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="113" column="15" lean-forward="true" selection-start-line="113" selection-start-column="15" selection-end-line="113" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots/Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="29" column="72" lean-forward="false" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
