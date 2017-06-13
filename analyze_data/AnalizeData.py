@@ -152,7 +152,7 @@ class AnalizeData:
 
         return beeLifeCycleDays, beeActivityPerDay
 
-    # Reestructure this method it must have a different name
+    # Restructure this method it must have a different name
     def differentObservationsPerDay(self,completeDict, lifeCycle):
         diffObsPerDay = {}
         avgActivity = {}

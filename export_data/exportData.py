@@ -1,6 +1,7 @@
 __author__ = 'Ulises Olivares'
 
 import csv
+import os
 
 class ExportData:
 
@@ -9,12 +10,33 @@ class ExportData:
             initialize constructor
         """
     def exportWeeklyBeeActivity(self, bees, weeklyActivityBees, registers, weeklyActivityRegisters):
+        '''
 
-        output = open('test.csv', "wb")
-        writer = csv.writer(output, delimiter='', quotechar='"', quoting=csv.QUOTE_ALL)
-        reader = "this is a test"
-        for row in reader:
-            writer.writerow(row)
+        :param bees:
+        :param weeklyActivityBees:
+        :param registers:
+        :param weeklyActivityRegisters:
+        :return:
+        '''
+        completePath = os.getcwd()
 
-        output.close()
+        # Variables for printing errors
+        #CRED = '\033[91m'
+        #CEND = '\033[0m'
 
+        # Validate the current working dir to avoid an incorrect path
+        # FIXME: THIS STATIC VALIDATION IS NOT A GOOD IDEA, CHANGE IT
+        projectPos = completePath.find('Bee-BehaviorAnalysis')
+        if  projectPos!= -1:
+            projectLength = len('Bee-BehaviorAnalysis')
+            if projectPos + projectLength != len (completePath): # There is nothing after the working dir
+                completePath = completePath[:projectPos + projectLength]
+
+            output = open('test.csv', "wb")
+            writer = csv.writer(output, delimiter=',')
+            reader = "this is a test" ,"hello"
+            for row in reader:
+                writer.writerow(row)
+            output.close()
+        else:
+            print " Error: "
