@@ -105,7 +105,12 @@ class ExportData:
         for i in weeklyActivityBees:
             #min[i] =
 
-            #print minimum
+            # Get the first natural week of measurements
+            list = weeklyActivityBees[i].keys()
+            list.sort()
+            # Store the min element
+            min[i] = list[0]
+
             f.write(i + '\n')
             f.write("Week, No. of bees\n")
             weekCount = 1
@@ -125,9 +130,10 @@ class ExportData:
             f.write("Installation Date\n")
             for j in detailedActivity[i]:
                 for k in detailedActivity[i][j]:
-                    f.write(str(j) + ',' )
-                    for l in range (len(detailedActivity[i][j])):
-                        f.write(str(l) + ',')
+                    f.write(str(j) + ',' + str(detailedActivity[i][j][k]))
+                    print str(j) + ',' + str(k) +',' + str(detailedActivity[i][j][k])
+                    #for l in range (len(detailedActivity[i][j])):
+                        #f.write(str(l) + ',')
                     f.write('\n')
 
 
