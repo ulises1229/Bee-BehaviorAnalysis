@@ -382,7 +382,6 @@ class AnalizeData:
             beesPerWeek[i] = {}
             detailBeesPerWeek[i] = {}
             for j in completeData[i]:
-                #tmp = {}
                 detailBeesPerWeek[i][j] = {}
                 for k in completeData[i][j]:
                     # This is a natural week
@@ -391,17 +390,14 @@ class AnalizeData:
                         detailBeesPerWeek[i][j][week] = detailBeesPerWeek[i][j][week] + 1
                     else:
                         detailBeesPerWeek[i][j][week] = 1
+
                     if week in beesPerWeek[i].keys():
                         beesPerWeek[i][week] =  beesPerWeek[i][week] + 1
                     else:
                         beesPerWeek[i][week] = 1
 
             bees[i] = len (detailBeesPerWeek[i].keys())
-            print "len of: " + i + " " + str(len(detailBeesPerWeek[i].keys()))
-            print detailBeesPerWeek[i].keys()
 
-        for i in completeData:
-            bees[i] = len(completeData[i].keys())
         return bees, beesPerWeek, detailBeesPerWeek
 
     def getNumRegisters(self, completeData):
@@ -412,20 +408,28 @@ class AnalizeData:
         '''
 
         registers = {}
-        weeklyActivity = {}
+        registersPerWeek = {}
+        detailRegistersPerWeek = {}
         for i in completeData:
-            weeklyActivity[i] = {}
+            registersPerWeek[i] = {}
+            detailRegistersPerWeek[i] = {}
             totalCount = 0
             for j in completeData[i]:
+                detailRegistersPerWeek[i][j] = {}
                 for k in completeData[i][j]:
                     totalCount = totalCount + len(completeData[i][j][k])
                     week = k.isocalendar()[1]
-                    if week in weeklyActivity[i].keys():
-                        weeklyActivity[i][week] = weeklyActivity[i][week] + len(completeData[i][j][k])
+                    if week in detailRegistersPerWeek[i][j].keys():
+                        detailRegistersPerWeek[i][j][week] = detailRegistersPerWeek[i][j][week] + len(completeData[i][j][k])
                     else:
-                        weeklyActivity[i][week] = len(completeData[i][j][k])
+                        detailRegistersPerWeek[i][j][week] = len(completeData[i][j][k])
+
+                    if week in registersPerWeek[i].keys():
+                        registersPerWeek[i][week] = registersPerWeek[i][week] + len(completeData[i][j][k])
+                    else:
+                        registersPerWeek[i][week] = len(completeData[i][j][k])
             registers[i] = totalCount
-        return registers, weeklyActivity
+        return registers, registersPerWeek, detailRegistersPerWeek
 
 
     def detectInterchangeInHives(self, completeData, installationDates):
