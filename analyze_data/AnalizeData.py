@@ -478,10 +478,12 @@ class AnalizeData:
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
         #Number of ids
-        bees, weeklyActivityBees, detailedActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
-        registers, weeklyActivityRegisters = self.getNumRegisters(completeData)
+        bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
+        registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
 
-        export.exportWeeklyBeeActivity(bees, weeklyActivityBees, registers, weeklyActivityRegisters)
+        export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity)
+        export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity)
+
         # Plot the two variables
         #plot.barPlotCategories(bees, registers)
 

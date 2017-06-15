@@ -3,13 +3,34 @@ __author__ = 'Ulises Olivares'
 import csv
 import os
 import fnmatch
+import sys
 
 class ExportData:
+    completePath = " "
+    exportPath = " "
 
     def __init__(self):
         '''
-         initialize constructor
         '''
+        self.completePath = os.getcwd()
+
+        # Validate the current working dir to avoid an incorrect path
+        # FIXME: THIS STATIC VALIDATION IS NOT A GOOD IDEA, CHANGE IT
+        projectPos = self.completePath.find('Bee-BehaviorAnalysis')
+        if projectPos != -1:
+            projectLength = len('Bee-BehaviorAnalysis')
+            if projectPos + projectLength != len(self.completePath):  # There is nothing after the working dir
+                self.completePath = self.completePath[:projectPos + projectLength]
+        else:
+            print " Error, the PATH: " + self.completePath + 'Does not exist'
+            sys.exit(0)
+
+        # Remove previous CSV files
+        exportPath = self.completePath + '\\data\\output\\'
+        # FIXME: THIS FUNCTION MUST BE INSTANTITED FROM THE FIRST WRITER METHOD
+        self.removePreviousCSVFiles(exportPath)
+
+
     def removePreviousCSVFiles(self, path):
         '''
         This method removes the all the
@@ -29,53 +50,16 @@ class ExportData:
             if os.path.isfile(path + i):
                 os.remove(path + i)
 
-    def exportWeeklyBeeActivity(self, bees, weeklyActivityBees, registers, weeklyActivityRegisters):
+    def exportRegistersInformation(self, registers, weeklyRegisters, detailedActivity):
         '''
 
-        :param bees:
-        :param weeklyActivityBees:
         :param registers:
-        :param weeklyActivityRegisters:
+        :param weeklyRegisters:
+        :param detailedActivity:
         :return:
         '''
-        completePath = os.getcwd()
 
-        # Validate the current working dir to avoid an incorrect path
-        # FIXME: THIS STATIC VALIDATION IS NOT A GOOD IDEA, CHANGE IT
-        projectPos = completePath.find('Bee-BehaviorAnalysis')
-        if  projectPos!= -1:
-            projectLength = len('Bee-BehaviorAnalysis')
-            if projectPos + projectLength != len (completePath): # There is nothing after the working dir
-                completePath = completePath[:projectPos + projectLength]
-        else:
-            print " Error, the PATH: " + completePath + 'Does not exist'
-
-        # Remove previous CSV files
-        exportPath = completePath + '\\data\\output\\'
-        # FIXME: THIS FUNCTION MUST BE INSTANTITED FROM THE FIRST WRITER METHOD
-        self.removePreviousCSVFiles(exportPath)
-
-        f = open(exportPath + 'Bees and Registers.csv', "wb")
-
-        # Write the information related to bees per site
-        f.write("Site,Number of Bees\n")
-        for l in bees:
-            f.write(l + ',' + str(bees[l]) + '\n')
-
-        # Add a break line as a separation
-        f.write('\n')
-
-        #f.write('Weekly activity of bees\n')
-        for i in weeklyActivityBees:
-            f.write(i + '\n')
-            f.write("Week, No. of bees\n")
-            count = 1
-            for j in weeklyActivityBees[i]:
-                f.write('Week ' + str(count) + ','  + str(weeklyActivityBees[i][j]) + '\n')
-                count = count + 1
-            f.write('\n')
-
-        f.write('\n')
+        f = open(self.exportPath + 'Registers.csv', "wb")
 
         # Write the information related to registers per site
         f.write("Site,Number of registers\n")
@@ -85,30 +69,68 @@ class ExportData:
         # Add a break line as a separation
         f.write('\n')
 
-        for i in weeklyActivityRegisters:
+        for i in weeklyRegisters:
             f.write(i + '\n')
             f.write("Week, No. of registers\n")
             count = 1
-            for j in weeklyActivityRegisters[i]:
-                f.write('Week ' + str(count) + ','  + str(weeklyActivityRegisters[i][j]) + '\n')
+            for j in weeklyRegisters[i]:
+                f.write('Week ' + str(count) + ',' + str(weeklyRegisters[i][j]) + '\n')
                 count = count + 1
             f.write('\n')
 
-
-        ## Python will convert \n to os.linesep
         f.close()
 
-        '''with open( exportPath + 'ID and Registers.csv', "wb") as csv_file:
-            writer = csv.writer(csv_file, delimiter=' ')
-            for l in bees:
-                writer.writerow(l)'''
+    def exportBeeInformation(self, bees, weeklyActivityBees, detailedActivity):
+        '''
 
-        '''output = open( exportPath + 'ID and Registers.csv', "wb")
-        writer = csv.writer(output)
+        :param bees:
+        :param weeklyActivityBees:
+        :param registers:
+        :param weeklyActivityRegisters:
+        :return:
+        '''
+        min ={} # this a variable to extract the minimum element of a list of weeks
+        print self.completePath
 
-        writer.writerow('site, Number of Bees')
-        for i in bees:
-            writer.writerow(i)
+        f = open(self.exportPath + 'Bees.csv', "wb")
 
-        output.close()'''
+        # Write the information related to bees per site
+        f.write("Site,Number of Bees\n")
+        for l in bees:
+            f.write(l + ',' + str(bees[l]) + '\n')
+
+        # Add a break line as a separation
+        f.write('\n')
+        weekCount = 1
+        #f.write('Weekly activity of bees\n')
+        for i in weeklyActivityBees:
+            #min[i] =
+            print weeklyActivityBees[i].keys
+            f.write(i + '\n')
+            f.write("Week, No. of bees\n")
+
+            for j in weeklyActivityBees[i]:
+                f.write('Week ' + str(weekCount) + ','  + str(weeklyActivityBees[i][j]) + '\n')
+                weekCount = weekCount + 1
+            f.write('\n')
+
+        f.write('\n')
+
+        for i in detailedActivity:
+            # Make the tittle
+            f.write(i)
+            f.write("Bee,")
+            for r in range(weekCount):
+                f.write("Week " + str(r) + ",")
+            f.write("Installation Date\n")
+            for j in detailedActivity[i]:
+                for k in detailedActivity[i][j]:
+                    for l in detailedActivity[i][j][k]:
+                        f.write(j + ','  )
+
+
+
+
+        f.close()
+
 
