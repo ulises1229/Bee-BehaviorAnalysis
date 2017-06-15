@@ -397,13 +397,11 @@ class AnalizeData:
                         beesPerWeek[i][week] = 1
 
             bees[i] = len (detailBeesPerWeek[i].keys())
-            print len (detailBeesPerWeek[i].keys())
+            print "len of: " + i + " " + str(len(detailBeesPerWeek[i].keys()))
+            print detailBeesPerWeek[i].keys()
 
         for i in completeData:
-            #bees[i] = len(completeData[i].keys())
-            print completeData[i].keys()
-            print len(completeData[i].keys())
-            print bees[i]
+            bees[i] = len(completeData[i].keys())
         return bees, beesPerWeek, detailBeesPerWeek
 
     def getNumRegisters(self, completeData):

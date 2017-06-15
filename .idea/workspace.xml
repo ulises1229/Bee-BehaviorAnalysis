@@ -12,8 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/output/Bees and Registers.csv" afterPath="$PROJECT_DIR$/data/output/Bees and Registers.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,8 +74,8 @@
       <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="401" column="0" lean-forward="false" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+            <state relative-caret-position="516">
+              <caret line="400" column="12" lean-forward="false" selection-start-line="400" selection-start-column="12" selection-end-line="400" selection-end-column="12" />
               <folding>
                 <element signature="e#32#59#0" expanded="true" />
               </folding>
@@ -571,7 +569,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>501</line>
+          <line>499</line>
           <option name="timeStamp" value="251" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -583,16 +581,6 @@
           <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
           <line>40</line>
           <option name="timeStamp" value="269" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>406</line>
-          <option name="timeStamp" value="273" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/analyze_data/AnalizeData.py</url>
-          <line>405</line>
-          <option name="timeStamp" value="277" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -945,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="401" column="0" lean-forward="false" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+        <state relative-caret-position="516">
+          <caret line="400" column="12" lean-forward="false" selection-start-line="400" selection-start-column="12" selection-end-line="400" selection-end-column="12" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
