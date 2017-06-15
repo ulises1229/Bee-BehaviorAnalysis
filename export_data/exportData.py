@@ -59,13 +59,10 @@ class ExportData:
 
         # Write the information related to bees per site
         f.write("Site,Number of Bees\n")
-        for line in bees:
-            f.write(line)
-            f.write(',')
-            f.write(str(bees[line]))
-            f.write('\n')
+        for l in bees:
+            f.write(l + ',' + str(bees[l]) + '\n')
 
-        # Separate one information from the other
+        # Add a break line as a separation
         f.write('\n')
 
         #f.write('Weekly activity of bees\n')
@@ -82,15 +79,29 @@ class ExportData:
 
         # Write the information related to registers per site
         f.write("Site,Number of registers\n")
-        for
+        for r in registers:
+            f.write(r + ',' + str(registers[r]) + '\n')
+
+        # Add a break line as a separation
+        f.write('\n')
+
+        for i in weeklyActivityRegisters:
+            f.write(i + '\n')
+            f.write("Week, No. of registers\n")
+            count = 1
+            for j in weeklyActivityRegisters[i]:
+                f.write('Week ' + str(count) + ','  + str(weeklyActivityRegisters[i][j]) + '\n')
+                count = count + 1
+            f.write('\n')
+
 
         ## Python will convert \n to os.linesep
         f.close()
 
         '''with open( exportPath + 'ID and Registers.csv', "wb") as csv_file:
             writer = csv.writer(csv_file, delimiter=' ')
-            for line in bees:
-                writer.writerow(line)'''
+            for l in bees:
+                writer.writerow(l)'''
 
         '''output = open( exportPath + 'ID and Registers.csv', "wb")
         writer = csv.writer(output)

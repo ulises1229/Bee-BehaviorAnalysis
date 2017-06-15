@@ -368,30 +368,50 @@ class AnalizeData:
 
 
     def getNumberIds(self, completeData):
-        """
+        '''
 
         :param completeData:
         :return:
-        """
+        '''
         bees = {}
         #weekActivity = {}
-        weekCount = {}
+        beesPerWeek = {}
+        detailBeesPerWeek = {}
+
         for i in completeData:
-            #weekActivity[i] = defaultdict(list)
-            weekCount[i] = {}
+            beesPerWeek[i] = {}
+            detailBeesPerWeek[i] = {}
             for j in completeData[i]:
+                #tmp = {}
+                detailBeesPerWeek[i][j] = {}
                 for k in completeData[i][j]:
+                    # This is a natural week
                     week = k.isocalendar()[1]
-                    #weekActivity[i][week].append(completeData[i][j])
-                    if week in weekCount[i].keys():
-                        weekCount[i][week] =  weekCount[i][week] + 1
+                    if week in detailBeesPerWeek[i][j].keys():
+                        detailBeesPerWeek[i][j][week] = detailBeesPerWeek[i][j][week] + 1
                     else:
-                        weekCount[i][week] = 1
+                        detailBeesPerWeek[i][j][week] = 1
+                    if week in beesPerWeek[i].keys():
+                        beesPerWeek[i][week] =  beesPerWeek[i][week] + 1
+                    else:
+                        beesPerWeek[i][week] = 1
+
+            bees[i] = len (detailBeesPerWeek[i].keys())
+            print len (detailBeesPerWeek[i].keys())
+
         for i in completeData:
-            bees[i] = len(completeData[i].keys())
-        return bees, weekCount
+            #bees[i] = len(completeData[i].keys())
+            print completeData[i].keys()
+            print len(completeData[i].keys())
+            print bees[i]
+        return bees, beesPerWeek, detailBeesPerWeek
 
     def getNumRegisters(self, completeData):
+        '''
+
+        :param completeData:
+        :return:
+        '''
 
         registers = {}
         weeklyActivity = {}
@@ -456,7 +476,7 @@ class AnalizeData:
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
         #Number of ids
-        bees, weeklyActivityBees = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
+        bees, weeklyActivityBees, detailedActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
         registers, weeklyActivityRegisters = self.getNumRegisters(completeData)
 
         export.exportWeeklyBeeActivity(bees, weeklyActivityBees, registers, weeklyActivityRegisters)
