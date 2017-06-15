@@ -478,11 +478,32 @@ class AnalizeData:
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
         #Number of ids
+
+        # Clean the data for a cleaning process
+        clean = CleanData()  # Clean data
+        FMT = '%H:%M:%S'
+
+        threshold = [dt.strptime("00:05:00", FMT), dt.strptime("00:10:00", FMT),
+                     dt.strptime("00:15:00", FMT), dt.strptime("00:20:00", FMT)]
+        thresholdTimeDelta = []
+
+        # Cast datetime to time delta
+        for i in threshold:
+            thresholdTimeDelta.append(timedelta(hours=i.hour, minutes=i.minute, seconds=i.second))
+
+        cleanData = {}
+
+        for i in thresholdTimeDelta:
+            cleanData[i] = {}
+            for j in completeData:
+                cleanData[i][j] = clean.removeNonValidReads(completeData[j], i)
+
+
         bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
         registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
 
         export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity, installationDates)
-        export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity)
+        export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates)
 
         # Plot the two variables
         #plot.barPlotCategories(bees, registers)
@@ -514,7 +535,7 @@ class AnalizeData:
         """----------------------------------------------------------------------------------------
             3. Get the duration between one register and other in different intervals 5, 10, 15, and 20 minutes
         ----------------------------------------------------------------------------------------"""
-        clean = CleanData()  # Clean data
+        '''clean = CleanData()  # Clean data
         FMT = '%H:%M:%S'
 
         threshold = [ dt.strptime("00:05:00", FMT), dt.strptime("00:10:00", FMT),
@@ -533,7 +554,7 @@ class AnalizeData:
             for j in completeData:
                 cleanData[i][count] = clean.removeNonValidReads( completeData[j], i)
                 count = count + 1
-            #TODO: MAKE A PLOT OF CleanData['timeDiff'] this is the duration between observations
+            #TODO: MAKE A PLOT OF CleanData['timeDiff'] this is the duration between observations'''
 
 
         """----------------------------------------------------------------------------------------

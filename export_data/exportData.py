@@ -50,7 +50,7 @@ class ExportData:
             if os.path.isfile(path + i):
                 os.remove(path + i)
 
-    def exportRegistersInformation(self, registers, weeklyRegisters, detailedActivity):
+    def exportRegistersInformation(self, registers, weeklyRegisters, detailedActivity, installation):
         '''
 
         :param registers:
@@ -58,6 +58,8 @@ class ExportData:
         :param detailedActivity:
         :return:
         '''
+
+        min = {}  # this a variable to extract the minimum element of a list of weeks
 
         f = open(self.exportPath + 'Registers.csv', "wb")
 
@@ -68,17 +70,61 @@ class ExportData:
 
         # Add a break line as a separation
         f.write('\n')
+        weekCount = 0
 
         for i in weeklyRegisters:
+            # Get the first natural week of measurements
+            list = weeklyRegisters[i].keys()
+            list.sort()
+            # Store the min element
+            min[i] = list[0]
+
             f.write(i + '\n')
             f.write("Week, No. of registers\n")
-            count = 1
+            weekCount = 1
             for j in weeklyRegisters[i]:
-                f.write('Week ' + str(count) + ',' + str(weeklyRegisters[i][j]) + '\n')
-                count = count + 1
+                f.write('Week ' + str(weekCount) + ',' + str(weeklyRegisters[i][j]) + '\n')
+                weekCount = weekCount + 1
             f.write('\n')
 
+        f.write('\n')
+
+        for i in detailedActivity:
+            # Make the tittle
+            f.write(i + '\n')
+            f.write("Bee,")
+            for r in range(1,weekCount):
+                f.write("Week " + str(r) + ",")
+            f.write("Installation Date\n")
+            for j in detailedActivity[i]:
+                lastElement = 1
+                f.write(str(j) + ',')
+                commaCount = 0
+                for k in detailedActivity[i][j]:
+                    for m in range(lastElement, (k % min[i]) + 1):
+                        f.write(',')
+                        commaCount = commaCount + 1
+                    f.write(str(detailedActivity[i][j][k]) )
+                    lastElement = (k % min[i]) + 1
+
+                if commaCount < weekCount:
+                    for w in range((weekCount - commaCount)-1):
+                        f.write(',')
+
+                # Write installation day information
+                if j in installation[i].keys():
+                    week = (installation[i][j].isocalendar()[1] % min[i]) + 1
+                    f.write('Week ' + str(week))
+
+
+                else:
+                    f.write('foreign bee')
+                f.write('\n')
+
         f.close()
+
+
+
 
     def exportBeeInformation(self, bees, weeklyActivityBees, detailedActivity, installation):
         '''
@@ -102,8 +148,8 @@ class ExportData:
         f.write('\n')
         weekCount = 0
         #f.write('Weekly activity of bees\n')
+
         for i in weeklyActivityBees:
-            #min[i] =
 
             # Get the first natural week of measurements
             list = weeklyActivityBees[i].keys()

@@ -83,8 +83,8 @@ class CleanData:
             'totalClean': totalClean
         }
 
-        return results
-
+        #return results
+        return cleanCompleteDict
 
     def removeNonValidReads(self, completeDict, threshold):
 
