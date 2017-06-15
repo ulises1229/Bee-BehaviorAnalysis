@@ -129,16 +129,24 @@ class ExportData:
                 f.write("Week " + str(r) + ",")
             f.write("Installation Date\n")
             for j in detailedActivity[i]:
+                lastElement = 1
+                f.write(str(j) + ',')
+                str1 = str(j) + ','
                 for k in detailedActivity[i][j]:
-                    f.write(str(j) + ',' + str(detailedActivity[i][j][k]))
-                    print str(j) + ',' + str(k) +',' + str(detailedActivity[i][j][k])
+                    tmp = (k % min[i]) + 1
+                    for m in range(lastElement, (k % min[i]) + 1):
+                        f.write(',')
+                        str1 = str1 + ','
+                    f.write(str(detailedActivity[i][j][k]) )
+                    str1 = str1 + str(detailedActivity[i][j][k])
+                    lastElement = (k % min[i]) + 1
+                print str1
+                    #print str(j) + ',' + str(k) +',' + str(detailedActivity[i][j][k])
+                    #size = len(detailedActivity[i][j])
                     #for l in range (len(detailedActivity[i][j])):
-                        #f.write(str(l) + ',')
-                    f.write('\n')
+                     #   tmp = k % min[i]
 
-
-
-
+                f.write('\n')
         f.close()
 
 
