@@ -62,7 +62,7 @@ class ExportData:
         f = open(self.exportPath + 'Registers.csv', "wb")
 
         # Write the information related to registers per site
-        f.write("Site,Number of registers\n")
+        f.write("Site,Total No. of registers\n")
         for r in registers:
             f.write(r + ',' + str(registers[r]) + '\n')
 
@@ -80,7 +80,7 @@ class ExportData:
 
         f.close()
 
-    def exportBeeInformation(self, bees, weeklyActivityBees, detailedActivity):
+    def exportBeeInformation(self, bees, weeklyActivityBees, detailedActivity, installation):
         '''
 
         :param bees:
@@ -94,7 +94,7 @@ class ExportData:
         f = open(self.exportPath + 'Bees.csv', "wb")
 
         # Write the information related to bees per site
-        f.write("Site,Number of Bees\n")
+        f.write("Site,Total No. of Bees\n")
         for l in bees:
             f.write(l + ',' + str(bees[l]) + '\n')
 
@@ -131,21 +131,26 @@ class ExportData:
             for j in detailedActivity[i]:
                 lastElement = 1
                 f.write(str(j) + ',')
-                str1 = str(j) + ','
+                commaCount = 0
                 for k in detailedActivity[i][j]:
-                    tmp = (k % min[i]) + 1
                     for m in range(lastElement, (k % min[i]) + 1):
                         f.write(',')
-                        str1 = str1 + ','
+                        commaCount = commaCount + 1
                     f.write(str(detailedActivity[i][j][k]) )
-                    str1 = str1 + str(detailedActivity[i][j][k])
                     lastElement = (k % min[i]) + 1
-                print str1
-                    #print str(j) + ',' + str(k) +',' + str(detailedActivity[i][j][k])
-                    #size = len(detailedActivity[i][j])
-                    #for l in range (len(detailedActivity[i][j])):
-                     #   tmp = k % min[i]
 
+                if commaCount < weekCount:
+                    for w in range((weekCount - commaCount)-1):
+                        f.write(',')
+
+                # Write installation day information
+                if j in installation[i].keys():
+                    week = (installation[i][j].isocalendar()[1] % min[i]) + 1
+                    f.write('Week ' + str(week))
+
+
+                else:
+                    f.write('foreign bee')
                 f.write('\n')
         f.close()
 

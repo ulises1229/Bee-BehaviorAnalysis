@@ -481,7 +481,7 @@ class AnalizeData:
         bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
         registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
 
-        export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity)
+        export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity, installationDates)
         export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity)
 
         # Plot the two variables
