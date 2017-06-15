@@ -105,7 +105,8 @@ class ExportData:
         #f.write('Weekly activity of bees\n')
         for i in weeklyActivityBees:
             #min[i] =
-            print weeklyActivityBees[i].keys
+
+            #print minimum
             f.write(i + '\n')
             f.write("Week, No. of bees\n")
 
@@ -126,7 +127,7 @@ class ExportData:
             for j in detailedActivity[i]:
                 for k in detailedActivity[i][j]:
                     for l in detailedActivity[i][j][k]:
-                        f.write(j + ','  )
+                        f.write(j + ','+  j + ',' + l)
 
 
 
