@@ -26,9 +26,9 @@ class ExportData:
             sys.exit(0)
 
         # Remove previous CSV files
-        exportPath = self.completePath + '\\data\\output\\'
+        self.exportPath = self.completePath + '\\data\\output\\'
         # FIXME: THIS FUNCTION MUST BE INSTANTITED FROM THE FIRST WRITER METHOD
-        self.removePreviousCSVFiles(exportPath)
+        self.removePreviousCSVFiles(self.exportPath)
 
 
     def removePreviousCSVFiles(self, path):
@@ -90,7 +90,6 @@ class ExportData:
         :return:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
-        print self.completePath
 
         f = open(self.exportPath + 'Bees.csv', "wb")
 
@@ -101,7 +100,7 @@ class ExportData:
 
         # Add a break line as a separation
         f.write('\n')
-        weekCount = 1
+        weekCount = 0
         #f.write('Weekly activity of bees\n')
         for i in weeklyActivityBees:
             #min[i] =
@@ -109,7 +108,7 @@ class ExportData:
             #print minimum
             f.write(i + '\n')
             f.write("Week, No. of bees\n")
-
+            weekCount = 1
             for j in weeklyActivityBees[i]:
                 f.write('Week ' + str(weekCount) + ','  + str(weeklyActivityBees[i][j]) + '\n')
                 weekCount = weekCount + 1
@@ -119,15 +118,17 @@ class ExportData:
 
         for i in detailedActivity:
             # Make the tittle
-            f.write(i)
+            f.write(i + '\n')
             f.write("Bee,")
-            for r in range(weekCount):
+            for r in range(1,weekCount):
                 f.write("Week " + str(r) + ",")
             f.write("Installation Date\n")
             for j in detailedActivity[i]:
                 for k in detailedActivity[i][j]:
-                    for l in detailedActivity[i][j][k]:
-                        f.write(j + ','+  j + ',' + l)
+                    f.write(str(j) + ',' )
+                    for l in range (len(detailedActivity[i][j])):
+                        f.write(str(l) + ',')
+                    f.write('\n')
 
 
 
