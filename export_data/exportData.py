@@ -50,7 +50,7 @@ class ExportData:
             if os.path.isfile(path + i):
                 os.remove(path + i)
 
-    def exportRegistersInformation(self, registers, weeklyRegisters, detailedActivity, installation):
+    def exportRegistersInformation(self, registers, weeklyRegisters, detailedActivity, installation, fileName):
         '''
 
         :param registers:
@@ -61,7 +61,7 @@ class ExportData:
 
         min = {}  # this a variable to extract the minimum element of a list of weeks
 
-        f = open(self.exportPath + 'Registers.csv', "wb")
+        f = open(self.exportPath + 'Registers' + str(fileName) +'.csv', "wb")
 
         # Write the information related to registers per site
         f.write("Site,Total No. of registers\n")
@@ -126,7 +126,7 @@ class ExportData:
 
 
 
-    def exportBeeInformation(self, bees, weeklyActivityBees, detailedActivity, installation):
+    def exportBeeInformation(self, bees, weeklyActivityBees, detailedActivity, installation, fileName):
         '''
 
         :param bees:
@@ -137,7 +137,7 @@ class ExportData:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
 
-        f = open(self.exportPath + 'Bees.csv', "wb")
+        f = open(self.exportPath + 'Bees' + str(fileName) +'.csv', "wb")
 
         # Write the information related to bees per site
         f.write("Site,Total No. of Bees\n")
@@ -179,11 +179,14 @@ class ExportData:
                 f.write(str(j) + ',')
                 commaCount = 0
                 for k in detailedActivity[i][j]:
-                    for m in range(lastElement, (k % min[i]) + 1):
+                    week = (k % min[i]) + 1
+                    if week > 5:
+                        print 'error'
+                    for m in range(lastElement, week):
                         f.write(',')
                         commaCount = commaCount + 1
                     f.write(str(detailedActivity[i][j][k]) )
-                    lastElement = (k % min[i]) + 1
+                    lastElement = week
 
                 if commaCount < weekCount:
                     for w in range((weekCount - commaCount)-1):

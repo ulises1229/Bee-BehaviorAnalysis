@@ -477,6 +477,14 @@ class AnalizeData:
         """----------------------------------------------------------------------------------------
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
+        #export Unclean data
+        bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(completeData)  # Detect how many bees in the month were registered and the weekly activite number of bee in a week
+        registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
+
+        fileName = " Unclean Data"
+        export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
+        export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName)
+
         #Number of ids
 
         # Clean the data for a cleaning process
@@ -498,12 +506,12 @@ class AnalizeData:
             for j in completeData:
                 cleanData[i][j] = clean.removeNonValidReads(completeData[j], i)
 
+            bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(cleanData[i]) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
+            registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(cleanData[i])
 
-        bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(completeData) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
-        registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
-
-        export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity, installationDates)
-        export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates)
+            fileName=  str(i.seconds //60) + ' min'
+            export.exportBeeInformation(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
+            export.exportRegistersInformation(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName)
 
         # Plot the two variables
         #plot.barPlotCategories(bees, registers)

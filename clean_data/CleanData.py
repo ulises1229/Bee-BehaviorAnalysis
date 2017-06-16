@@ -83,8 +83,8 @@ class CleanData:
             'totalClean': totalClean
         }
 
-        #return results
-        return cleanCompleteDict
+        return results
+
 
     def removeNonValidReads(self, completeDict, threshold):
 
@@ -156,4 +156,5 @@ class CleanData:
             'timeDiff': timeDifference
         }
 
-        return results
+        #return results
+        return cleanCompleteDict
