@@ -123,7 +123,7 @@ class ExportData:
 
         f.close()
 
-    def exportRegistersInformationClean(self, registers, weeklyRegisters, detailedActivity, installation, fileName, min):
+    def exportRegistersInformationClean(self, registers, weeklyRegisters, detailedActivity, installation, fileName, min, weekC):
         '''
 
         :param registers:
@@ -275,9 +275,9 @@ class ExportData:
                     f.write('foreign bee')
                 f.write('\n')
         f.close()
-        return min
+        return min, weekCount
 
-    def exportBeeInformationClean(self, bees, weeklyActivityBees, detailedActivity, installation, fileName, min):
+    def exportBeeInformationClean(self, bees, weeklyActivityBees, detailedActivity, installation, fileName, min, weekC):
         '''
 
         :param bees:

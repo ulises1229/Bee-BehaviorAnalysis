@@ -482,7 +482,7 @@ class AnalizeData:
         registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
 
         fileName = " Unclean Data"
-        min = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
+        min, weekCount = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
         export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName)
 
         #Number of ids
@@ -510,8 +510,8 @@ class AnalizeData:
             registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(cleanData[i])
 
             fileName=  str(i.seconds //60) + ' min'
-            export.exportBeeInformationClean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, min)
-            export.exportRegistersInformationClean(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName, min)
+            export.exportBeeInformationClean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, min, weekCount)
+            export.exportRegistersInformationClean(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName, min, weekCount)
 
         # Plot the two variables
         #plot.barPlotCategories(bees, registers)
