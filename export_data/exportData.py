@@ -158,6 +158,7 @@ class ExportData:
             f.write('\n')
 
         f.write('\n')
+        weekCount = weekC
 
         for i in detailedActivity:
             # Make the tittle
@@ -309,6 +310,8 @@ class ExportData:
                 f.write('Week ' + str(weekCount) + ','  + str(weeklyActivityBees[i][j]) + '\n')
                 weekCount = weekCount + 1
             f.write('\n')
+
+        weekCount = weekC
 
         f.write('\n')
 

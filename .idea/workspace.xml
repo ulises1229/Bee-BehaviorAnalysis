@@ -11,8 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees Unclean Data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees10 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees15 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees20 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees5 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers Unclean Data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers10 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers15 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers20 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers5 min.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +42,8 @@
             <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="240">
-                    <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+                  <state relative-caret-position="3200">
+                    <caret line="160" column="25" lean-forward="false" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
                     <folding>
                       <element signature="e#32#42#0" expanded="true" />
                     </folding>
@@ -512,7 +521,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-473" width="1096" height="1896" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09982984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -589,17 +598,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
-          <line>290</line>
-          <option name="timeStamp" value="310" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
-          <line>307</line>
-          <option name="timeStamp" value="311" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
-          <line>310</line>
+          <line>311</line>
           <option name="timeStamp" value="312" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -609,8 +608,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
-          <line>308</line>
-          <option name="timeStamp" value="314" />
+          <line>309</line>
+          <option name="timeStamp" value="315" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -623,7 +622,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="315" />
+      <option name="time" value="316" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -963,8 +962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        <state relative-caret-position="3200">
+          <caret line="160" column="25" lean-forward="false" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
           <folding>
             <element signature="e#32#42#0" expanded="true" />
           </folding>
