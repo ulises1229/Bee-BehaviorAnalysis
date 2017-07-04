@@ -9,6 +9,7 @@ import collections
 from clean_data.CleanData import CleanData
 from export_data.exportData import ExportData
 from datetime import  timedelta
+from datetime import datetime
 
 start = []
 end = []
@@ -466,6 +467,8 @@ class AnalizeData:
         :param completeData:
         :return:
         '''
+
+        FMT = '%H:%M:%S' #format of time
         duration = {}
         for i in completeData:
             duration[i] = {}
@@ -473,10 +476,11 @@ class AnalizeData:
             for j in completeData[i]:
                 duration[i][j] = defaultdict(list)
                 for k in completeData[i][j]:
-                    for l in range(len(completeData[i][j][k])):
-                        print completeData[i][j][k][l]
-                    #for l in completeData[i][j][k]:
-                        print l
+                    for l in range(len(completeData[i][j][k])-1):
+                        duration[i][j][k].append(datetime.strptime(str(completeData[i][j][k][l + 1]), FMT) -
+                                                 datetime.strptime(str(completeData[i][j][k][l]), FMT))
+
+        return duration
 
 
     def analizeAllSites(self, completeData, installationDates):
@@ -507,7 +511,9 @@ class AnalizeData:
         export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName)
 
         # Analyze data for detecting duration between detections
-        self.extractRegistersDuration(completeData)
+        uncleanDuration = self.extractRegistersDuration(completeData)
+
+        # Analyze data for
 
         '''--------------  analyze and export clean data using different thresholds  ---------------'''
         clean = CleanData()  # Clean data
