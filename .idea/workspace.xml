@@ -11,6 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees Unclean Data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees10 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Bees5 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers Unclean Data.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers10 min.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Registers5 min.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
@@ -29,15 +35,15 @@
     <window id="2">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="528">
+                  <state relative-caret-position="9440">
                     <caret line="472" column="8" lean-forward="false" selection-start-line="472" selection-start-column="8" selection-end-line="472" selection-end-column="8" />
                     <folding>
                       <element signature="e#32#59#0" expanded="true" />
-                      <marker date="1499206260009" expanded="true" signature="18704:18775" ph="..." />
+                      <marker date="1499207681310" expanded="true" signature="21725:22556" ph="..." />
                     </folding>
                   </state>
                 </provider>
@@ -46,11 +52,29 @@
             <file leaf-file-name="CleanData.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="280">
+                  <state relative-caret-position="-800">
                     <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
                     <folding>
                       <element signature="e#0#16#0" expanded="true" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="438">
+                    <caret line="357" column="14" lean-forward="false" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -79,8 +103,8 @@
       <file leaf-file-name="ImportData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="206" column="32" lean-forward="true" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="38" />
+            <state relative-caret-position="3980">
+              <caret line="206" column="32" lean-forward="false" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -89,8 +113,8 @@
       <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="445" column="43" lean-forward="true" selection-start-line="445" selection-start-column="43" selection-end-line="445" selection-end-column="43" />
+            <state relative-caret-position="1514">
+              <caret line="546" column="40" lean-forward="true" selection-start-line="546" selection-start-column="40" selection-end-line="546" selection-end-column="40" />
               <folding>
                 <element signature="e#32#59#0" expanded="true" />
               </folding>
@@ -101,7 +125,7 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2540">
+            <state relative-caret-position="3200">
               <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding />
             </state>
@@ -182,8 +206,8 @@
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/plots/Plot.py" />
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
-        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
         <option value="$PROJECT_DIR$/export_data/exportData.py" />
+        <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
       </list>
     </option>
   </component>
@@ -513,14 +537,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-473" width="1096" height="1896" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09982984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23482245" sideWeight="0.5037675" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23510292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.30856496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.30856496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18032786" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20498301" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67169" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1018,6 +1042,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3980">
+          <caret line="206" column="32" lean-forward="false" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3200">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-800">
+          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plots/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
@@ -1026,47 +1076,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
+    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="206" column="32" lean-forward="true" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="38" />
+        <state relative-caret-position="438">
+          <caret line="357" column="14" lean-forward="false" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2540">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="445" column="43" lean-forward="true" selection-start-line="445" selection-start-column="43" selection-end-line="445" selection-end-column="43" />
+        <state relative-caret-position="1514">
+          <caret line="546" column="40" lean-forward="true" selection-start-line="546" selection-start-column="40" selection-end-line="546" selection-end-column="40" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="371" column="51" lean-forward="true" selection-start-line="371" selection-start-column="51" selection-end-line="371" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>

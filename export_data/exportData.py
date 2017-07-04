@@ -61,7 +61,7 @@ class ExportData:
 
         min = {}  # this a variable to extract the minimum element of a list of weeks
 
-        f = open(self.exportPath + 'Registers' + str(fileName) +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "wb")
 
         # Write the information related to registers per site
         f.write("Site,Total No. of registers\n")
@@ -134,7 +134,7 @@ class ExportData:
 
 
 
-        f = open(self.exportPath + 'Registers' + str(fileName) +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "wb")
 
         # Write the information related to registers per site
         f.write("Site,Total No. of registers\n")
@@ -207,7 +207,7 @@ class ExportData:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
 
-        f = open(self.exportPath + 'Bees' + str(fileName) +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Bees' + '.csv', "wb")
 
         # Write the information related to bees per site
         f.write("Site,Total No. of Bees\n")
@@ -289,7 +289,7 @@ class ExportData:
         '''
 
 
-        f = open(self.exportPath + 'Bees' + str(fileName) +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Bees' +'.csv', "wb")
 
         # Write the information related to bees per site
         f.write("Site,Total No. of Bees\n")
@@ -355,7 +355,7 @@ class ExportData:
                 f.write('\n')
         f.close()
 
-    def exportUncleanDuration(self, uncleanDuration, fileName):
+    def exportDuration(self, uncleanDuration, fileName):
         '''
 
         :param uncleanDuration:

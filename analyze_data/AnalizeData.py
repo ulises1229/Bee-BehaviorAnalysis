@@ -512,8 +512,8 @@ class AnalizeData:
 
         # Analyze data for detecting duration between detections
         uncleanDuration = self.extractRegistersDuration(completeData)
-        fileName = 'DurationUnclean'
-        export.exportUncleanDuration(uncleanDuration, fileName)
+        fileName = 'Unclean Duration'
+        export.exportDuration(uncleanDuration, fileName)
 
 
         '''--------------  analyze and export clean data using different thresholds  ---------------'''
@@ -529,6 +529,7 @@ class AnalizeData:
             thresholdTimeDelta.append(timedelta(hours=i.hour, minutes=i.minute, seconds=i.second))
 
         cleanData = {}
+        cleanDuration = {}
 
         for i in thresholdTimeDelta:
             cleanData[i] = {}
@@ -542,6 +543,10 @@ class AnalizeData:
             export.exportBeeInformationClean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, min, weekCount)
             export.exportRegistersInformationClean(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName, min, weekCount)
 
+            # TODO: CHECK IF THIS PART IS WORKING PROPERLY
+            file = fileName + 'Duration'
+            cleanDuration = self.extractRegistersDuration(cleanData[i])
+            export.exportDuration(cleanDuration, file)
         # Plot the two variables
         #plot.barPlotCategories(bees, registers)
 
