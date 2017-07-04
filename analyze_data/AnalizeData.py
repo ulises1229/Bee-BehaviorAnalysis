@@ -466,7 +466,11 @@ class AnalizeData:
         :param completeData:
         :return:
         '''
-    
+        for i in completeData:
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    print k
+
 
     def analizeAllSites(self, completeData, installationDates):
         #TODO: VERIFY HOW MANY SITES ARE SUPPORTED WITHOUT DEFORMING GRAPHS
@@ -520,7 +524,7 @@ class AnalizeData:
             bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(cleanData[i]) # Detect how many bees in the month were registered and the weekly activite number of bee in a week
             registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(cleanData[i])
 
-            fileName=  str(i.seconds //60) + ' min'
+            fileName=  str(i.seconds //60) + ' min' # Get the filename in minutes format
             export.exportBeeInformationClean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, min, weekCount)
             export.exportRegistersInformationClean(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName, min, weekCount)
 
