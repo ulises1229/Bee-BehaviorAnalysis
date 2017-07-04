@@ -460,7 +460,13 @@ class AnalizeData:
             outData[i]["instSize"] = keysSize
         return outData
 
+    def extractRegistersDuration(self, completeData):
+        '''
 
+        :param completeData:
+        :return:
+        '''
+    
 
     def analizeAllSites(self, completeData, installationDates):
         #TODO: VERIFY HOW MANY SITES ARE SUPPORTED WITHOUT DEFORMING GRAPHS
@@ -485,10 +491,12 @@ class AnalizeData:
 
         #FIXME: avoid calculate min in this method is not a good practice
         fileName = " Unclean Data"
+        # Export data to CSV
         min, weekCount = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
-
-        # export data to CSV format
         export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName)
+
+        # Analyze data for detecting duration between detections
+        self.extractRegistersDuration(completeData)
 
         '''--------------  analyze and export clean data using different thresholds  ---------------'''
         clean = CleanData()  # Clean data

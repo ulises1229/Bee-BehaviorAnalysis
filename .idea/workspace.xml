@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,9 +31,29 @@
             <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="98">
-                    <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+                  <state relative-caret-position="-1962">
+                    <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
                     <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="528">
+                    <caret line="468" column="4" lean-forward="false" selection-start-line="468" selection-start-column="4" selection-end-line="468" selection-end-column="4" />
+                    <folding>
+                      <element signature="e#32#59#0" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -53,8 +72,8 @@
       <file leaf-file-name="CleanData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1355">
-              <caret line="146" column="19" lean-forward="true" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+            <state relative-caret-position="1375">
+              <caret line="147" column="51" lean-forward="true" selection-start-line="147" selection-start-column="51" selection-end-line="147" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -83,8 +102,8 @@
       <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="492" column="72" lean-forward="false" selection-start-line="492" selection-start-column="72" selection-end-line="492" selection-end-column="72" />
+            <state relative-caret-position="528">
+              <caret line="468" column="4" lean-forward="false" selection-start-line="468" selection-start-column="4" selection-end-line="468" selection-end-column="4" />
               <folding>
                 <element signature="e#32#59#0" expanded="true" />
               </folding>
@@ -113,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>numDays</find>
       <find>workingDir = os.getcwd()         path = workingDir + '\latex_report\latex_template\\'         if path.count(&quot;\latex_report\latex_template&quot;) &gt; 1:             path = path.replace('\latex_report\latex_template' , '', 1)</find>
       <find>get</find>
       <find>addContent</find>
@@ -143,6 +161,7 @@
       <find>raw_da</find>
       <find>exportPat</find>
       <find>print</find>
+      <find>export.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1001,24 +1020,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        <state relative-caret-position="-1962">
+          <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clean_data/CleanData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1355">
-          <caret line="146" column="19" lean-forward="true" selection-start-line="146" selection-start-column="19" selection-end-line="146" selection-end-column="19" />
+        <state relative-caret-position="1375">
+          <caret line="147" column="51" lean-forward="true" selection-start-line="147" selection-start-column="51" selection-end-line="147" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="492" column="72" lean-forward="false" selection-start-line="492" selection-start-column="72" selection-end-line="492" selection-end-column="72" />
+        <state relative-caret-position="528">
+          <caret line="468" column="4" lean-forward="false" selection-start-line="468" selection-start-column="4" selection-end-line="468" selection-end-column="4" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
