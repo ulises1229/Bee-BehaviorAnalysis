@@ -477,17 +477,20 @@ class AnalizeData:
         """----------------------------------------------------------------------------------------
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
+
+        '''------------------------  analyze and export unclean data   -------------------------'''
         #export Unclean data
         bees, weeklyBeeActivity, detailedBeeActivity = self.getNumberIds(completeData)  # Detect how many bees in the month were registered and the weekly activite number of bee in a week
         registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
 
+        #FIXME: avoid calculate min in this method is not a good practice
         fileName = " Unclean Data"
         min, weekCount = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
+
+        # export data to CSV format
         export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName)
 
-        #Number of ids
-
-        # Clean the data for a cleaning process
+        '''--------------  analyze and export clean data using different thresholds  ---------------'''
         clean = CleanData()  # Clean data
         FMT = '%H:%M:%S'
 
