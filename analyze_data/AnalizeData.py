@@ -466,10 +466,17 @@ class AnalizeData:
         :param completeData:
         :return:
         '''
+        duration = {}
         for i in completeData:
+            duration[i] = {}
+            print i
             for j in completeData[i]:
+                duration[i][j] = defaultdict(list)
                 for k in completeData[i][j]:
-                    print k
+                    for l in range(len(completeData[i][j][k])):
+                        print completeData[i][j][k][l]
+                    #for l in completeData[i][j][k]:
+                        print l
 
 
     def analizeAllSites(self, completeData, installationDates):
