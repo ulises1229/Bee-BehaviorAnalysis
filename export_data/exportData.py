@@ -366,12 +366,14 @@ class ExportData:
         for i in uncleanDuration:
             f.write('\n\n' + i + '\n')
             for j in uncleanDuration[i]:
-                f.write( str(j) + '\n')
-                for k in uncleanDuration[i][j]:
-                    f.write(' ,' + str(k) + '\n  ,' )
-                    for l in uncleanDuration[i][j][k]:
-                        f.write(str(l) + ',')
-                    f.write('\n')
+                #FIXME: AVOID PUT EMPTY VALUES
+                if len(uncleanDuration[i][j]) > 1:
+                    f.write( str(j) + '\n')
+                    for k in uncleanDuration[i][j]:
+                        f.write(' ,' + str(k) + '\n  ,' )
+                        for l in uncleanDuration[i][j][k]:
+                            f.write(str(l) + ',')
+                        f.write('\n')
         f.close()
 
 

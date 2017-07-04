@@ -11,20 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/10 min/Bees10 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/10 min/Registers10 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/15 min/Bees15 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/15 min/Registers15 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/20 min/Bees20 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/20 min/Registers20 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/5 min/Bees5 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/5 min/Registers5 min.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Unclean Data/Bees Unclean Data.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Unclean Data/Registers Unclean Data.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/output.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clean_data/CleanData.py" afterPath="$PROJECT_DIR$/clean_data/CleanData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,24 +26,6 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="658">
-                    <caret line="366" column="38" lean-forward="true" selection-start-line="366" selection-start-column="38" selection-end-line="366" selection-end-column="38" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
     <window id="2">
       <content type="file-editors">
         <state>
@@ -67,7 +37,7 @@
                     <caret line="472" column="8" lean-forward="false" selection-start-line="472" selection-start-column="8" selection-end-line="472" selection-end-column="8" />
                     <folding>
                       <element signature="e#32#59#0" expanded="true" />
-                      <marker date="1499206089010" expanded="true" signature="18704:18775" ph="..." />
+                      <marker date="1499206260009" expanded="true" signature="18704:18775" ph="..." />
                     </folding>
                   </state>
                 </provider>
@@ -119,8 +89,8 @@
       <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
-              <caret line="515" column="62" lean-forward="false" selection-start-line="515" selection-start-column="62" selection-end-line="515" selection-end-column="62" />
+            <state relative-caret-position="334">
+              <caret line="445" column="43" lean-forward="true" selection-start-line="445" selection-start-column="43" selection-end-line="445" selection-end-column="43" />
               <folding>
                 <element signature="e#32#59#0" expanded="true" />
               </folding>
@@ -543,14 +513,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-473" width="1096" height="1896" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09982984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23482245" sideWeight="0.5037675" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23510292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.30856496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.30856496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18032786" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20498301" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67169" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -635,8 +605,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
-          <line>374</line>
+          <line>376</line>
           <option name="timeStamp" value="325" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
+          <line>363</line>
+          <option name="timeStamp" value="327" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -649,7 +624,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="327" />
+      <option name="time" value="328" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1077,21 +1052,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="366" column="38" lean-forward="true" selection-start-line="366" selection-start-column="38" selection-end-line="366" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="515" column="62" lean-forward="false" selection-start-line="515" selection-start-column="62" selection-end-line="515" selection-end-column="62" />
+        <state relative-caret-position="334">
+          <caret line="445" column="43" lean-forward="true" selection-start-line="445" selection-start-column="43" selection-end-line="445" selection-end-column="43" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="371" column="51" lean-forward="true" selection-start-line="371" selection-start-column="51" selection-end-line="371" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
