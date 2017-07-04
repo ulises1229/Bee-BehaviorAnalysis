@@ -355,3 +355,23 @@ class ExportData:
                 f.write('\n')
         f.close()
 
+    def exportUncleanDuration(self, uncleanDuration, fileName):
+        '''
+
+        :param uncleanDuration:
+        :return:
+        '''
+        f = open(self.exportPath + fileName + '.csv', "wb")
+
+        for i in uncleanDuration:
+            f.write('\n\n' + i + '\n')
+            for j in uncleanDuration[i]:
+                f.write( str(j) + '\n')
+                for k in uncleanDuration[i][j]:
+                    f.write(' ,' + str(k) + '\n  ,' )
+                    for l in uncleanDuration[i][j][k]:
+                        f.write(str(l) + ',')
+                    f.write('\n')
+        f.close()
+
+

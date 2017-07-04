@@ -512,8 +512,9 @@ class AnalizeData:
 
         # Analyze data for detecting duration between detections
         uncleanDuration = self.extractRegistersDuration(completeData)
+        fleName = 'DurationUnclean'
+        export.exportUncleanDuration(uncleanDuration, fileName)
 
-        # Analyze data for
 
         '''--------------  analyze and export clean data using different thresholds  ---------------'''
         clean = CleanData()  # Clean data

@@ -12,7 +12,7 @@ class CleanData:
     """
         This method removes all the test lectures FFFFFF
     """
-    #FIXME: IS NOT NECCESARY TO TRANSFEER IDDICT AND DATEDICT
+    #FIXME: IS NOT NECCESARY TO TRANSFEER IDDICT AND DATEDICT correct it
     def removeLostChips(self, completeDict, threshold):
 
         cleanCompleteDict = {}
