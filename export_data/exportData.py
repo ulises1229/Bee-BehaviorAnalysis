@@ -4,6 +4,7 @@ import csv
 import os
 import fnmatch
 import sys
+from collections import defaultdict
 
 class ExportData:
     completePath = " "
@@ -196,7 +197,7 @@ class ExportData:
 
 
 
-    def exportBeeInformationUnclean(self, bees, weeklyActivityBees, detailedActivity, installation, fileName):
+    def exportBeeInformationUnclean(self, bees, weeklyActivityBees, detailedActivity, installation, fileName, completeData):
         '''
 
         :param bees:
@@ -206,6 +207,15 @@ class ExportData:
         :return:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
+
+        beesPerDay = defaultdict(list)
+        for i in completeData:
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    print k
+                    beesPerDay[k].append(j)
+
+
 
         f = open(self.exportPath + str(fileName) + ' Bees' + '.csv', "wb")
 

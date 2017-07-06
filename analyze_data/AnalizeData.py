@@ -507,8 +507,8 @@ class AnalizeData:
         #FIXME: avoid calculate min in this method is not a good practice
         fileName = " Unclean Data"
         # Export data to CSV
-        min, weekCount = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName)
-        export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName)
+        min, weekCount = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, completeData)
+        export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName, completeData)
 
         # Analyze data for detecting duration between detections
         uncleanDuration = self.extractRegistersDuration(completeData)
