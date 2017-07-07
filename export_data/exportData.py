@@ -456,14 +456,6 @@ class ExportData:
         :param lastRegisters:
         :return:
         '''
-        newDates = {}
-        for i in installationDates:
-            newDates[i] = {}
-            for j in installationDates[i]:
-                print installationDates[i][j]
-                newDates[i][installationDates[i][j]] = j
-
-
         f = open(self.exportPath  + 'LastRegisters.csv', "wb")
 
 
@@ -471,7 +463,10 @@ class ExportData:
             f.write(i + '\n')
             f.write('ID, Date, Time \n')
             for j in lastRegisters[i]:
-                f.write(str(j) + ',' + str(lastRegisters[i][j][0]) + ',' + str(lastRegisters[i][j][1]) +  ',' + installationDates[i][j] + '\n')
+                if j in installationDates[i].keys():
+                    f.write(str(j) + ',' + str(lastRegisters[i][j][0]) + ',' + str(lastRegisters[i][j][1]) +  ',' + str(installationDates[i][j]) + '\n')
+                else:
+                    f.write(str(j) + ',' + str(lastRegisters[i][j][0]) + ',' + str(lastRegisters[i][j][1]) + ',' + 'foreign bee' + '\n')
             f.write('\n')
         f.close()
 

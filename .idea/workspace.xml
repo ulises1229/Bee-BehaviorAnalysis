@@ -11,17 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/15 min/15 min Bees.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/15 min/15 min Registers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/15 min/15 minDuration.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/20 min/20 min Bees.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/20 min/20 min Registers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/20 min/20 minDuration.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Unclean Data/Unclean Data Bees.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Unclean Data/Unclean Data Registers.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/output/Unclean Data/Unclean Duration.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export_data/exportData.py" afterPath="$PROJECT_DIR$/export_data/exportData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,7 +54,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="61">
@@ -76,7 +66,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Main.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="310">
@@ -103,8 +93,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="624">
-                  <caret line="519" column="67" lean-forward="false" selection-start-line="519" selection-start-column="67" selection-end-line="519" selection-end-column="67" />
+                <state relative-caret-position="-126">
+                  <caret line="519" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -113,8 +103,8 @@
           <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="379">
-                  <caret line="467" column="0" lean-forward="true" selection-start-line="467" selection-start-column="0" selection-end-line="467" selection-end-column="0" />
+                <state relative-caret-position="447">
+                  <caret line="468" column="127" lean-forward="false" selection-start-line="468" selection-start-column="127" selection-end-line="468" selection-end-column="127" />
                   <folding>
                     <element signature="e#32#41#0" expanded="true" />
                   </folding>
@@ -518,8 +508,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="2418" height="1318" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20493358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09982984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -606,13 +596,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
-          <line>475</line>
+          <line>470</line>
           <option name="timeStamp" value="353" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/export_data/exportData.py</url>
           <line>466</line>
-          <option name="timeStamp" value="356" />
+          <option name="timeStamp" value="357" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -625,7 +615,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="357" />
+      <option name="time" value="358" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1022,6 +1012,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="519" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -1030,18 +1028,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="519" column="67" lean-forward="false" selection-start-line="519" selection-start-column="67" selection-end-line="519" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="467" column="0" lean-forward="true" selection-start-line="467" selection-start-column="0" selection-end-line="467" selection-end-column="0" />
+        <state relative-caret-position="447">
+          <caret line="468" column="127" lean-forward="false" selection-start-line="468" selection-start-column="127" selection-end-line="468" selection-end-column="127" />
           <folding>
             <element signature="e#32#41#0" expanded="true" />
           </folding>
