@@ -482,6 +482,27 @@ class AnalizeData:
 
         return duration
 
+    def detectLastRegister(self, installationDates, completeData):
+        '''
+
+        :param completeData:
+        :return:
+        '''
+        lastRegister = {}
+        for i in completeData:
+            lastRegister[i] = defaultdict(list)
+            for j in completeData[i]:
+                dates = completeData[i][j].keys()
+                time = completeData[i][j].values()
+                time = time[0]
+                dates.sort()
+                time.sort()
+                lastDay = dates[-1]
+                lastTime = time[-1]
+                # FIXME: CHECK IF THE INSTALLATION DATE IS DIFFERENT TO LAST DAY
+                lastRegister[i][j].append(lastDay)
+                lastRegister[i][j].append(lastTime)
+        return lastRegister
 
     def analizeAllSites(self, completeData, installationDates):
         #TODO: VERIFY HOW MANY SITES ARE SUPPORTED WITHOUT DEFORMING GRAPHS
@@ -495,8 +516,8 @@ class AnalizeData:
         plot = Plot()           #Make plots
         export = ExportData()   #Export data in csv format
 
-
-
+        lastRegisters = self.detectLastRegister(installationDates, completeData)
+        export.exportLastRegisters(lastRegisters)
         """----------------------------------------------------------------------------------------
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
@@ -551,6 +572,8 @@ class AnalizeData:
             export.exportDuration(cleanDuration, file)
         # Plot the two variables
         #plot.barPlotCategories(bees, registers)
+
+
 
 
 

@@ -450,4 +450,22 @@ class ExportData:
                         f.write('\n')
         f.close()
 
+    def exportLastRegisters(self, lastRegisters):
+        '''
+
+        :param lastRegisters:
+        :return:
+        '''
+        f = open(self.exportPath  + 'LastRegisters.csv', "wb")
+
+        for i in lastRegisters:
+            f.write(i + '\n')
+            f.write('ID, Date, Time \n')
+            for j in lastRegisters[i]:
+                f.write(str(i) +  )
+            f.write('\n')
+
+
+
+
 
