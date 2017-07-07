@@ -10,11 +10,7 @@
     <bookmark url="file://$PROJECT_DIR$/clean_data/CleanData.py" line="54" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/import_data.iml" afterPath="$PROJECT_DIR$/.idea/import_data.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,8 +86,8 @@
           <file leaf-file-name="AnalizeData.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="598">
-                  <caret line="558" column="30" lean-forward="false" selection-start-line="558" selection-start-column="30" selection-end-line="558" selection-end-column="30" />
+                <state relative-caret-position="214">
+                  <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -100,8 +96,8 @@
           <file leaf-file-name="exportData.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1510">
-                  <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+                <state relative-caret-position="501">
+                  <caret line="221" column="56" lean-forward="true" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
                   <folding>
                     <element signature="e#32#42#0" expanded="true" />
                   </folding>
@@ -139,7 +135,6 @@
       <find>870020100200104300000137</find>
       <find>clean</find>
       <find>thrs</find>
-      <find>defaultdict</find>
       <find>inter</find>
       <find>thresholdLostChips</find>
       <find>site 1</find>
@@ -152,6 +147,7 @@
       <find>defaul</find>
       <find>export.</find>
       <find>default</find>
+      <find>defaultdict</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,8 +171,8 @@
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/plots/Plot.py" />
         <option value="$PROJECT_DIR$/clean_data/CleanData.py" />
-        <option value="$PROJECT_DIR$/export_data/exportData.py" />
         <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
+        <option value="$PROJECT_DIR$/export_data/exportData.py" />
       </list>
     </option>
   </component>
@@ -1001,14 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="558" column="30" lean-forward="false" selection-start-line="558" selection-start-column="30" selection-end-line="558" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plots/Plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -1017,10 +1005,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1510">
-          <caret line="126" column="26" lean-forward="true" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+        <state relative-caret-position="501">
+          <caret line="221" column="56" lean-forward="true" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
           <folding>
             <element signature="e#32#42#0" expanded="true" />
           </folding>
