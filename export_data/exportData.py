@@ -1,6 +1,5 @@
 __author__ = 'Ulises Olivares'
 
-import csv
 import os
 import fnmatch
 import sys
@@ -208,7 +207,9 @@ class ExportData:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
 
-        beesPerDay = defaultdict(list)
+        bees2 = defaultdict(list)
+        idDict = defaultdict(list)
+
         for i in completeData:
             for j in completeData[i]:
                 for k in completeData[i][j]:

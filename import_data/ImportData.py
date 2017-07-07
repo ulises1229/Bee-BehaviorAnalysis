@@ -4,7 +4,6 @@ __author__ = 'Ulises Olivares'
 
 import csv
 from datetime import *
-import arrow
 from os import walk
 from collections import defaultdict
 import itertools
