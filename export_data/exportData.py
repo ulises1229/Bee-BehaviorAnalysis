@@ -2,6 +2,7 @@ __author__ = 'Ulises Olivares'
 
 import os
 import fnmatch
+import collections
 import sys
 from collections import defaultdict
 
@@ -50,7 +51,7 @@ class ExportData:
             if os.path.isfile(path + i):
                 os.remove(path + i)
 
-    def exportRegistersInformationUnclean(self, registers, weeklyRegisters, detailedActivity, installation, fileName):
+    def exportRegistersInformationUnclean(self, registers, weeklyRegisters, detailedActivity, installation, fileName, completeData):
         '''
 
         :param registers:
@@ -61,6 +62,17 @@ class ExportData:
 
         min = {}  # this a variable to extract the minimum element of a list of weeks
 
+        registerPerDay = {}
+        for i in completeData:
+            registerPerDay[i] = defaultdict(list)
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    if k in registerPerDay[i].keys():
+                        registerPerDay[i][k] = registerPerDay[i][k] + len(completeData[i][j][k])
+                    else:
+                        registerPerDay[i][k] =  len(completeData[i][j][k])
+
+
         f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "wb")
 
         # Write the information related to registers per site
@@ -70,14 +82,26 @@ class ExportData:
 
         # Add a break line as a separation
         f.write('\n')
+
+        for i in registerPerDay:
+            f.write(i + '\n')
+            f.write('Day, No. Registers \n')
+            regList = registerPerDay[i].keys()
+            regList.sort()
+            for j in regList:
+                f.write(str(j) + ',' + str(registerPerDay[i][j]) + '\n')
+
+
+        # Add a break line as a separation
+        f.write('\n')
         weekCount = 0
 
         for i in weeklyRegisters:
             # Get the first natural week of measurements
-            list = weeklyRegisters[i].keys()
-            list.sort()
+            weekList = weeklyRegisters[i].keys()
+            weekList.sort()
             # Store the min element
-            min[i] = list[0]
+            min[i] = weekList[0]
 
             f.write(i + '\n')
             f.write("Week, No. of registers\n")
@@ -123,7 +147,7 @@ class ExportData:
 
         f.close()
 
-    def exportRegistersInformationClean(self, registers, weeklyRegisters, detailedActivity, installation, fileName, min, weekC):
+    def exportRegistersInformationClean(self, registers, weeklyRegisters, detailedActivity, installation, fileName, min, weekC, completeData):
         '''
 
         :param registers:
@@ -132,7 +156,15 @@ class ExportData:
         :return:
         '''
 
-
+        registerPerDay = {}
+        for i in completeData:
+            registerPerDay[i] = defaultdict(list)
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    if k in registerPerDay[i].keys():
+                        registerPerDay[i][k] = registerPerDay[i][k] + len(completeData[i][j][k])
+                    else:
+                        registerPerDay[i][k] = len(completeData[i][j][k])
 
         f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "wb")
 
@@ -206,17 +238,14 @@ class ExportData:
         :return:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
+        beesPerDay = {}
 
-        #bees2 = defaultdict(list)
-        idDict = defaultdict(list)
-
+        # Store all the registers per day
         for i in completeData:
+            beesPerDay[i] = defaultdict(list)
             for j in completeData[i]:
                 for k in completeData[i][j]:
-                    print k
-                    beesPerDay[k].append(j)
-
-
+                    beesPerDay[i][k].append(j)
 
         f = open(self.exportPath + str(fileName) + ' Bees' + '.csv', "wb")
 
@@ -225,21 +254,34 @@ class ExportData:
         for l in bees:
             f.write(l + ',' + str(bees[l]) + '\n')
 
+
         # Add a break line as a separation
         f.write('\n')
+
+        # Activity per day
+        for i in beesPerDay:
+            f.write(i + '\n')
+            f.write('Day, No. of Bees' + '\n')
+            dayList = beesPerDay[i].keys()
+            dayList.sort()
+            for j in dayList:
+                f.write(str(j) + ',' + str(len(beesPerDay[i][j])) + '\n')
+
+        # Add a break line as a separation
+        f.write('\n')
+
         weekCount = 0
         #f.write('Weekly activity of bees\n')
 
         for i in weeklyActivityBees:
-
             # Get the first natural week of measurements
-            list = weeklyActivityBees[i].keys()
-            list.sort()
+            weekList = weeklyActivityBees[i].keys()
+            weekList.sort()
             # Store the min element
-            min[i] = list[0]
+            min[i] = weekList[0]
 
             f.write(i + '\n')
-            f.write("Week, No. of bees\n")
+            f.write("Week, No. of bees" +'\n')
             weekCount = 1
             for j in weeklyActivityBees[i]:
                 f.write('Week ' + str(weekCount) + ','  + str(weeklyActivityBees[i][j]) + '\n')
@@ -289,7 +331,7 @@ class ExportData:
         f.close()
         return min, weekCount
 
-    def exportBeeInformationClean(self, bees, weeklyActivityBees, detailedActivity, installation, fileName, min, weekC):
+    def exportBeeInformationClean(self, bees, weeklyActivityBees, detailedActivity, installation, fileName, min, weekC, completeData):
         '''
 
         :param bees:
@@ -299,6 +341,15 @@ class ExportData:
         :return:
         '''
 
+        beesPerDay = {}
+        # Store all the registers per day
+        for i in completeData:
+            beesPerDay[i] = defaultdict(list)
+            for j in completeData[i]:
+                for k in completeData[i][j]:
+                    beesPerDay[i][k].append(j)
+
+
 
         f = open(self.exportPath + str(fileName) + ' Bees' +'.csv', "wb")
 
@@ -306,6 +357,18 @@ class ExportData:
         f.write("Site,Total No. of Bees\n")
         for l in bees:
             f.write(l + ',' + str(bees[l]) + '\n')
+
+        # Add a break line as a separation
+        f.write('\n')
+
+        # Activity per day
+        for i in beesPerDay:
+            f.write(i + '\n')
+            f.write('Day, No. of Bees' + '\n')
+            dayList = beesPerDay[i].keys()
+            dayList.sort()
+            for j in dayList:
+                f.write(str(j) + ',' + str(len(beesPerDay[i][j])) + '\n')
 
         # Add a break line as a separation
         f.write('\n')

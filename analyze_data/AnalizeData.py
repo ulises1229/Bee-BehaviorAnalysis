@@ -495,6 +495,8 @@ class AnalizeData:
         plot = Plot()           #Make plots
         export = ExportData()   #Export data in csv format
 
+
+
         """----------------------------------------------------------------------------------------
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
@@ -505,7 +507,7 @@ class AnalizeData:
         registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(completeData)
 
         #FIXME: avoid calculate min in this method is not a good practice
-        fileName = " Unclean Data"
+        fileName = "Unclean Data"
         # Export data to CSV
         min, weekCount = export.exportBeeInformationUnclean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, completeData)
         export.exportRegistersInformationUnclean(registers, weeklyRegistersActivity, detailedRegisterActivity,installationDates, fileName, completeData)
@@ -540,8 +542,8 @@ class AnalizeData:
             registers, weeklyRegistersActivity, detailedRegisterActivity = self.getNumRegisters(cleanData[i])
 
             fileName=  str(i.seconds //60) + ' min' # Get the filename in minutes format
-            export.exportBeeInformationClean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, min, weekCount)
-            export.exportRegistersInformationClean(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName, min, weekCount)
+            export.exportBeeInformationClean(bees, weeklyBeeActivity, detailedBeeActivity, installationDates, fileName, min, weekCount, completeData)
+            export.exportRegistersInformationClean(registers, weeklyRegistersActivity, detailedRegisterActivity, installationDates, fileName, min, weekCount, completeData)
 
             # TODO: CHECK IF THIS PART IS WORKING PROPERLY
             file = fileName + 'Duration'
