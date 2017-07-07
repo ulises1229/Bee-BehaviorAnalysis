@@ -207,7 +207,7 @@ class ExportData:
         '''
         min ={} # this a variable to extract the minimum element of a list of weeks
 
-        bees2 = defaultdict(list)
+        #bees2 = defaultdict(list)
         idDict = defaultdict(list)
 
         for i in completeData:
