@@ -450,20 +450,30 @@ class ExportData:
                         f.write('\n')
         f.close()
 
-    def exportLastRegisters(self, lastRegisters):
+    def exportLastRegisters(self, lastRegisters, installationDates):
         '''
 
         :param lastRegisters:
         :return:
         '''
+        newDates = {}
+        for i in installationDates:
+            newDates[i] = {}
+            for j in installationDates[i]:
+                print installationDates[i][j]
+                newDates[i][installationDates[i][j]] = j
+
+
         f = open(self.exportPath  + 'LastRegisters.csv', "wb")
+
 
         for i in lastRegisters:
             f.write(i + '\n')
             f.write('ID, Date, Time \n')
             for j in lastRegisters[i]:
-                f.write(str(i) +  )
+                f.write(str(j) + ',' + str(lastRegisters[i][j][0]) + ',' + str(lastRegisters[i][j][1]) +  ',' + installationDates[i][j] + '\n')
             f.write('\n')
+        f.close()
 
 
 

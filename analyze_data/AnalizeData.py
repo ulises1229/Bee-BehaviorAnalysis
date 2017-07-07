@@ -517,7 +517,7 @@ class AnalizeData:
         export = ExportData()   #Export data in csv format
 
         lastRegisters = self.detectLastRegister(installationDates, completeData)
-        export.exportLastRegisters(lastRegisters)
+        export.exportLastRegisters(lastRegisters, installationDates)
         """----------------------------------------------------------------------------------------
             1. Get the number of total ID and observations for each site organized per week
         ----------------------------------------------------------------------------------------"""
