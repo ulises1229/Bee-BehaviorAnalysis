@@ -89,7 +89,7 @@ class ImportData:
                         # Skip first line of the csv
                         if row[0][0] == '#':
                             continue
-                        # Remove all the FFFFFF reads those are for test proposes
+                        # Remove all the FFFFFF reads, those are for test proposes
                         # FIXME: store all the FFFFFF reads for statistical proposes
                         elif row[1][0] != 'F':
                             # Parse dete and time values
