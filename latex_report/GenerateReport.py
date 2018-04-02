@@ -312,7 +312,7 @@ class GenerateReport:
 
     def generateReport(self, contents):
         """
-
+        This is the main method of this class, it initiallizes variables.
         :param contents:
         :return:
         """
