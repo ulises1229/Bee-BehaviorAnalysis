@@ -30,6 +30,9 @@ http://www.activestate.com/activeperl/downloads
 #It is madatory to install latex and enable the automation of package installation
 https://www.latex-project.org/get/
 
+# Install python-tk
+python-tk
+
 #--------------------------
 # How to USE the framework
 #--------------------------
