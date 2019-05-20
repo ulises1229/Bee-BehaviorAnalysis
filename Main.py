@@ -61,7 +61,7 @@ def main():
     print("Time Lapse of importation: " + str(delta))
 
     if noFiles < 1:
-        print "There are not input Files, Please be sure that your input files are in the data Directory..."
+        print ("There are not input Files, Please be sure that your input files are in the data Directory...")
         exit(0)
 
     #Get data
@@ -74,14 +74,14 @@ def main():
     # Iteration for analizing all the input data of independent sites
 
     for i in completeData:
-        print "---------------------------------"
-        print "Site Name: " + i
-        print "---------------------------------"
+        print ("---------------------------------")
+        print ("Site Name: " + i)
+        print ("---------------------------------")
 
-        print "Number of files: " + str(noFiles[i])
-        print "Active Days: " + str(len(dateData[i]))
-        print "Non-Active Days: " + str(noFiles[i] - len(dateData[i]))
-        print str(noFiles[i] - len(dateData[i]))
+        print ("Number of files: " + str(noFiles[i]))
+        print ("Active Days: " + str(len(dateData[i])))
+        print ("Non-Active Days: " + str(noFiles[i] - len(dateData[i])))
+        print (str(noFiles[i] - len(dateData[i])))
         # Store values of activity for each site
         activity[i] = {}
         activity[i]['Active Days'] = len(dateData[i])
@@ -91,7 +91,7 @@ def main():
         chartName=  i + "chartNumLectures"
         #plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
         """
-        print "---------------------------------"
+        print "---------------------------------")
         print("Cleaning data...\n" + "Threshold: " + str(thresholdLostChips))
 
         # sorting all dates to select 1st and last date and make a difference

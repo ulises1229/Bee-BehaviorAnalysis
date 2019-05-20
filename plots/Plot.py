@@ -179,7 +179,7 @@ class Plot:
         :param chartName:
         :return:
         """
-        print inputData
+        print (inputData)
         labels = ["label%d" % i for i in xrange(len(inputData))]
         x = range(len(inputData))
         y = inputData
@@ -243,8 +243,8 @@ class Plot:
         site2.append(registers['Morelia Hive 1'])
         site2.append(registers['Morelia Hive 2'])
 
-        print "Morelia - Site 1: " + str(site1)
-        print "Morelia - Site 2: " + str(site2)
+        print ("Morelia - Site 1: " + str(site1))
+        print ("Morelia - Site 2: " + str(site2))
 
         fig, ax = plt.subplots()
         rects1 = ax.bar(ind, site1, width, color='b')
