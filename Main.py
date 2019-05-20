@@ -58,10 +58,10 @@ def main():
     #noFiles = sorted(noFiles.items(), key=operator.itemgetter(0))
     end = time.time()
     delta = end - start
-    print "Time Lapse of importation: " + str(delta)
+    print("Time Lapse of importation: " + str(delta))
 
     if noFiles < 1:
-        print "There are not input Files, Please be sure tu put your input files in the data Directory..."
+        print "There are not input Files, Please be sure that your input files are in the data Directory..."
         exit(0)
 
     #Get data
