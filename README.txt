@@ -1,6 +1,6 @@
 # |-----------------------------------------------------------------------| # 
 # |     Author: Ulises Olivares Pinto, uolivares@enesmorelia.unam.mx      |
-# |This code was tested using python 2.7.11 and pip 8.0.3                 |
+# |This code was tested using python 3.7.3 and pip 8.0.3                 |
 # |The project was developed with PyCharm Community Edition 2016.3.2      |
 # |Build #PC-163.10154.50, built on December 28, 2016                     |
 # |JRE: 1.8.0_112-release-408-b6 x86                                      |
