@@ -11,26 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/10 min Bees.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/10 min Registers.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/10 minDuration.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/15 min Bees.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/15 min Registers.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/15 minDuration.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/20 min Bees.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/20 min Registers.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/20 minDuration.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/5 min Bees.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/5 min Registers.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/5 minDuration.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/LastRegisters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/LastRegisters.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/Unclean Data Bees.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/Unclean Data Bees.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/Unclean Data Registers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/Unclean Data Registers.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/Unclean Duration.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/export_data/exportData.py" beforeDir="false" afterPath="$PROJECT_DIR$/export_data/exportData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/import_data/ImportData.py" beforeDir="false" afterPath="$PROJECT_DIR$/import_data/ImportData.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Main.coverage" NAME="Main Coverage Results" MODIFIED="1558399975914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Main.coverage" NAME="Main Coverage Results" MODIFIED="1558400269917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -48,7 +31,7 @@
     <session id="-24474702">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
@@ -57,12 +40,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="12" />
-          <entry key="py" value="654" />
+          <entry key="py" value="662" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="666" />
+          <entry key="Python" value="674" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -103,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="283" column="19" selection-start-line="283" selection-start-column="19" selection-end-line="283" selection-end-column="19" />
+            <state relative-caret-position="-372">
+              <caret line="291" selection-start-line="291" selection-end-line="291" />
             </state>
           </provider>
         </entry>
@@ -116,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="495" column="23" selection-start-line="495" selection-start-column="23" selection-end-line="495" selection-end-column="23" />
+              <caret line="474" column="17" selection-start-line="474" selection-start-column="12" selection-end-line="474" selection-end-column="17" />
               <folding>
                 <element signature="e#32#59#0" expanded="true" />
               </folding>
@@ -124,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="-907">
+              <caret line="375" column="48" selection-start-line="375" selection-start-column="48" selection-end-line="375" selection-end-column="48" />
               <folding>
                 <element signature="e#32#41#0" expanded="true" />
               </folding>
@@ -139,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="533">
+              <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
               <folding>
                 <element signature="e#78#126#0" expanded="true" />
               </folding>
@@ -193,11 +176,11 @@
       <find>defaul</find>
       <find>export.</find>
       <find>default</find>
-      <find>print</find>
       <find>Darwin</find>
-      <find>there are</find>
-      <find>wb</find>
       <find>FIXME</find>
+      <find>wb</find>
+      <find>there are</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,9 +203,9 @@
         <option value="$PROJECT_DIR$/plots/Plot.py" />
         <option value="$PROJECT_DIR$/latex_report/GenerateReport.py" />
         <option value="$PROJECT_DIR$/import_data/ImportData.py" />
+        <option value="$PROJECT_DIR$/export_data/exportData.py" />
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/analyze_data/AnalizeData.py" />
-        <option value="$PROJECT_DIR$/export_data/exportData.py" />
       </list>
     </option>
   </component>
@@ -504,7 +487,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15125571" />
       <window_info anchor="bottom" auto_hide="true" id="Run" internal_type="SLIDING" order="2" type="SLIDING" weight="0.2817518" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4962325" visible="true" weight="0.34817517" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4962325" weight="0.34817517" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5037675" side_tool="true" weight="0.23482245" />
@@ -655,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="283" column="19" selection-start-line="283" selection-start-column="19" selection-end-line="283" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/import_data/ImportData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -672,10 +648,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-907">
+          <caret line="375" column="48" selection-start-line="375" selection-start-column="48" selection-end-line="375" selection-end-column="48" />
+          <folding>
+            <element signature="e#32#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="533">
+          <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
           <folding>
             <element signature="e#78#126#0" expanded="true" />
           </folding>
@@ -685,20 +671,17 @@
     <entry file="file://$PROJECT_DIR$/analyze_data/AnalizeData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="495" column="23" selection-start-line="495" selection-start-column="23" selection-end-line="495" selection-end-column="23" />
+          <caret line="474" column="17" selection-start-line="474" selection-start-column="12" selection-end-line="474" selection-end-column="17" />
           <folding>
             <element signature="e#32#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/export_data/exportData.py">
+    <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="110" column="35" lean-forward="true" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding>
-            <element signature="e#32#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-372">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
         </state>
       </provider>
     </entry>

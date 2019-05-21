@@ -373,7 +373,7 @@ class ExportData:
         for i in beesPerDay:
             f.write(i + '\n')
             f.write('Day, No. of Bees' + '\n')
-            dayList = beesPerDay[i].keys()
+            dayList = list(beesPerDay[i].keys())
             dayList.sort()
             for j in dayList:
                 f.write(str(j) + ',' + str(len(beesPerDay[i][j])) + '\n')

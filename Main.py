@@ -157,7 +157,7 @@ def main():
 
 
     # Generate the .tex file
-    #report.generateReport(reportContent)
+    report.generateReport(reportContent)
 
 
     #FIXME: Store all the registers in the DB
