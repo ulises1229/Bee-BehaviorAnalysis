@@ -278,10 +278,10 @@ class GenerateReport:
             output, error = proc.communicate()
             #proc.communicate()
         if os.path.isfile(path + "Latex Report.pdf") and error != 'None':
-            print "PDF Report generated Correctly"
+            print ("PDF Report generated Correctly")
         else:
             "There was an error during PDF report Generation please check the log file"
-            print output
+            print (output)
 
     def readTemplate(self, templateFile):
         """

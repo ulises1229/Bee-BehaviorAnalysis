@@ -23,7 +23,7 @@ class ExportData:
             if projectPos + projectLength != len(self.completePath):  # There is nothing after the working dir
                 self.completePath = self.completePath[:projectPos + projectLength]
         else:
-            print " Error, the PATH: " + self.completePath + 'Does not exist'
+            print (" Error, the PATH: " + self.completePath + 'Does not exist')
             sys.exit(0)
 
         # Remove previous CSV files
@@ -318,9 +318,9 @@ class ExportData:
 
                     week = (installation[i][j].isocalendar()[1] % min[i]) + 1
                     if week > 4:
-                        print 'error'
-                        print installation[i][j]
-                        print installation[i][j].isocalendar()[1]
+                        print ('error')
+                        print (installation[i][j])
+                        print (installation[i][j].isocalendar()[1])
 
                     f.write('Week ' + str(week))
 
@@ -417,9 +417,9 @@ class ExportData:
 
                     week = (installation[i][j].isocalendar()[1] % min[i]) + 1
                     if week > 4:
-                        print 'error'
-                        print installation[i][j]
-                        print installation[i][j].isocalendar()[1]
+                        print ('error')
+                        print (installation[i][j])
+                        print (installation[i][j].isocalendar()[1])
 
                     f.write('Week ' + str(week))
 

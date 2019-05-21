@@ -122,7 +122,7 @@ class ImportData:
                             sensorID.append(row[1][:24])
                         #else:
                         #    print "Unknown value or error in input file" + str(row)
-                except csv.Error, e:
+                except csv.Error as e:
                     sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
             globaDate[i] = date
             globalID[i] = sensorID
@@ -159,10 +159,10 @@ class ImportData:
                                 #installationDates[]= datetime.datetime(int (row[0][0:4]), int (row[0][4:6]) , int (row[0][6:tvar]), int (tmp2[:2]) , int (tmp2[2:4]) , int (tmp2[4:6]))
 
                             else:
-                                print "Errror: Plaese, check te input installation files" \
-                                      " You have inserted repeated IDs"
+                                print ("Errror: Plaese, check te input installation files" \
+                                      " You have inserted repeated IDs")
 
-            except csv.Error, e:
+            except csv.Error as e:
                 sys.exit('file %s, line %d: %s' % (currentFile, f.line_num, e))
         return installationDates
 
@@ -191,7 +191,8 @@ class ImportData:
             rawFiles[i] = (self.exploreFiles(rawPath + i))
             lenDict[i] = len(rawFiles[i])
         self.importRawData(rawFiles, rawPath)
-        return lenDict
+
+        return len(lenDict)
 
     def getCompleteDictionary(self):
         """
@@ -237,10 +238,10 @@ class ImportData:
                 idDict[j].append(k) #FIXME: CHECK IF THIS IS CORRECT AND APPLY THIS APPORACH TO DATEDICT
                 date = date +1
             completeIdDict[i] =  idDict
-        print "Id Dict: Total Elements: ID: " + str(id) + " Date: " + str(date)
+        print ("Id Dict: Total Elements: ID: " + str(id) + " Date: " + str(date))
 
         for i in completeIdDict:
-            print " Ids: " + str(len(completeIdDict[i].keys())) + " Dates: " + str(len(completeIdDict[i].values()))
+            print (" Ids: " + str(len(completeIdDict[i].keys())) + " Dates: " + str(len(completeIdDict[i].values())))
         return completeIdDict
 
     def getDateDictionaary(self):
