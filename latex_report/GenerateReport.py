@@ -4,7 +4,7 @@ import os
 import subprocess
 import fnmatch
 import collections
-from datetime import datetime, timedelta
+import platform
 
 class GenerateReport:
 
@@ -317,7 +317,11 @@ class GenerateReport:
         :return:
         """
         workingDir = os.getcwd()
-        path = workingDir + '\latex_report\latex_template\\'
+        if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+            path = workingDir + '/latex_report/latex_template/'
+        else:
+            path = workingDir + '\latex_report\latex_template\\'
+
         if path.count("\latex_report\latex_template") > 1:
             path = path.replace('\latex_report\latex_template', '', 1)
         template = path + "Template.tex"
@@ -352,7 +356,12 @@ class GenerateReport:
         contents = []
 
         workingDir = os.getcwd()
-        path = workingDir + '\latex_report\latex_template\\'
+
+        if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+            path = workingDir + '/latex_report/latex_template/'
+        else:
+            path = workingDir + '\latex_report\latex_template\\'
+
         if path.count("\latex_report\latex_template") > 1:
             path = path.replace('\latex_report\latex_template', '', 1)
 
@@ -369,7 +378,7 @@ class GenerateReport:
         # Removes previous generated files
         self.removePreviousFiles(path)
 
-        #FIXME: ADD A CHAPTER FOR EACH SITE
+        # TODO: ADD A CHAPTER FOR EACH SITE
 
         # Add Capter 1: Introductory section
         contents.append("\part{" + str(site)+ "}\n")
