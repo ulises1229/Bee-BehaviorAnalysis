@@ -10,7 +10,7 @@ from clean_data.CleanData import CleanData
 
 from datetime import datetime, timedelta
 import time
-import os
+
 
 # Data folder
 data = "data/"
@@ -52,7 +52,7 @@ def main():
     uncleanDict = {}
     reportContent = {}     # Contains the latex document in a str format
 
-    # FIXME: how to pass by reference all the parameters implement this to reduce the memory footprint
+    # TODO: how to pass by reference all the parameters implement this to reduce the memory footprint
     start = time.time()
     noFiles = imp.importInputData(data)
     #noFiles = sorted(noFiles.items(), key=operator.itemgetter(0))
@@ -78,16 +78,16 @@ def main():
         print ("Site Name: " + i)
         print ("---------------------------------")
 
-        print ("Number of files: " + str(noFiles[i]))
+        print ("Number of files: " + str(noFiles))
         print ("Active Days: " + str(len(dateData[i])))
-        print ("Non-Active Days: " + str(noFiles[i] - len(dateData[i])))
-        print (str(noFiles[i] - len(dateData[i])))
+        print ("Non-Active Days: " + str(noFiles - len(dateData[i])))
+        print (str(noFiles - len(dateData[i])))
         # Store values of activity for each site
         activity[i] = {}
         activity[i]['Active Days'] = len(dateData[i])
-        activity[i]['Non-Active Days'] = noFiles[i] - len(dateData[i])
+        activity[i]['Non-Active Days'] = noFiles - len(dateData[i])
 
-        # FIXME:This plot has to be in other class
+        # TODO:This plot has to be in other class
         chartName=  i + "chartNumLectures"
         #plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
         """

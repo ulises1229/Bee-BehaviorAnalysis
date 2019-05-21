@@ -6,9 +6,9 @@ import csv
 from datetime import *
 from os import walk
 from collections import defaultdict
-import itertools
 from datetime import datetime
 import datetime
+import platform
 
 
 
@@ -60,7 +60,7 @@ class ImportData:
         """
         correctedTime = originalTime + TZDifference
         if (correctedTime < 10):
-            if (correctedTime < 0):  # handle negative cases FIXME: this is the past day correct it
+            if (correctedTime < 0):  # handle negative cases TODO: this is the past day correct it
                 tmp2 = str(24 + correctedTime) + row[tvar + 3:-1]
             else:
                 tmp2 = str(0) + str(originalTime + TZDifference) + row[tvar + 3:-1]
@@ -82,7 +82,12 @@ class ImportData:
             sensorID = []
             for j in rawFiles[i]:
                 try:
-                    currentFile = str(rawPath + i + '\\' + j)
+                    #  Mac or Linux Platforms
+                    if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+                        currentFile = currentFile = str(rawPath + i + '/' + j)
+                    else:
+                        # Windows
+                        currentFile = str(rawPath + i + '\\' + j)
                     # print currentFile
                     f = open(currentFile)
                     for row in csv.reader(f):
@@ -90,12 +95,10 @@ class ImportData:
                         if row[0][0] == '#':
                             continue
                         # Remove all the FFFFFF reads, those are for test proposes
-                        # FIXME: store all the FFFFFF reads for statistical proposes
+                        # TODO: store all the FFFFFF reads for statistical proposes
                         elif row[1][0] != 'F':
                             # Parse dete and time values
                             tvar = row[0].find('T')
-
-
 
                             # Parse Time in a 'HH:MM:SS' format
                             tmp1 = int(row[0][tvar + 1:tvar + 3]) # Extract hour and adjust time zone
@@ -174,17 +177,31 @@ class ImportData:
         """
         lenDict = {}
 
+        print ("Importation path: " + path)
+
+        #  Mac or Linux Platforms
+        if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+            installationPath = path + "/input/installation_data/"
+            rawPath = path + "/input/raw_data/"
+
+        # Windows platform
+        else:
+            installationPath = path + "\\input\\installation_data\\"
+            rawPath = path + "\\input\\raw_data\\"
+
+
+
         # Get all the files tha contains the information related to IDs and installation date
-        installationPath = path + "\\input\\installation_data\\"
+
         installationFiles = self.exploreFiles(installationPath)
         self.importInstallationFiles(installationFiles, installationPath)
 
         # Get all the files related to raw data
-        rawPath = path + "\\input\\raw_data\\"
+
         # This is a list wich contains in each possition a datasate for an specific Hive
         rawFiles = {}
 
-        # Explore the contents of "path + raw_data" to find all the folders
+        # Explore contents of "path + raw_data" to find all the folders
         rawDataDirs = self.exploreDirs(rawPath)
         rawDataDirs.sort(reverse=True)
         for i in rawDataDirs:
@@ -206,7 +223,7 @@ class ImportData:
             completeDictionary = {}
             idDict = defaultdict(list)
             dateDict = defaultdict(list)
-            for j, k ,l in itertools.izip(globalID[i], globaDate[i], globalTime[i]):
+            for j, k ,l in zip(globalID[i], globaDate[i], globalTime[i]):
                 idDict[j].append(k)
                 dateDict[k].append(l)
                 if j in completeDictionary.keys():
@@ -232,10 +249,10 @@ class ImportData:
             date = 0
             idDict = defaultdict(list)
 
-            for j, k in itertools.izip(globalID[i], globaDate[i]):
+            for j, k in zip(globalID[i], globaDate[i]):
                 if j not in idDict.keys():
                     id = id + 1
-                idDict[j].append(k) #FIXME: CHECK IF THIS IS CORRECT AND APPLY THIS APPORACH TO DATEDICT
+                idDict[j].append(k) #TODO: CHECK IF THIS IS CORRECT AND APPLY THIS APPORACH TO DATEDICT
                 date = date +1
             completeIdDict[i] =  idDict
         print ("Id Dict: Total Elements: ID: " + str(id) + " Date: " + str(date))

@@ -2,9 +2,9 @@ __author__ = 'Ulises Olivares'
 
 import os
 import fnmatch
-import collections
 import sys
 from collections import defaultdict
+import platform
 
 class ExportData:
     completePath = " "
@@ -26,9 +26,17 @@ class ExportData:
             print (" Error, the PATH: " + self.completePath + 'Does not exist')
             sys.exit(0)
 
+
         # Remove previous CSV files
-        self.exportPath = self.completePath + '\\data\\output\\'
-        # FIXME: THIS FUNCTION MUST BE INSTANTITED FROM THE FIRST WRITER METHOD
+
+        # Mac and Linux
+        if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+            self.exportPath = self.completePath + '/data/output/'
+
+        # Windows
+        else:
+            self.exportPath = self.completePath + '\\data\\output\\'
+        # TODO: THIS FUNCTION MUST BE INSTANTITED FROM THE FIRST WRITER METHOD
         self.removePreviousCSVFiles(self.exportPath)
 
 
@@ -40,7 +48,7 @@ class ExportData:
         '''
         #print "the path is" + str(path)
         files = []
-        # FIXME: put a try to avoid getting warning or error if a file is open
+        # TODO: put a try to avoid getting warning or error if a file is open
         # Detect all the existing files
         for file in os.listdir(path):
             if fnmatch.fnmatch(file, "*.csv"):
@@ -73,7 +81,7 @@ class ExportData:
                         registerPerDay[i][k] =  len(completeData[i][j][k])
 
 
-        f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "w")
 
         # Write the information related to registers per site
         f.write("Site,Total No. of registers\n")
@@ -86,7 +94,7 @@ class ExportData:
         for i in registerPerDay:
             f.write(i + '\n')
             f.write('Day, No. Registers \n')
-            regList = registerPerDay[i].keys()
+            regList = list(registerPerDay[i].keys())
             regList.sort()
             for j in regList:
                 f.write(str(j) + ',' + str(registerPerDay[i][j]) + '\n')
@@ -98,7 +106,7 @@ class ExportData:
 
         for i in weeklyRegisters:
             # Get the first natural week of measurements
-            weekList = weeklyRegisters[i].keys()
+            weekList = list(weeklyRegisters[i].keys())
             weekList.sort()
             # Store the min element
             min[i] = weekList[0]
@@ -166,7 +174,7 @@ class ExportData:
                     else:
                         registerPerDay[i][k] = len(completeData[i][j][k])
 
-        f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Registers'  +'.csv', "w")
 
         # Write the information related to registers per site
         f.write("Site,Total No. of registers\n")
@@ -247,7 +255,7 @@ class ExportData:
                 for k in completeData[i][j]:
                     beesPerDay[i][k].append(j)
 
-        f = open(self.exportPath + str(fileName) + ' Bees' + '.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Bees' + '.csv', "w")
 
         # Write the information related to bees per site
         f.write("Site,Total No. of Bees\n")
@@ -262,7 +270,7 @@ class ExportData:
         for i in beesPerDay:
             f.write(i + '\n')
             f.write('Day, No. of Bees' + '\n')
-            dayList = beesPerDay[i].keys()
+            dayList = list(beesPerDay[i].keys())
             dayList.sort()
             for j in dayList:
                 f.write(str(j) + ',' + str(len(beesPerDay[i][j])) + '\n')
@@ -275,7 +283,7 @@ class ExportData:
 
         for i in weeklyActivityBees:
             # Get the first natural week of measurements
-            weekList = weeklyActivityBees[i].keys()
+            weekList = list(weeklyActivityBees[i].keys())
             weekList.sort()
             # Store the min element
             min[i] = weekList[0]
@@ -351,7 +359,7 @@ class ExportData:
 
 
 
-        f = open(self.exportPath + str(fileName) + ' Bees' +'.csv', "wb")
+        f = open(self.exportPath + str(fileName) + ' Bees' +'.csv', "w")
 
         # Write the information related to bees per site
         f.write("Site,Total No. of Bees\n")
@@ -435,7 +443,7 @@ class ExportData:
         :param uncleanDuration:
         :return:
         '''
-        f = open(self.exportPath + fileName + '.csv', "wb")
+        f = open(self.exportPath + fileName + '.csv', "w")
 
         for i in uncleanDuration:
             f.write('\n\n' + i + '\n')
@@ -456,7 +464,7 @@ class ExportData:
         :param lastRegisters:
         :return:
         '''
-        f = open(self.exportPath  + 'LastRegisters.csv', "wb")
+        f = open(self.exportPath  + 'LastRegisters.csv', "w")
 
 
         for i in lastRegisters:

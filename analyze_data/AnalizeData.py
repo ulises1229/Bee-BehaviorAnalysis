@@ -484,7 +484,6 @@ class AnalizeData:
 
     def detectLastRegister(self, installationDates, completeData):
         '''
-
         :param completeData:
         :return:
         '''
@@ -492,14 +491,14 @@ class AnalizeData:
         for i in completeData:
             lastRegister[i] = defaultdict(list)
             for j in completeData[i]:
-                dates = completeData[i][j].keys()
-                time = completeData[i][j].values()
+                dates = list(completeData[i][j].keys())
+                time = list(completeData[i][j].values())
                 time = time[0]
                 dates.sort()
                 time.sort()
                 lastDay = dates[-1]
                 lastTime = time[-1]
-                # FIXME: CHECK IF THE INSTALLATION DATE IS DIFFERENT TO LAST DAY
+                # TODO: CHECK IF THE INSTALLATION DATE IS DIFFERENT TO LAST DAY
                 lastRegister[i][j].append(lastDay)
                 lastRegister[i][j].append(lastTime)
         return lastRegister
