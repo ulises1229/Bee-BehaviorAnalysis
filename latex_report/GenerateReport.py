@@ -272,9 +272,9 @@ class GenerateReport:
         error = ''
         for i in range(3):
             devnull = open(os.devnull, 'wb')
-            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
-                                    stdout=subprocess.PIPE, stderr=devnull)
-            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
+            #proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'], shell=False,
+            #                        stdout=subprocess.PIPE, stderr=devnull)
+            proc = subprocess.Popen(['pdflatex', 'Latex Report.tex'])
             output, error = proc.communicate()
             #proc.communicate()
         if os.path.isfile(path + "Latex Report.pdf") and error != 'None':
