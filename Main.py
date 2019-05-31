@@ -73,25 +73,25 @@ def main():
 
     activity = {}
 
-    # Iteration for analizing all the input data of independent sites
+    # Iteration for analyzing all the input data of independent sites
 
     for i in completeData:
         print ("---------------------------------")
         print ("Site Name: " + i)
         print ("---------------------------------")
 
-        print ("Number of files: " + str(noFiles))
+        print ("Number of files: " + str(noFiles[i]))
         print ("Active Days: " + str(len(dateData[i])))
-        print ("Non-Active Days: " + str(noFiles - len(dateData[i])))
-        print (str(noFiles - len(dateData[i])))
+        print ("Non-Active Days: " + str(noFiles[i] - len(dateData[i])))
+
         # Store values of activity for each site
         activity[i] = {}
         activity[i]['Active Days'] = len(dateData[i])
-        activity[i]['Non-Active Days'] = noFiles - len(dateData[i])
+        activity[i]['Non-Active Days'] = noFiles[i] - len(dateData[i])
 
         # TODO:This plot has to be in other class
         chartName=  i + "chartNumLectures"
-        #plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
+        plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
 
 
 
@@ -142,7 +142,7 @@ def main():
             'totalRegisters': analyze.getTotalObservations(dateData[i]),
             'totalChips': len(idData[i].keys()),
             'non-empty': str(len(dateData[i])),
-            'empty-files': str(noFiles- len(dateData[i])),
+            'empty-files': str(noFiles[i]- len(dateData[i])),
             'ObsPerDay': uncleanAnalysis[i]['ObsPerDay'],
             'lifeCycle': uncleanAnalysis[i]['lifeCycle'],
             'differentBeesPerDay': uncleanAnalysis[i]['differentBeesPerDay'],
