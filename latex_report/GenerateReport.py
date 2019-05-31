@@ -248,7 +248,7 @@ class GenerateReport:
         """
         #print "the path is" + str(path)
         files = []
-        # FIXME: put a try to avoid getting warning or errer if a file is open
+        # TODO: put a try to avoid getting warning or error if a file is open
         # Detect all the existing files
         for file in os.listdir(path):
             if fnmatch.fnmatch(file, "Latex Report.*"):
@@ -316,14 +316,18 @@ class GenerateReport:
         :param contents:
         :return:
         """
+
         workingDir = os.getcwd()
+
+        # Validate Operative System
         if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
             path = workingDir + '/latex_report/latex_template/'
         else:
-            path = workingDir + '\latex_report\latex_template\\'
+            path = workingDir + '\\latex_report\\latex_template\\'
 
         if path.count("\latex_report\latex_template") > 1:
             path = path.replace('\latex_report\latex_template', '', 1)
+
         template = path + "Template.tex"
         texFile = path + "Latex Report.tex"
 
@@ -339,7 +343,7 @@ class GenerateReport:
         # Add content to the file
         self.addContent(texFile,totalContent, buffer)
 
-        # FIXME: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
+        # TODO: VERIFY THAT THE PATH CONTAINS THE FILES NECESSARY IMAGES (Pictures/ => latex image path)
         # Generate the PDF file using pdf_latex
         self.generatePDF(path)
 

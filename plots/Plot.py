@@ -113,10 +113,10 @@ class Plot:
         inputX = inputData.keys()
         inputY = []
         if (type != 'diffBees'):
-            inputY = inputData.values()
+            inputY = list(inputData.values())
 
         if type == 'Obs':
-            tmpX = inputX
+            tmpX = list(inputX)
             tmpX.sort()
             first = tmpX[0]
             last = tmpX[-1]
@@ -126,7 +126,7 @@ class Plot:
             for i in inputData:
                 inputY.append(len(inputData[i]))
 
-        # Create a listo of nums from 1 to n where n is the num of elements for plots only
+        # Create a list of nums from 1 to n where n is the num of elements
         numericX =[]
         for i in range (len(inputX)):
             numericX.append(i + 1)
@@ -168,8 +168,8 @@ class Plot:
         py.image.save_as(fig, filename=fileName)
 
     def linePlotBeesPerDay(self, inputData, title, xAxis, yAxis, chartName):
-        x = inputData.keys()
-        y = inputData.values()
+        x = list(inputData.keys())
+        y = list(inputData.values())
         fig, ax = plt.subplots()
         line1, = ax.plot(x, np.sin(x), '--', linewidth=2,label='Dashes set retroactively')
 
@@ -207,12 +207,14 @@ class Plot:
 
         fileName = os.getcwd() + self.figPath + chartName + ".png"
 
-        #if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+        if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+            if fileName.count("\latex_report\latex_template") > 1:
+                fileName = fileName.replace('/latex_report/latex_template', '', 1)
+        else:
+            if fileName.count("\latex_report\latex_template") > 1:
+                fileName = fileName.replace('\\latex_report\\latex_template', '', 1)
 
-        #else:
 
-        if fileName.count("\latex_report\latex_template") > 1:
-            fileName = fileName.replace('\\latex_report\\latex_template' , '', 1)
 
         plt.savefig(fileName, format='png', dpi=600)
         plt.close()

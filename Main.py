@@ -74,8 +74,9 @@ def main():
     activity = {}
 
     # Iteration for analyzing all the input data of independent sites
-
+    sites = []
     for i in completeData:
+        sites.append(i)
         print ("---------------------------------")
         print ("Site Name: " + i)
         print ("---------------------------------")
@@ -130,7 +131,7 @@ def main():
 
         # Performs an analysis of unclean data
         uncleanAnalysis[i] = analyze.analizeSingleSite(idData[i], dateData[i], completeData[i], "Unclean", i)
-        #F: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
+        #TODO: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
         uncleanDict[i] = {}
         uncleanDict[i] = {
             'numDays': len(dateData[i].keys()),
@@ -154,8 +155,8 @@ def main():
         reportContent[i] = report.generateLatexContent(uncleanDict[i], cleanDict[i], i)
 
 
-    # Analysis of all sites
-    analyze.analizeAllSites(completeData, installationDates);
+    # Analysis of all sites as a result several CSV files are generated.
+    analyze.analizeAllSites(completeData, installationDates)
 
 
     # Generate the .tex file
