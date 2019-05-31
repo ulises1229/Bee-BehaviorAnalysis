@@ -52,7 +52,7 @@ def main():
     uncleanDict = {}
     reportContent = {}     # Contains the latex document in a str format
 
-    # TODO: how to pass by reference all the parameters implement this to reduce the memory footprint
+    # TODO:  pass by reference all the parameters implement this to reduce the memory footprint
     start = time.time()
     noFiles = imp.importInputData(data)
     #noFiles = sorted(noFiles.items(), key=operator.itemgetter(0))
@@ -60,13 +60,15 @@ def main():
     delta = end - start
     print("Time Lapse of importation: " + str(delta))
 
-    if noFiles < 1:
+    if len(noFiles) < 1:
         print ("There are not input Files, Please be sure that your input files are in the data Directory...")
         exit(0)
 
     #Get data
     #idData, dateData, completeData = imp.getIdDictionary()
     #dateData = imp.getDateDictionaary()
+
+    # Obtain data from CSV Files
     idData, dateData, completeData, installationDates= imp.getCompleteDictionary()
 
     activity = {}

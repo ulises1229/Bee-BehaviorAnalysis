@@ -181,7 +181,6 @@ class ImportData:
 
         #  Mac or Linux Platforms
         if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
-            path.replace("//","/")
             installationPath = path + "input/installation_data/"
             rawPath = path + "input/raw_data/"
 
@@ -210,7 +209,7 @@ class ImportData:
             lenDict[i] = len(rawFiles[i])
         self.importRawData(rawFiles, rawPath)
 
-        return len(lenDict)
+        return lenDict
 
     def getCompleteDictionary(self):
         """
