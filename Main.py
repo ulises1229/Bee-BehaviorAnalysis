@@ -55,7 +55,7 @@ def main():
     # TODO:  pass by reference all the parameters implement this to reduce the memory footprint
     start = time.time()
     noFiles = imp.importInputData(data)
-    #noFiles = sorted(noFiles.items(), key=operator.itemgetter(0))
+
     end = time.time()
     delta = end - start
     print("Time Lapse of importation: " + str(delta))

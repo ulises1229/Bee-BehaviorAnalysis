@@ -191,7 +191,7 @@ class Plot:
             else:
                 tmpX.append(str(i))
         #print tmpX
-        #FIXME: DISPLAY XTICKS IN HOUR FORMAT
+        #TODO: DISPLAY XTICKS IN HOUR FORMAT
         plt.xticks(x, fontsize=7)
         #plt.yticks(y, fontsize=2)
         plt.bar(x , y , align='center' , color='blue', alpha=0.8)
@@ -201,6 +201,11 @@ class Plot:
         plt.title(title)
 
         fileName = os.getcwd() + self.figPath + chartName + ".png"
+
+        #if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+
+        #else:
+
         if fileName.count("\latex_report\latex_template") > 1:
             fileName = fileName.replace('\\latex_report\\latex_template' , '', 1)
 
