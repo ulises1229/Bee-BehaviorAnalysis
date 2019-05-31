@@ -90,11 +90,8 @@ def main():
         activity[i]['Non-Active Days'] = noFiles[i] - len(dateData[i])
 
         # TODO:This plot has to be in other class
-        chartName=  i + "/chartNumLectures"
+        chartName=  i + "-chartNumLectures"
         plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
-
-
-
 
         print ("---------------------------------")
         print("Cleaning data...\n" + "Threshold: " + str(thresholdLostChips))
@@ -133,7 +130,7 @@ def main():
 
         # Performs an analysis of unclean data
         uncleanAnalysis[i] = analyze.analizeSingleSite(idData[i], dateData[i], completeData[i], "Unclean", i)
-        #FIXME: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
+        #F: CHECK THE TWO DICTIONARIES AND SELECT ANOTHER WAY TO STORE DATA WITHOUT MAKING THIS PART HUGE
         uncleanDict[i] = {}
         uncleanDict[i] = {
             'numDays': len(dateData[i].keys()),

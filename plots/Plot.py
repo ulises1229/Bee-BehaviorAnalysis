@@ -14,9 +14,9 @@ from matplotlib.gridspec import GridSpec
 class Plot:
     # Validate platform
     if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
-        figPath = '/latex_report/latex_template/Pictures/plots/'
+        figPath = '/latex_report/latex_template/Pictures/plots/good/'
     else:
-        figPath = '\\latex_report\\latex_template\\Pictures\\plots\\'
+        figPath = '\\latex_report\\latex_template\\Pictures\\plots\\good\\'
 
     def __init__(self):
         """put code here"""
@@ -184,7 +184,7 @@ class Plot:
         :param chartName:
         :return:
         """
-        print (inputData)
+
         labels = ["label%d" % i for i in range(len(inputData))]
         x = range(len(inputData))
         y = inputData
