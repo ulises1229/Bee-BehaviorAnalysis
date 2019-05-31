@@ -15,7 +15,7 @@ class GenerateReport:
     def __init__(self):
         """
         """
-    def addActivityUncleanData(self, doc, introDict):
+    def addActivityUncleanData(self, doc, introDict, site):
         # --------------------------------------------------------------------------------------------
         #                                        Activity per Day
         # --------------------------------------------------------------------------------------------
@@ -25,7 +25,8 @@ class GenerateReport:
                        "graphs which reflects the behavior of a beehive during a specific period of time.")
 
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("observationsPerdayUnclean.png", width='400px')
+                figName = site + "observationsPerdayUnclean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Number of Observations per Day')
                 # doc.append("Begin a new pharagraph")
 
@@ -394,7 +395,7 @@ class GenerateReport:
         #Add Chapter 2 analysis of RAW data
         contents.append("\chapterimage{head3.jpg} % Chapter heading image \n")
         contents.append("\chapter{Analysis of Raw Data} \n")
-        contents.append(self.addActivityUncleanData(doc1, uncleanDict))
+        contents.append(self.addActivityUncleanData(doc1, uncleanDict), site)
 
         doc2 = Document(geometry_options=geometry_options)
         #Add chapter 3 analysis of clean data
