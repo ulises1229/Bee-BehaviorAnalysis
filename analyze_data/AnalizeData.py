@@ -133,7 +133,7 @@ class AnalizeData:
 
         for i in completeDict:
             #print i
-            sortedDate = completeDict[i].keys()
+            sortedDate = list(completeDict[i].keys())
             sortedDate.sort()
             start = sortedDate[0]
             end = sortedDate[-1]
@@ -199,6 +199,7 @@ class AnalizeData:
 
     def getSortedDays(self, days):
         element = 1
+        days = list(days)
         days.sort()
         sortedDays = {}
         for i in days:

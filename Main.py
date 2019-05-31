@@ -90,8 +90,11 @@ def main():
         # TODO:This plot has to be in other class
         chartName=  i + "chartNumLectures"
         #plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
-        """
-        print "---------------------------------")
+
+
+
+
+        print ("---------------------------------")
         print("Cleaning data...\n" + "Threshold: " + str(thresholdLostChips))
 
         # sorting all dates to select 1st and last date and make a difference
@@ -148,9 +151,9 @@ def main():
 
         #FIXME: PASS ALL THE PARAMETERS IN ORDER TO GENERATE THE REPORT CORRECTLY
         # Generate Latex Report
-        #FIXME: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
+        #TODO: WITH THIS APPROACH ALL THE INFORMATION IS OVERWRITTEN CORRECT IT.
         reportContent[i] = report.generateLatexContent(uncleanDict[i], cleanDict[i], i)
-        """
+
 
     # Analysis of all sites
     analyze.analizeAllSites(completeData, installationDates);
