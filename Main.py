@@ -90,7 +90,7 @@ def main():
         activity[i]['Non-Active Days'] = noFiles[i] - len(dateData[i])
 
         # TODO:This plot has to be in other class
-        chartName=  i + "chartNumLectures"
+        chartName=  i + "/chartNumLectures"
         plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
 
 

@@ -8,10 +8,15 @@ import numpy as np
 plotly.tools.set_credentials_file(username='ulises1229', api_key='IBElW0dqjDEJXCuozFGy')
 import plotly.graph_objs as go
 import os
+import platform
 from matplotlib.gridspec import GridSpec
 
 class Plot:
-    figPath = '\\latex_report\\latex_template\\Pictures\\plots\\'
+    # Validate platform
+    if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
+        figPath = '/latex_report/latex_template/Pictures/plots/'
+    else:
+        figPath = '\\latex_report\\latex_template\\Pictures\\plots\\'
 
     def __init__(self):
         """put code here"""

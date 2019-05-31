@@ -19,7 +19,7 @@ observationsPerDay = ''
 class AnalizeData:
 
     def __init__(self):
-        """Initializa code here"""
+        """Initialize code here"""
 
     def getTotalObservations(self, dateDict):
         total = 0
