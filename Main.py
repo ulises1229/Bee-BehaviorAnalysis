@@ -140,7 +140,7 @@ def main():
             'totalRegisters': analyze.getTotalObservations(dateData[i]),
             'totalChips': len(idData[i].keys()),
             'non-empty': str(len(dateData[i])),
-            'empty-files': str(noFiles[i] - len(dateData[i])),
+            'empty-files': str(noFiles- len(dateData[i])),
             'ObsPerDay': uncleanAnalysis[i]['ObsPerDay'],
             'lifeCycle': uncleanAnalysis[i]['lifeCycle'],
             'differentBeesPerDay': uncleanAnalysis[i]['differentBeesPerDay'],

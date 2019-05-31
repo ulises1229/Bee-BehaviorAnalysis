@@ -181,8 +181,9 @@ class ImportData:
 
         #  Mac or Linux Platforms
         if (platform.system() == 'Darwin' or platform.system() == 'Linux'):
-            installationPath = path + "/input/installation_data/"
-            rawPath = path + "/input/raw_data/"
+            path.replace("//","/")
+            installationPath = path + "input/installation_data/"
+            rawPath = path + "input/raw_data/"
 
         # Windows platform
         else:

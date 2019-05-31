@@ -235,9 +235,9 @@ class GenerateReport:
                                introDict['lastDay'], introDict['totalRegisters'],
                                introDict['totalChips'], introDict['empty-files']))
 
-            with doc.create(Figure(position='h!')) as fig:
-                    fig.add_image("chartNumLectures.png", width='315px')
-                    fig.add_caption('Days with and without Empty Reads')
+            #with doc.create(Figure(position='h!')) as fig:
+             #       fig.add_image("chartNumLectures.png", width='315px')
+             #       fig.add_caption('Days with and without Empty Reads')
         return doc.dumps_content()
 
     def removePreviousFiles(self, path):

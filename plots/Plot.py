@@ -180,7 +180,7 @@ class Plot:
         :return:
         """
         print (inputData)
-        labels = ["label%d" % i for i in xrange(len(inputData))]
+        labels = ["label%d" % i for i in range(len(inputData))]
         x = range(len(inputData))
         y = inputData
 

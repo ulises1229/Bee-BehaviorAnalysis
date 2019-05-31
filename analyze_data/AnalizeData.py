@@ -2,14 +2,16 @@ __author__ = 'Ulises Olivares'
 
 from plots.Plot import Plot
 import numpy as np
-import datetime
-from datetime import datetime as dt
+#import datetime
+from datetime import  datetime as dt
 from collections import defaultdict
 import collections
 from clean_data.CleanData import CleanData
 from export_data.exportData import ExportData
-from datetime import  timedelta
-from datetime import datetime
+from datetime import  datetime
+from datetime import timedelta
+
+
 
 start = []
 end = []
@@ -55,7 +57,12 @@ class AnalizeData:
             list.sort()
             #start.append(list[0])
             #end.append(list[len(list)-1])
-            difference.append(datetime.datetime.combine(i ,list[-1]) - datetime.datetime.combine(i ,list[0]))
+            """print("i: " + str(i))
+            print("list[0]: " + str(list[0]))
+            print("list[-1]: " + str(list[-1]))
+            print("combine: " + str(datetime.combine(i,list[-1])))"""
+
+            difference.append(datetime.combine(i,list[-1]) - datetime.combine(i ,list[0]))
 
             #print str(list[0].hour) + " " + str(list[0].minute) + " " + str(list[0].second)
         #print difference
@@ -63,9 +70,15 @@ class AnalizeData:
 
     # This method returns the average of total activity per day
     def averageTotalActivity(self, timeInterval):
-        sum = datetime.timedelta(0, 0)
+        #sum = datetime.time(0, 0, 0)
+        j = 0
         for i in timeInterval:
-            sum = sum + i
+            if j == 0:
+                j = j+1
+                sum = i
+            else:
+                sum = sum + i
+
         #print "Average: " + str(sum / len(timeInterval))
         return sum / len(timeInterval)
 
@@ -316,10 +329,10 @@ class AnalizeData:
         6. What are the mean of the most active hours taking into account all the observations?
         ----------------------------------------------------------------------------------------"""
 
-        averageEquivClasses = np.mean(totalActivityEquivClasses.values(), dtype=np.float32, axis=0)
+        averageEquivClasses = np.mean(list(totalActivityEquivClasses.values()), dtype=np.float32, axis=0)
         averageEquivClasses.tolist()
         list(averageEquivClasses)
-        stdEquivClasses = np.std(totalActivityEquivClasses.values(), dtype=np.float32, axis=0)
+        stdEquivClasses = np.std(list(totalActivityEquivClasses.values()), dtype=np.float32, axis=0)
         #rint "Average: " + str(averageEquivClasses)
         #print "Std: " + str(stdEquivClasses)
         # Graph the activity by equivalence classes
