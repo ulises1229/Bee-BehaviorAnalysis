@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 JUN 2019 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 JUN 2019 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1628,31 +1628,32 @@ Package pdftex.def Info: Pictures/Morelia Hive 2differentBeesPerdayUnclean.png
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `beeLifeCycleUnclean.png' not found on input line 343.
+LaTeX Warning: File `Pictures/Morelia Hive 2beeLifeCycleUnclean.png' not found 
+on input line 343.
 
 
-! Package pdftex.def Error: File `beeLifeCycleUnclean.png' not found: using dra
-ft setting.
+! Package pdftex.def Error: File `Pictures/Morelia Hive 2beeLifeCycleUnclean.pn
+g' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.343 ...ics[width=400px]{beeLifeCycleUnclean.png}
+l.343 ...es/Morelia Hive 2beeLifeCycleUnclean.png}
                                                   %
 ? 
 ! Emergency stop.
  ...                                              
                                                   
-l.343 ...ics[width=400px]{beeLifeCycleUnclean.png}
+l.343 ...es/Morelia Hive 2beeLifeCycleUnclean.png}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
  
 Here is how much of TeX's memory you used:
- 36162 strings out of 492649
- 679690 string characters out of 6129622
+ 36161 strings out of 492649
+ 679694 string characters out of 6129622
  1276812 words of memory out of 5000000
  39497 multiletter control sequences out of 15000+600000
  580088 words of font info for 81 fonts, out of 8000000 for 9000

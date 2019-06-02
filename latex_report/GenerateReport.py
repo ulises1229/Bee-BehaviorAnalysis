@@ -89,10 +89,10 @@ class GenerateReport:
                 fig.add_caption('Different Bees Per Day')
 
             # Add Figure
-            with doc.create(Figure(position='h!')) as fig:
+           """ with doc.create(Figure(position='h!')) as fig:
                 figName = self.figPath + site + "beeLifeCycleUnclean.png"
                 fig.add_image(figName, width='400px')
-                fig.add_caption('Bee Life cycle in days')
+                fig.add_caption('Bee Life cycle in days')"""
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:

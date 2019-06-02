@@ -12,10 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f8cbf49b-e51a-46db-9e8e-ba374c8e1cec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyze_data/AnalizeData.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyze_data/AnalizeData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/latex_report/GenerateReport.py" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/GenerateReport.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Template.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Template.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.aux" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.bcf" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.bcf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.log" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.out" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +28,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Main.coverage" NAME="Main Coverage Results" MODIFIED="1559261677595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559513209042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559513576837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -106,8 +108,8 @@
           <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="215">
-                  <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+                <state relative-caret-position="230">
+                  <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -189,7 +191,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>thresholdLostChips</find>
       <find />
       <find>average</find>
       <find>dict</find>
@@ -219,6 +220,7 @@
       <find>observationsPerdayUnclean.png'</find>
       <find>figPath</find>
       <find>site</find>
+      <find>beeLifeCycleUnclean.png</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -1038,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        <state relative-caret-position="230">
+          <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
