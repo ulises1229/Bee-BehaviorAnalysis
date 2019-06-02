@@ -92,7 +92,7 @@ def main():
 
         # TODO:This plot has to be in other class
         chartName=  i + "-chartNumLectures"
-        ###plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
+        plot.pieChart(activity[i], chartName, "Relation: Active VS Non-active Days: " + i)
 
         print ("---------------------------------")
         print("Cleaning data...\n" + "Threshold: " + str(thresholdLostChips))

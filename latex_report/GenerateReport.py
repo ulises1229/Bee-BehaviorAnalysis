@@ -11,7 +11,7 @@ class GenerateReport:
 
     doc = Document()
 
-    figPath = "Pictures/"
+    figPath = "Pictures/plots/good/"
 
 
     def __init__(self):

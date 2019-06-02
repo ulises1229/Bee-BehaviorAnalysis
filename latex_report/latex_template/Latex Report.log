@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 JUN 2019 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 JUN 2019 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1629,16 +1629,16 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 109.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2observationsPerdayUnclean.png' not 
-found on input line 116.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2observationsPerdayUnclea
+n.png' not found on input line 116.
 
-<Pictures/Morelia Hive 2observationsPerdayUnclean.png, id=185, 702.625pt x 501.
-875pt>
-File: Pictures/Morelia Hive 2observationsPerdayUnclean.png Graphic file (type p
-ng)
-<use Pictures/Morelia Hive 2observationsPerdayUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2observationsPerdayUnclean.png  
-used on input line 116.
+<Pictures/plots/good/Morelia Hive 2observationsPerdayUnclean.png, id=185, 702.6
+25pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 2observationsPerdayUnclean.png Graphic f
+ile (type png)
+<use Pictures/plots/good/Morelia Hive 2observationsPerdayUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2observationsPerdayUn
+clean.png  used on input line 116.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1653,64 +1653,67 @@ Underfull \vbox (badness 10000) detected at line 329
 
 [10]
 
-LaTeX Warning: File `Pictures/Morelia Hive 2differentBeesPerdayUnclean.png' not
- found on input line 334.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2differentBeesPerdayUncle
+an.png' not found on input line 334.
 
-<Pictures/Morelia Hive 2differentBeesPerdayUnclean.png, id=197, 702.625pt x 501
-.875pt>
-File: Pictures/Morelia Hive 2differentBeesPerdayUnclean.png Graphic file (type 
-png)
-<use Pictures/Morelia Hive 2differentBeesPerdayUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2differentBeesPerdayUnclean.png 
- used on input line 334.
+<Pictures/plots/good/Morelia Hive 2differentBeesPerdayUnclean.png, id=197, 702.
+625pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 2differentBeesPerdayUnclean.png Graphic 
+file (type png)
+<use Pictures/plots/good/Morelia Hive 2differentBeesPerdayUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2differentBeesPerdayU
+nclean.png  used on input line 334.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2pieBeeLifeCycleUnclean.png' not fou
-nd on input line 343.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleUnclean.p
+ng' not found on input line 343.
 
-<Pictures/Morelia Hive 2pieBeeLifeCycleUnclean.png, id=198, 702.625pt x 501.875
-pt>
-File: Pictures/Morelia Hive 2pieBeeLifeCycleUnclean.png Graphic file (type png)
-
-<use Pictures/Morelia Hive 2pieBeeLifeCycleUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2pieBeeLifeCycleUnclean.png  use
-d on input line 343.
+<Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleUnclean.png, id=198, 702.625p
+t x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleUnclean.png Graphic file
+ (type png)
+<use Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleUncle
+an.png  used on input line 343.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2histogramUnclean.png' not found on 
-input line 354.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2histogramUnclean.png' no
+t found on input line 354.
 
-<Pictures/Morelia Hive 2histogramUnclean.png, id=199, 462.528pt x 346.896pt>
-File: Pictures/Morelia Hive 2histogramUnclean.png Graphic file (type png)
-<use Pictures/Morelia Hive 2histogramUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2histogramUnclean.png  used on i
-nput line 354.
+<Pictures/plots/good/Morelia Hive 2histogramUnclean.png, id=199, 462.528pt x 34
+6.896pt>
+File: Pictures/plots/good/Morelia Hive 2histogramUnclean.png Graphic file (type
+ png)
+<use Pictures/plots/good/Morelia Hive 2histogramUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2histogramUnclean.png
+  used on input line 354.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2histogramUnclean.png' not found on 
-input line 363.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2histogramUnclean.png' no
+t found on input line 363.
 
-File: Pictures/Morelia Hive 2histogramUnclean.png Graphic file (type png)
-<use Pictures/Morelia Hive 2histogramUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2histogramUnclean.png  used on i
-nput line 363.
+File: Pictures/plots/good/Morelia Hive 2histogramUnclean.png Graphic file (type
+ png)
+<use Pictures/plots/good/Morelia Hive 2histogramUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2histogramUnclean.png
+  used on input line 363.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11] [12 <./Pictures/Morelia Hive 2observationsPerdayUnclean.png>] [13 <./Pictu
-res/Morelia Hive 2differentBeesPerdayUnclean.png>] [14 <./Pictures/Morelia Hive
- 2pieBeeLifeCycleUnclean.png>] [15 <./Pictures/Morelia Hive 2histogramUnclean.p
-ng>] [16]
+[11] [12 <./Pictures/plots/good/Morelia Hive 2observationsPerdayUnclean.png>]
+[13 <./Pictures/plots/good/Morelia Hive 2differentBeesPerdayUnclean.png>]
+[14 <./Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleUnclean.png>] [15 <./Pi
+ctures/plots/good/Morelia Hive 2histogramUnclean.png>] [16]
 Chapter 3.
 <Pictures/head4.jpg, id=234, 1479.126pt x 547.2445pt>
 File: Pictures/head4.jpg Graphic file (type jpg)
@@ -1722,16 +1725,16 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 370.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2observationsPerdayClean.png' not fo
-und on input line 377.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2observationsPerdayClean.
+png' not found on input line 377.
 
-<Pictures/Morelia Hive 2observationsPerdayClean.png, id=235, 702.625pt x 501.87
-5pt>
-File: Pictures/Morelia Hive 2observationsPerdayClean.png Graphic file (type png
-)
-<use Pictures/Morelia Hive 2observationsPerdayClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2observationsPerdayClean.png  us
-ed on input line 377.
+<Pictures/plots/good/Morelia Hive 2observationsPerdayClean.png, id=235, 702.625
+pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 2observationsPerdayClean.png Graphic fil
+e (type png)
+<use Pictures/plots/good/Morelia Hive 2observationsPerdayClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2observationsPerdayCl
+ean.png  used on input line 377.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1748,63 +1751,67 @@ Underfull \vbox (badness 10000) detected at line 547
 
 [18]
 
-LaTeX Warning: File `Pictures/Morelia Hive 2differentBeesPerdayClean.png' not f
-ound on input line 552.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2differentBeesPerdayClean
+.png' not found on input line 552.
 
-<Pictures/Morelia Hive 2differentBeesPerdayClean.png, id=246, 702.625pt x 501.8
-75pt>
-File: Pictures/Morelia Hive 2differentBeesPerdayClean.png Graphic file (type pn
-g)
-<use Pictures/Morelia Hive 2differentBeesPerdayClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2differentBeesPerdayClean.png  u
-sed on input line 552.
+<Pictures/plots/good/Morelia Hive 2differentBeesPerdayClean.png, id=246, 702.62
+5pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 2differentBeesPerdayClean.png Graphic fi
+le (type png)
+<use Pictures/plots/good/Morelia Hive 2differentBeesPerdayClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2differentBeesPerdayC
+lean.png  used on input line 552.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2pieBeeLifeCycleClean.png' not found
- on input line 561.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleClean.png
+' not found on input line 561.
 
-<Pictures/Morelia Hive 2pieBeeLifeCycleClean.png, id=247, 702.625pt x 501.875pt
->
-File: Pictures/Morelia Hive 2pieBeeLifeCycleClean.png Graphic file (type png)
-<use Pictures/Morelia Hive 2pieBeeLifeCycleClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2pieBeeLifeCycleClean.png  used 
-on input line 561.
+<Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleClean.png, id=247, 702.625pt 
+x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleClean.png Graphic file (
+type png)
+<use Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleClean
+.png  used on input line 561.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2histogramClean.png' not found on in
-put line 572.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2histogramClean.png' not 
+found on input line 572.
 
-<Pictures/Morelia Hive 2histogramClean.png, id=248, 462.528pt x 346.896pt>
-File: Pictures/Morelia Hive 2histogramClean.png Graphic file (type png)
-<use Pictures/Morelia Hive 2histogramClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2histogramClean.png  used on inp
-ut line 572.
+<Pictures/plots/good/Morelia Hive 2histogramClean.png, id=248, 462.528pt x 346.
+896pt>
+File: Pictures/plots/good/Morelia Hive 2histogramClean.png Graphic file (type p
+ng)
+<use Pictures/plots/good/Morelia Hive 2histogramClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2histogramClean.png  
+used on input line 572.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 2histogramClean.png' not found on in
-put line 581.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 2histogramClean.png' not 
+found on input line 581.
 
-File: Pictures/Morelia Hive 2histogramClean.png Graphic file (type png)
-<use Pictures/Morelia Hive 2histogramClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 2histogramClean.png  used on inp
-ut line 581.
+File: Pictures/plots/good/Morelia Hive 2histogramClean.png Graphic file (type p
+ng)
+<use Pictures/plots/good/Morelia Hive 2histogramClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 2histogramClean.png  
+used on input line 581.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19] [20 <./Pictures/Morelia Hive 2observationsPerdayClean.png>] [21 <./Picture
-s/Morelia Hive 2differentBeesPerdayClean.png>] [22 <./Pictures/Morelia Hive 2pi
-eBeeLifeCycleClean.png>] [23 <./Pictures/Morelia Hive 2histogramClean.png>]
-[24] [25
+[19] [20 <./Pictures/plots/good/Morelia Hive 2observationsPerdayClean.png>]
+[21 <./Pictures/plots/good/Morelia Hive 2differentBeesPerdayClean.png>]
+[22 <./Pictures/plots/good/Morelia Hive 2pieBeeLifeCycleClean.png>] [23 <./Pict
+ures/plots/good/Morelia Hive 2histogramClean.png>] [24] [25
 
 ] [26]
 Chapter 4.
@@ -1842,16 +1849,16 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 599.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1observationsPerdayUnclean.png' not 
-found on input line 606.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1observationsPerdayUnclea
+n.png' not found on input line 606.
 
-<Pictures/Morelia Hive 1observationsPerdayUnclean.png, id=300, 702.625pt x 501.
-875pt>
-File: Pictures/Morelia Hive 1observationsPerdayUnclean.png Graphic file (type p
-ng)
-<use Pictures/Morelia Hive 1observationsPerdayUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1observationsPerdayUnclean.png  
-used on input line 606.
+<Pictures/plots/good/Morelia Hive 1observationsPerdayUnclean.png, id=300, 702.6
+25pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 1observationsPerdayUnclean.png Graphic f
+ile (type png)
+<use Pictures/plots/good/Morelia Hive 1observationsPerdayUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1observationsPerdayUn
+clean.png  used on input line 606.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1866,64 +1873,67 @@ Underfull \vbox (badness 10000) detected at line 799
 
 [30]
 
-LaTeX Warning: File `Pictures/Morelia Hive 1differentBeesPerdayUnclean.png' not
- found on input line 804.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1differentBeesPerdayUncle
+an.png' not found on input line 804.
 
-<Pictures/Morelia Hive 1differentBeesPerdayUnclean.png, id=311, 702.625pt x 501
-.875pt>
-File: Pictures/Morelia Hive 1differentBeesPerdayUnclean.png Graphic file (type 
-png)
-<use Pictures/Morelia Hive 1differentBeesPerdayUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1differentBeesPerdayUnclean.png 
- used on input line 804.
+<Pictures/plots/good/Morelia Hive 1differentBeesPerdayUnclean.png, id=311, 702.
+625pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 1differentBeesPerdayUnclean.png Graphic 
+file (type png)
+<use Pictures/plots/good/Morelia Hive 1differentBeesPerdayUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1differentBeesPerdayU
+nclean.png  used on input line 804.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1pieBeeLifeCycleUnclean.png' not fou
-nd on input line 813.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleUnclean.p
+ng' not found on input line 813.
 
-<Pictures/Morelia Hive 1pieBeeLifeCycleUnclean.png, id=312, 702.625pt x 501.875
-pt>
-File: Pictures/Morelia Hive 1pieBeeLifeCycleUnclean.png Graphic file (type png)
-
-<use Pictures/Morelia Hive 1pieBeeLifeCycleUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1pieBeeLifeCycleUnclean.png  use
-d on input line 813.
+<Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleUnclean.png, id=312, 702.625p
+t x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleUnclean.png Graphic file
+ (type png)
+<use Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleUncle
+an.png  used on input line 813.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1histogramUnclean.png' not found on 
-input line 824.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1histogramUnclean.png' no
+t found on input line 824.
 
-<Pictures/Morelia Hive 1histogramUnclean.png, id=313, 462.528pt x 346.896pt>
-File: Pictures/Morelia Hive 1histogramUnclean.png Graphic file (type png)
-<use Pictures/Morelia Hive 1histogramUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1histogramUnclean.png  used on i
-nput line 824.
+<Pictures/plots/good/Morelia Hive 1histogramUnclean.png, id=313, 462.528pt x 34
+6.896pt>
+File: Pictures/plots/good/Morelia Hive 1histogramUnclean.png Graphic file (type
+ png)
+<use Pictures/plots/good/Morelia Hive 1histogramUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1histogramUnclean.png
+  used on input line 824.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1histogramUnclean.png' not found on 
-input line 833.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1histogramUnclean.png' no
+t found on input line 833.
 
-File: Pictures/Morelia Hive 1histogramUnclean.png Graphic file (type png)
-<use Pictures/Morelia Hive 1histogramUnclean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1histogramUnclean.png  used on i
-nput line 833.
+File: Pictures/plots/good/Morelia Hive 1histogramUnclean.png Graphic file (type
+ png)
+<use Pictures/plots/good/Morelia Hive 1histogramUnclean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1histogramUnclean.png
+  used on input line 833.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[31] [32 <./Pictures/Morelia Hive 1observationsPerdayUnclean.png>] [33 <./Pictu
-res/Morelia Hive 1differentBeesPerdayUnclean.png>] [34 <./Pictures/Morelia Hive
- 1pieBeeLifeCycleUnclean.png>] [35 <./Pictures/Morelia Hive 1histogramUnclean.p
-ng>] [36]
+[31] [32 <./Pictures/plots/good/Morelia Hive 1observationsPerdayUnclean.png>]
+[33 <./Pictures/plots/good/Morelia Hive 1differentBeesPerdayUnclean.png>]
+[34 <./Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleUnclean.png>] [35 <./Pi
+ctures/plots/good/Morelia Hive 1histogramUnclean.png>] [36]
 Chapter 6.
 File: Pictures/head4.jpg Graphic file (type jpg)
 <use Pictures/head4.jpg>
@@ -1934,16 +1944,16 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 840.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1observationsPerdayClean.png' not fo
-und on input line 847.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1observationsPerdayClean.
+png' not found on input line 847.
 
-<Pictures/Morelia Hive 1observationsPerdayClean.png, id=349, 702.625pt x 501.87
-5pt>
-File: Pictures/Morelia Hive 1observationsPerdayClean.png Graphic file (type png
-)
-<use Pictures/Morelia Hive 1observationsPerdayClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1observationsPerdayClean.png  us
-ed on input line 847.
+<Pictures/plots/good/Morelia Hive 1observationsPerdayClean.png, id=349, 702.625
+pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 1observationsPerdayClean.png Graphic fil
+e (type png)
+<use Pictures/plots/good/Morelia Hive 1observationsPerdayClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1observationsPerdayCl
+ean.png  used on input line 847.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1960,55 +1970,59 @@ Underfull \vbox (badness 10000) detected at line 1003
 
 [38]
 
-LaTeX Warning: File `Pictures/Morelia Hive 1differentBeesPerdayClean.png' not f
-ound on input line 1008.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1differentBeesPerdayClean
+.png' not found on input line 1008.
 
-<Pictures/Morelia Hive 1differentBeesPerdayClean.png, id=361, 702.625pt x 501.8
-75pt>
-File: Pictures/Morelia Hive 1differentBeesPerdayClean.png Graphic file (type pn
-g)
-<use Pictures/Morelia Hive 1differentBeesPerdayClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1differentBeesPerdayClean.png  u
-sed on input line 1008.
+<Pictures/plots/good/Morelia Hive 1differentBeesPerdayClean.png, id=361, 702.62
+5pt x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 1differentBeesPerdayClean.png Graphic fi
+le (type png)
+<use Pictures/plots/good/Morelia Hive 1differentBeesPerdayClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1differentBeesPerdayC
+lean.png  used on input line 1008.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1pieBeeLifeCycleClean.png' not found
- on input line 1017.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleClean.png
+' not found on input line 1017.
 
-<Pictures/Morelia Hive 1pieBeeLifeCycleClean.png, id=362, 702.625pt x 501.875pt
->
-File: Pictures/Morelia Hive 1pieBeeLifeCycleClean.png Graphic file (type png)
-<use Pictures/Morelia Hive 1pieBeeLifeCycleClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1pieBeeLifeCycleClean.png  used 
-on input line 1017.
+<Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleClean.png, id=362, 702.625pt 
+x 501.875pt>
+File: Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleClean.png Graphic file (
+type png)
+<use Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleClean
+.png  used on input line 1017.
 (pdftex.def)             Requested size: 401.50146pt x 286.79156pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1histogramClean.png' not found on in
-put line 1028.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1histogramClean.png' not 
+found on input line 1028.
 
-<Pictures/Morelia Hive 1histogramClean.png, id=363, 462.528pt x 346.896pt>
-File: Pictures/Morelia Hive 1histogramClean.png Graphic file (type png)
-<use Pictures/Morelia Hive 1histogramClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1histogramClean.png  used on inp
-ut line 1028.
+<Pictures/plots/good/Morelia Hive 1histogramClean.png, id=363, 462.528pt x 346.
+896pt>
+File: Pictures/plots/good/Morelia Hive 1histogramClean.png Graphic file (type p
+ng)
+<use Pictures/plots/good/Morelia Hive 1histogramClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1histogramClean.png  
+used on input line 1028.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `Pictures/Morelia Hive 1histogramClean.png' not found on in
-put line 1037.
+LaTeX Warning: File `Pictures/plots/good/Morelia Hive 1histogramClean.png' not 
+found on input line 1037.
 
-File: Pictures/Morelia Hive 1histogramClean.png Graphic file (type png)
-<use Pictures/Morelia Hive 1histogramClean.png>
-Package pdftex.def Info: Pictures/Morelia Hive 1histogramClean.png  used on inp
-ut line 1037.
+File: Pictures/plots/good/Morelia Hive 1histogramClean.png Graphic file (type p
+ng)
+<use Pictures/plots/good/Morelia Hive 1histogramClean.png>
+Package pdftex.def Info: Pictures/plots/good/Morelia Hive 1histogramClean.png  
+used on input line 1037.
 (pdftex.def)             Requested size: 401.50146pt x 301.14072pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2018,10 +2032,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [39]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1042.
- [40 <./Pictures/Morelia Hive 1observationsPerdayClean.png>] [41 <./Pictures/Mo
-relia Hive 1differentBeesPerdayClean.png>] [42 <./Pictures/Morelia Hive 1pieBee
-LifeCycleClean.png>] [43 <./Pictures/Morelia Hive 1histogramClean.png>]
-[44]
+ [40 <./Pictures/plots/good/Morelia Hive 1observationsPerdayClean.png>]
+[41 <./Pictures/plots/good/Morelia Hive 1differentBeesPerdayClean.png>]
+[42 <./Pictures/plots/good/Morelia Hive 1pieBeeLifeCycleClean.png>] [43 <./Pict
+ures/plots/good/Morelia Hive 1histogramClean.png>] [44]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1042.
  (./Latex Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1042.
@@ -2038,8 +2052,8 @@ Package logreq Info: Writing requests to '"Latex Report".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36405 strings out of 492649
- 684920 string characters out of 6129622
+ 36406 strings out of 492649
+ 685655 string characters out of 6129622
  1278311 words of memory out of 5000000
  39629 multiletter control sequences out of 15000+600000
  591850 words of font info for 100 fonts, out of 8000000 for 9000
