@@ -163,10 +163,5 @@ def main():
     report.generateReport(reportContent)
 
 
-    #FIXME: Store all the registers in the DB
-    # Connect and store values to the DB
-    #con = mysqlConnect()
-    #con.insertData()
-
 if __name__ == "__main__":
     main()
