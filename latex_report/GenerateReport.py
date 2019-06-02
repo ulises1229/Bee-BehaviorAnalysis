@@ -11,6 +11,8 @@ class GenerateReport:
 
     doc = Document()
 
+    figPath = "Pictures/"
+
 
     def __init__(self):
         """
@@ -25,7 +27,7 @@ class GenerateReport:
                        "graphs which reflects the behavior of a beehive during a specific period of time.")
 
             with doc.create(Figure(position='h!')) as fig:
-                figName = site + "observationsPerdayUnclean.png"
+                figName =self.figPath + site + "observationsPerdayUnclean.png"
                 fig.add_image(figName, width='400px')
                 fig.add_caption('Number of Observations per Day')
                 # doc.append("Begin a new pharagraph")
@@ -82,17 +84,20 @@ class GenerateReport:
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("differentBeesPerdayUnclean.png", width='400px')
+                figName= self.figPath + site + "differentBeesPerdayUnclean.png"
+                fig.add_image( figName, width='400px')
                 fig.add_caption('Different Bees Per Day')
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("beeLifeCycleUnclean.png", width='400px')
+                figName = self.figPath + site + "beeLifeCycleUnclean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Bee Life cycle in days')
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("pieBeeLifeCycleUnclean.png", width='400px')
+                figName =self.figPath + site+"pieBeeLifeCycleUnclean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Bee Life cycle in days')
                 # doc.append("Begin a new pharagraph")
 
@@ -102,16 +107,18 @@ class GenerateReport:
         with doc.create(Subsection("Analysis of Activity per Hour")):
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("histogramUnclean.png", width='400px')
+                figName =self.figPath + site+ "histogramUnclean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Histogram of frequencies per hour')
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("histogramStdUnclean.png", width='400px')
+                figName =self.figPath + site+"histogramStdUnclean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Histogram of frequencies per hour. It includes standard deviation')
         return doc.dumps_content()
 
-    def addActivityCleanData(self, doc, cleanDict):
+    def addActivityCleanData(self, doc, cleanDict, site):
         # --------------------------------------------------------------------------------------------
         #                                        Activity per Day
         # --------------------------------------------------------------------------------------------
@@ -123,7 +130,8 @@ class GenerateReport:
                        " ".format(cleanDict['thresholdLostChips'].seconds))
 
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("observationsPerdayClean.png", width='400px')
+                figName =self.figPath + site+ "observationsPerdayClean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Number of Observations per Day')
                 # doc.append("Begin a new pharagraph")
 
@@ -179,17 +187,20 @@ class GenerateReport:
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("differentBeesPerdayClean.png", width='400px')
+                figName =self.figPath + site+ "differentBeesPerdayClean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Different Bees Per Day')
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("beeLifeCycleClean.png", width='400px')
+                figName =self.figPath + site+ "beeLifeCycleClean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Bee Life cycle in days')
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("pieBeeLifeCycleClean.png", width='400px')
+                figName =self.figPath + site+ "pieBeeLifeCycleClean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Bee Life cycle in days')
                 # doc.append("Begin a new pharagraph")
 
@@ -199,12 +210,14 @@ class GenerateReport:
         with doc.create(Subsection("Analysis of Activity per Hour")):
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("histogramClean.png", width='400px')
+                figName =self.figPath + site+ "histogramClean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Histogram of frequencies per hour')
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                fig.add_image("histogramStdClean.png", width='400px')
+                figName =self.figPath + site+ "histogramStdClean.png"
+                fig.add_image(figName, width='400px')
                 fig.add_caption('Histogram of frequencies per hour. It includes standard deviation')
         return doc.dumps_content()
 
@@ -395,13 +408,13 @@ class GenerateReport:
         #Add Chapter 2 analysis of RAW data
         contents.append("\chapterimage{head3.jpg} % Chapter heading image \n")
         contents.append("\chapter{Analysis of Raw Data} \n")
-        contents.append(self.addActivityUncleanData(doc1, uncleanDict), site)
+        contents.append(self.addActivityUncleanData(doc1, uncleanDict, site))
 
         doc2 = Document(geometry_options=geometry_options)
         #Add chapter 3 analysis of clean data
         contents.append("\chapterimage{head4.jpg} % Chapter heading image \n")
         contents.append("\chapter{Analysis of Clean Data}\n")
-        contents.append(self.addActivityCleanData(doc2, cleanDict))
+        contents.append(self.addActivityCleanData(doc2, cleanDict, site))
 
         doc3 = Document(geometry_options=geometry_options)
         #Add chapter 4 foraging behavior
