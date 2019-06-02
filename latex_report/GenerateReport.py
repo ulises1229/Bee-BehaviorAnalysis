@@ -88,11 +88,6 @@ class GenerateReport:
                 fig.add_image( figName, width='400px')
                 fig.add_caption('Different Bees Per Day')
 
-            # Add Figure
-           """ with doc.create(Figure(position='h!')) as fig:
-                figName = self.figPath + site + "beeLifeCycleUnclean.png"
-                fig.add_image(figName, width='400px')
-                fig.add_caption('Bee Life cycle in days')"""
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
@@ -113,7 +108,7 @@ class GenerateReport:
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                figName =self.figPath + site+"histogramStdUnclean.png"
+                figName =self.figPath + site+"histogramUnclean.png"
                 fig.add_image(figName, width='400px')
                 fig.add_caption('Histogram of frequencies per hour. It includes standard deviation')
         return doc.dumps_content()
@@ -191,11 +186,13 @@ class GenerateReport:
                 fig.add_image(figName, width='400px')
                 fig.add_caption('Different Bees Per Day')
 
+            """
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
                 figName =self.figPath + site+ "beeLifeCycleClean.png"
                 fig.add_image(figName, width='400px')
                 fig.add_caption('Bee Life cycle in days')
+            """
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
@@ -216,7 +213,7 @@ class GenerateReport:
 
             # Add Figure
             with doc.create(Figure(position='h!')) as fig:
-                figName =self.figPath + site+ "histogramStdClean.png"
+                figName =self.figPath + site+ "histogramClean.png"
                 fig.add_image(figName, width='400px')
                 fig.add_caption('Histogram of frequencies per hour. It includes standard deviation')
         return doc.dumps_content()
@@ -417,9 +414,10 @@ class GenerateReport:
         contents.append(self.addActivityCleanData(doc2, cleanDict, site))
 
         doc3 = Document(geometry_options=geometry_options)
+        """
         #Add chapter 4 foraging behavior
         contents.append("\chapterimage{head5.jpg} % Chapter heading image\n")
         contents.append("\chapter{Analysis of Foraging Behavior}\n")
-
+        """
         return contents
 

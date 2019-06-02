@@ -18,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.log" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.out" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.toc" beforeDir="false" afterPath="$PROJECT_DIR$/latex_report/latex_template/Latex Report.toc" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +29,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Main.coverage" NAME="Main Coverage Results" MODIFIED="1559261677595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559513576837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bee_BehaviorAnalysis$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559515152581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -108,8 +109,8 @@
           <file leaf-file-name="GenerateReport.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
+                <state relative-caret-position="480">
+                  <caret line="420" column="11" selection-start-line="420" selection-start-column="11" selection-end-line="420" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -486,7 +487,7 @@
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.50549453" side_tool="true" visible="true" weight="0.30974358" />
       <window_info anchor="right" x="0" y="0" width="370" height="766" id="Documentation" order="7" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" auto_hide="true" id="Run" internal_type="SLIDING" order="2" type="SLIDING" weight="0.28102565" />
+      <window_info active="true" anchor="bottom" auto_hide="true" id="Run" internal_type="SLIDING" order="2" type="SLIDING" visible="true" weight="0.28102565" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.497558" weight="0.32685715" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.54273504" weight="0.24252874" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.492674" weight="0.12457143" />
@@ -547,12 +548,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/latex_report/GenerateReport.py</url>
-          <line>230</line>
+          <line>227</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/latex_report/GenerateReport.py</url>
-          <line>318</line>
+          <line>315</line>
           <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1040,8 +1041,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/latex_report/GenerateReport.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="94" column="60" selection-start-line="94" selection-start-column="60" selection-end-line="94" selection-end-column="60" />
+        <state relative-caret-position="480">
+          <caret line="420" column="11" selection-start-line="420" selection-start-column="11" selection-end-line="420" selection-end-column="11" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
